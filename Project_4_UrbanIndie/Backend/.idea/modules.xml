@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GlobalBazaar_APIGateway/GlobalBazaar_APIGateway.iml" filepath="$PROJECT_DIR$/GlobalBazaar_APIGateway/GlobalBazaar_APIGateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GlobalBazaar_ConfigurationServer/GlobalBazaar_ConfigurationServer.iml" filepath="$PROJECT_DIR$/GlobalBazaar_ConfigurationServer/GlobalBazaar_ConfigurationServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GlobalBazaar_EurekaServer/GlobalBazaar_EurekaServer.iml" filepath="$PROJECT_DIR$/GlobalBazaar_EurekaServer/GlobalBazaar_EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GlobalBazaar_PaymentMicroservice/GlobalBazaar_PaymentMicroservice.iml" filepath="$PROJECT_DIR$/GlobalBazaar_PaymentMicroservice/GlobalBazaar_PaymentMicroservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GlobalBazaar_UserMicroservice/GlobalBazaar_UserMicroservice.iml" filepath="$PROJECT_DIR$/GlobalBazaar_UserMicroservice/GlobalBazaar_UserMicroservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GlobalBazaar_OrderMicroservice/order.iml" filepath="$PROJECT_DIR$/GlobalBazaar_OrderMicroservice/order.iml" />
+    </modules>
+  </component>
+</project>

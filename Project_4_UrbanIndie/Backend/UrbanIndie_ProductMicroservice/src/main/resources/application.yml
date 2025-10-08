@@ -1,0 +1,14 @@
+spring:
+#  data:
+#    mongodb:
+#      uri: mongodb+srv://Global_Bazaar_Project:Global_Bazaar_%40_#@projectcluster.vxt4voc.mongodb.net/GlobalBazaar?retryWrites=true&w=majority
+#      uri: mongodb+srv://Global_Bazaar_Project:Global_Bazaar_%40_#@projectcluster.vxt4voc.mongodb.net/GlobalBazaar?retryWrites=true&w=majority
+  application:
+    name: PRODUCT-SERVICE
+  cache:
+    type: simple
+#
+#  config:
+#    import: configserver:http://localhost:8090
+
+

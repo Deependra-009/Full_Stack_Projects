@@ -1,0 +1,198 @@
+:root {
+  --loader-width: 300px;
+  --loader-dot-size: 20px;
+}
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent */
+  z-index: 9; /* Positioned below loader but above other content */
+  pointer-events: auto; /* Allow clicks on overlay (to block underlying clicks) */
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  font-family: Helvetica;
+}
+
+.loader {
+
+  height: var(--loader-dot-size);
+  width: var(--loader-width);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.loader--dot {
+  animation: loader 3s ease-in-out infinite;
+  height: var(--loader-dot-size);
+  width: var(--loader-dot-size);
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  border: 2px solid white;
+}
+
+.loader--dot:nth-child(1) {
+  background-color: #8cc759;
+  animation-delay: 0.5s;
+}
+
+.loader--dot:nth-child(2) {
+  background-color: #8c6daf;
+  animation-delay: 0.4s;
+}
+
+.loader--dot:nth-child(3) {
+  background-color: #ef5d74;
+  animation-delay: 0.3s;
+}
+
+.loader--dot:nth-child(4) {
+  background-color: #f9a74b;
+  animation-delay: 0.2s;
+}
+
+.loader--dot:nth-child(5) {
+  background-color: #60beeb;
+  animation-delay: 0.1s;
+}
+
+.loader--dot:nth-child(6) {
+  background-color: #fbef5a;
+  animation-delay: 0s;
+}
+
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(calc(var(--loader-width) - var(--loader-dot-size)));
+  }
+  65% {
+    transform: translateX(calc(var(--loader-width) - var(--loader-dot-size)));
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+
+/* Login Loader */
+
+.login-loader--text {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  right: 0;
+  width: 5rem;
+  margin: auto;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: antiquewhite;
+}
+
+.login-loader--text:after {
+  content: "Loading";
+  animation: loading-text 3s infinite;
+}
+
+@keyframes loading-text {
+  0% {
+    content: "Loading";
+  }
+  25% {
+    content: "Loading.";
+  }
+  50% {
+    content: "Loading..";
+  }
+  75% {
+    content: "Loading...";
+  }
+}
+
+
+/* Fetching Data Loader */
+
+.fetching-data-loader--text {
+  position: absolute;
+  top: 200%;
+  left: 30px;
+  right: 0;
+  text-align: left;
+  /* width: 20rem; */
+  /* margin: auto; */
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: antiquewhite;
+}
+
+.fetching-data-loader--text:after {
+  content: "Fetching Data";
+  animation: fetching-data-text 3s infinite;
+}
+
+@keyframes fetching-data-text {
+  0% {
+    content: "Fetching Data";
+  }
+  25% {
+    content: "Fetching Data.";
+  }
+  50% {
+    content: "Fetching Data..";
+  }
+  75% {
+    content: "Fetching Data...";
+  }
+}
+
+
+/* Connecting to server */
+
+.connecting-to-server-loader--text {
+  position: absolute;
+  top: 200%;
+  left: 30px;
+  right: 0;
+  text-align: left;
+  width: 20rem;
+  /* margin: auto; */
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: antiquewhite;
+}
+
+.connecting-to-server-loader--text:after {
+  content: "Connecting to Server";
+  animation: connecting-to-server-text 3s infinite;
+}
+
+@keyframes connecting-to-server-text {
+  0% {
+    content: "Connecting to Server";
+  }
+  25% {
+    content: "Connecting to Server.";
+  }
+  50% {
+    content: "Connecting to Server..";
+  }
+  75% {
+    content: "Connecting to Server...";
+  }
+}

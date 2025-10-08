@@ -1,0 +1,39 @@
+<div class="w-[100%] ">
+    
+        <!-- New Arrival -->
+        <div class="w-[100%] border-2-black">
+            <app-product-card1 [ContainerTitle]="'New Arrival'"  [New_Arrival]="New_Arrival_Images"></app-product-card1>
+
+        </div>
+        <!-- Most Wanted Brand -->
+        <div class="w-[100%]  items-center flex justify-center">
+            <div class="w-[80%] mt-[3%]">
+                <div class="w-[100%] h-[30px] text-2xl">
+                    Most Wanted Brands
+                </div>
+                <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-800">
+                <img src="./../../../../assets/Images/homepage/hnw1.png" class="w-[100%] h-[150px] md:h-[480px]">
+                <div class="mt-[3%] w-[100%] flex justify-between overflow-quick overflow-x-auto">
+                    <div class="w-[186px] mr-5" *ngFor="let item of categories_scroll_images" >
+                        <div class="w-[140px] h-[200px] md:w-[190px] md:h-[250px] bg-cover bg-center "style="background-image: url('{{item.link}}');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended -->
+        <div class="w-[100%] ">
+            <app-product-card1 [ContainerTitle]="'Recommended'" [New_Arrival]="Recommended_Images"></app-product-card1>
+        </div>
+        
+
+        <!-- Categories -->
+        <div class="w-[100%] ">
+            <app-product-card1 [ContainerTitle]="'Categories'" [New_Arrival]="Category_Images"></app-product-card1>
+        </div>
+        
+        
+   
+
+    
+</div>

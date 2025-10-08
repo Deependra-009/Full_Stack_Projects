@@ -1,0 +1,38 @@
+/* @media (min-width: 700px) and (max-width: 896px) {
+    .urban {
+      font-size: 1.0rem;
+    }
+  } */
+
+  @media (min-width: 817px) and (max-width: 1128px) {
+    .urban {
+      font-size: 1.0rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 799px){
+    .urbanIndeLogoName {
+        font-size: 1rem;
+      }
+  }
+  @media (min-width: 500px) and (max-width: 816px) {
+    .urban {
+      font-size: 0.8rem;
+    }
+  }
+  @media (min-width: 500px) and (max-width: 816px) {
+    .btnfsize {
+      font-size: 0.67rem;
+    }
+  }
+  @media (max-width: 768px) {
+   .wset{
+    width:52%;
+   }
+  }
+
+  @media (min-width: 440px){
+    .sm\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+    
+  }

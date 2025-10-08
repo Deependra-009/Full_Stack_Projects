@@ -1,0 +1,204 @@
+<div class=" flex md: h-full lg:flex-row flex-col justify-start">
+  <div class="w-full md:h-full overflow-quick md:overflow-y-auto lg:px-8 lg:py-8 md:px-6  md:py-4  bg-white ">
+    <!-- add address  -->
+    <div class="md:flex items-stretch py-2 border-b border-gray-300 w-[100%]">
+      <!-- //dropdown btn  -->
+
+      <div class="flex flex-col justify-center w-[100%]">
+        <div>
+          <div (click)="isAddAddress = !isAddAddress"
+            class="w-[100%] p-3 shadow bg-slate-200 text-sm font-black leading-9 text-gray-800 flex items-center justify-start cursor-pointer">
+            <span class="ml-2 mr-2">Add Address</span>
+            <span class="ml-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+              </svg>
+            </span>
+          </div>
+
+          <!-- //dropdown menu  -->
+          <div *ngIf="isAddAddress" class="p-4 bg-white shadow rounded" id="dropdown">
+            <form (ngSubmit)="saveAddress()">
+              <div class="relative z-0 w-full mb-6 group">
+                <input type="text" name="name" [(ngModel)]="formData.name" id="fullName"
+                  class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                  placeholder=" " required />
+                <label for="name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full
+                  Name</label>
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input type="tel" [(ngModel)]="formData.mobileNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  name="mobileNumber" id="mobileNumber"
+                  class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                  placeholder=" " required />
+                <label for="mobileNumber"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone
+                  number (123-456-7890)</label>
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input type="text" name="addressLine1" id="addressline1" [(ngModel)]="formData.addressLine1"
+                  class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                  placeholder=" " required />
+                <label for="addressLine1"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">House
+                  No.,BuildingName</label>
+              </div>
+              <div class="relative z-0 w-full mb-6 group">
+                <input type="text" name="addressLine2" id="addressline2" [(ngModel)]="formData.addressLine2"
+                  class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                  placeholder=" " required />
+                <label for="addressLine2"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Road
+                  name,Area,Colony</label>
+              </div>
+              <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-6 group">
+                  <input type="text" name="addressCity" id="city" [(ngModel)]="formData.addressCity"
+                    class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                    placeholder=" " required />
+                  <label for="addressCity"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">City</label>
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
+                  <input type="text" name="addressState" id="state" [(ngModel)]="formData.addressState"
+                    class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                    placeholder=" " required />
+                  <label for="addressState"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">State</label>
+                </div>
+
+              </div>
+
+              <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-6 group">
+                  <input type="text" name="addressPinCode" id="state" [(ngModel)]="formData.addressPinCode"
+                    class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                    placeholder=" " required />
+                  <label for="addressPinCode"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Area
+                    Pin Code</label>
+                </div>
+
+
+                <div class="relative z-0 w-full mb-6 group">
+
+                  <select type="text" name="addressType" id="PinCode" [(ngModel)]="formData.addressType"
+                    class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                    required>
+                    <option value="Home">Home</option>
+                    <option value="Office">Office</option>
+
+                  </select>
+                  <label for="addressType"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Address
+                    Type</label>
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <input id="remember" type="checkbox" name="isDefaultAddress" value=""
+                      [(ngModel)]="formData.isDefaultAddress"
+                      class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                      required>
+                  </div>
+                  <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mark This
+                    Address As Default Address</label>
+                </div>
+              </div>
+              <button
+                class="text-[17px] py-3 bg-gray-200 transition duration-150 ease-in-out hover:bg-red-300 rounded-md mt-6 font-medium  w-full leading-3 text-black hover:text-red-500">
+                Save Address
+              </button>
+            </form>
+            <!-- {{formData|json}} -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- {{selectedAddress|json}} -->
+    <!-- Address -->
+    <div *ngFor="let address of addresses" class="md:flex items-stretch py-8 md:py-10 lg:py-8 border-b border-gray-300">
+ 
+      <!-- Left Div for Radio Button -->
+      <div class="md:w-1/12 2xl:w-1/6 w-full h-[100%] flex items-center justify-start md:justify-center">
+        <!-- Radio button for selecting the address -->
+        <div class="flex items-center">
+          <input type="radio" class="mt-5 ml-4 md:ml-8 text-red-600 focus:ring-red-500" [id]="address.id" name="selectedAddress"
+            [value]="address" [checked]="address.isDefaultAddress"
+            [(ngModel)]="selectedAddress" (change)="SelectedAddress()" 
+            />
+        </div>
+      </div>
+      <!-- Right Div for Address Card and Details -->
+      <div class="md:w-10/12 2xl:w-5/6 w-full h-[100%]">
+        <!-- Address Card -->
+        <div class="rounded-lg p-4 bg-white">
+          <!-- Name and Address Type Tag -->
+          <div class="flex items-center">
+            <p class="font-bold">{{ address.name }}</p>
+            <span class="text-xs bg-red-200 font-medium text-red-500 px-2 py-1 ml-2 self-center">
+              {{ address.addressType }}
+            </span>
+          </div>
+          <!-- Address Lines -->
+          <p *ngIf="address.isDefaultAddress; else notDefault">
+            Default address
+          </p>
+
+          <ng-template #notDefault>
+            <br />
+          </ng-template>
+          <p>{{ address.addressLine1 }}</p>
+          <p>
+            {{ address.addressCity }}, {{ address.addressState }},
+            {{ address.addressPinCode }}
+          </p>
+          <!-- Mobile Number -->
+          <p class="mt-2">+91- {{ address.
+            mobileNumber }}</p>
+
+
+          <!-- Edit and Remove Buttons -->
+          <div class="flex mt-3 items-center mb-3">
+           
+           
+            <button type="button" (click)="openModal(address)"
+              class="mr-3 bg-gray-200 dark:bg-gray-700 focus:outline-none transition duration-150 ease-in-out rounded hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-indigo-600 text-black px-6 py-2 text-sm focus:ring-4 focus:ring-blue-300 text-center inline-flex items-center dark:focus:ring-blue-800">
+              <span class="mr-1">Edit</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+              </svg>
+            </button>
+            <app-edit-address-modal  [isVisible]="modalVisible" (closeModalEvent)="closeModal()" [addressData]="toUpdateAddress"
+            (updateAddressEvent)="onAddressUpdate($event)">
+            </app-edit-address-modal >
+
+            <button type="button"
+              class="mr-3 bg-gray-200 dark:bg-gray-700 focus:outline-none transition duration-150 ease-in-out rounded hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-indigo-600 text-black px-6 py-2 text-sm focus:ring-4 focus:ring-blue-300 text-center inline-flex items-center dark:focus:ring-blue-800"
+              (click)="removeAddress(address.id)">
+              <span class="mr-1">Remove</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <!-- Address Availability -->
+          <p class="text-xs mt-2" *ngIf="address.codAvailable">
+            Pay on delivery available on this address
+          </p>
+          <!-- Date of Delivery -->
+          <p class="text-xs text-gray-600 mt-1">
+            Delivery by {{ address.expectedDeliveryDate }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- address ends -->
+  </div>
+</div>

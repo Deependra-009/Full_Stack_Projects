@@ -1,0 +1,41 @@
+<div class="w-[100%] h-[100vh] flex justify-center items-center bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-green-200 to-green-300  ">
+    <div style="background-image: url('./../../../../../assets/Images/Login/loginbank.png');" class=" w-[90%] h-[90vh] bg-contain bg-no-repeat bg-white rounded-[20px] p-5 flex justify-center">
+        <div  class="w-[50%] rounded-[20px]">
+            <!-- <div class="w-[100%]  ">
+                <img class="w-[50%]" src="./../../../../../assets/Images/Login/loginbank.png">
+            </div> -->
+        </div>
+        <div class="w-[50%] bg-white flex justify-center items-center">
+
+            <div class="w-[90%] min-h-[90%] ">
+                <div class="w-[100%]  p-5 flex justify-start items-center text-[40px] font-semibold font-sans">
+                    <svg class="w-[7%] h-[7%] mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z"/><circle cx="16.5" cy="7.5" r=".5"/></svg>
+                    <span class="login-head">Login</span>
+                </div>
+                <!-- <div class="w-[100%] flex justify-center py-5 px-10 text-[20px] ">Already have an Account. <span>Login</span></div> -->
+                <div class="w-[100%] py-10">
+                    <form class="w-[100%]" [formGroup]="UserLoginData">
+                    <div class="w-[100%] py-2 flex flex-col">
+                        <label class="text-gray-600 text-[17px]">Customer ID</label>
+                        <input matInput formControlName="user_customer_id" placeholder="Enter Your Name " class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]">
+                    </div>
+                    <div class="w-[100%] py-2 flex flex-col">
+                        <label class="text-gray-600 text-[17px]">E-mail</label>
+                        <input matInput formControlName="account_holder_email" placeholder="example@gmail.com" class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]">
+                    </div>
+                    <div class="w-[100%] py-2 flex flex-col">
+                        <label class="text-gray-600 text-[17px]">Password</label>
+                        <input type="password" matInput formControlName="user_password" placeholder="Enter 10 character or more" class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]">
+                    </div>
+                    </form>
+                    <div class="w-[100%]  py-10 ">
+                        <button (click)="loginMethod()" class="w-[80%] flex justify-center items-center py-3 text-[22px] font-medium border-2 border-[#e11d48] text-[#e11d48] shadow-sm-light hover:shadow-none shadow-[#e11d48] hover:text-white rounded-[7px]  hover:bg-[#e11d48]">
+                            <span class="px-1">Login</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

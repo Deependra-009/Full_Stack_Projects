@@ -1,0 +1,175 @@
+<div class="flex lg:flex-row flex-col justify-start h-full">
+  <div class="w-full overflow-quick overflow-y-auto lg:px-8 lg:py-8 md:px-6  md:py-4 py-4 bg-white h-full">
+    <!--Buttons-->
+    <div class=" md:flex items-stretch py-2 border-b border-gray-300 w-[100%]">
+      <div class="flex flex-wrap ">
+        <button type="button"  *ngFor="let btn of buttons.row1" (click)="
+            selectedOptions = paymentOptions[btn.value];
+            whichCategorySelected = btn.value
+          "
+          class="w-[100%] md:mt-0 mt-2 md:w-[20%] md:mr-3 hover:bg-red-200 hover:text-red-500 bg-gray-200 dark:bg-gray-700 focus:outline-none transition duration-150 ease-in-out rounded dark:hover:bg-gray-600 dark:text-indigo-600 text-black px-6 py-2 text-sm   text-center inline-flex items-center dark:focus:ring-blue-800">
+          <span class="mr-1">{{ btn.label }}</span>
+          <div [innerHTML]="svgSanitizer.sanitizeSvg(btn.icon)"></div>
+        </button>
+        <div class="flex w-[100%] flex-wrap justify-start   md:mt-2">
+          <button type="button" *ngFor="let btn of buttons.row2" (click)="selectedOptions = paymentOptions[btn.value]"
+            class="w-[100%] md:mt-0 mt-2 md:w-[20%] md:mr-3 hover:bg-red-200 hover:text-red-500 bg-gray-200 dark:bg-gray-700 focus:outline-none transition duration-150 ease-in-out rounded dark:hover:bg-gray-600 dark:text-indigo-600 text-black px-6 py-2 text-sm   text-center inline-flex items-center dark:focus:ring-blue-800">
+            <span class="mr-1">{{ btn.label }}</span>
+            <div [innerHTML]="svgSanitizer.sanitizeSvg(btn.icon)"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment option Card -->
+    <div *ngIf="whichCategorySelected === 'creditDebitcard'"
+      class="w-[100%] md:flex py-2 md:py-3 lg:py-4 border-b border-gray-300 items-center justify-center">
+  
+
+      <div class="p-4 bg-white rounded w-[100%] md:w-[70%]" id="dropdown">
+        <form (ngSubmit)="submitCardDetailsForm()">
+          <div class="w-[100%] relative z-0  mb-6 group">
+            <input type="tel" name="cardNumber" maxlength="16" autocomplete="off"
+              [(ngModel)]="cardDetailsFormData.cardNumber" id="cardNumber"
+              class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+              placeholder=" " required />
+            <label for="cardNumber"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Card
+              Number</label>
+          </div>
+          <div class="relative z-0 w-full mb-6 group">
+            <input type="text" [(ngModel)]="cardDetailsFormData.nameOnCard" name="nameOnCard" id="nameOnCard"
+              maxlength="15"
+              class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+              placeholder="" required />
+            <label for="nameOnCard"
+              class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name
+              On Card</label>
+          </div>
+          <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="relative z-0 w-full mb-6 group">
+              <input type="text" name="cvv" id="CVV" [(ngModel)]="cardDetailsFormData.cvv" id="expiry" type="tel"
+                pattern="\d*" maxlength="3"
+                class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                placeholder=" " required />
+              <label for="CVV"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">CVV</label>
+            </div>
+            <div class="relative z-0 w-full mb-6 group">
+              <input type="tel" name="validThru" id="validThru" [(ngModel)]="cardDetailsFormData.validThru"
+                autocomplete="off" pattern="\d*" maxlength="5"
+                class="block py-2.5 px-2 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-red-400 peer"
+                placeholder=" " required />
+              <label for="validThru"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-2 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Valid
+                Thru (MM/YY)</label>
+            </div>
+          </div>
+
+          <button
+            class="text-[16px] bg-gray-200 transition duration-150 ease-in-out hover:bg-red-300 rounded-md mt-6 font-medium py-3 w-full leading-3 text-black hover:text-red-500">
+            Pay Now
+          </button>
+        </form>
+        
+      </div>
+
+    </div> 
+
+    <div *ngIf="selectedOptions && selectedOptions.length > 0">
+      <div *ngFor="let option of selectedOptions"
+        class=" h-[150px] mt-10 flex justify-between items-center py-2 md:py-3 lg:py-4 border-b border-gray-300">
+        <!-- Left Div for Radio Button -->
+        <div class=" w-[10%] flex justify-center items-center">
+          <input type="radio" [name]="'paymentOptionGroup'" [id]="option.id"
+            class="  text-red-600  focus:ring-red-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            (click)="selectPaymentOption(option)" />
+        </div>
+        <!-- Right Div for Payment Card -->
+        <div class="  w-[90%]">
+          <div class="w-[100%] rounded-lg  bg-white">
+            <div class="  flex justify-between items-center w-[100%]">
+              <!-- PhonePe Icon in a Round Circle -->
+              <div class=" w-[10%] flex items-center justify-center hover:text-red-500"
+                [innerHTML]="svgSanitizer.sanitizeSvg(option.svgProperties)"></div>
+              <!-- PhonePe and Highly Recommended on the same line -->
+              <div class=" w-[85%] flex md:flex-row flex-col justify-start ">
+                <div class="text-[15px] font-medium md:text-[17px]">{{ option.name }}</div>
+                <div *ngIf="option.recommended" class="md:ml-5 md:mt-0 mt-3">
+                  <span 
+                  class=" w-[100%] text-[12px] px-2 py-2  md:text-[14px] bg-red-200 font-medium text-red-500 ">Highly
+                  Recommended</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form stars for Upi -->
+            <div *ngIf="
+                selectedPaymentOption === option.id &&
+                option.value === 'enterupiid'
+              " class="mt-3">
+              <form class="w-[50%]" (ngSubmit)="submitEnterUpiIdForm()">
+                <div class="mb-4">
+                  <input type="email" [(ngModel)]="upiFormData.upiId" name="upiId" id="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-300 focus:border-red-300 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter UPI ID here" required />
+                </div>
+                <div class="flex items-start mb-2" *ngIf="upiFormData.upiId">
+                  <div class="flex items-center h-5">
+                    <input id="terms" type="checkbox" [(ngModel)]="upiFormData.saveUpi" name="saveUpi"
+                      class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 dark:bg-gray-700 dark:border-gray-600 focus:ring-red-300 focus:border-red-300 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" />
+                  </div>
+                  <label for="terms" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                    <span>Save UPI ID for faster payments</span>
+                    <!-- <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a> -->
+                  </label>
+                </div>
+
+                <button type="submit"
+                  class="text-red-500 hover:text-red-600 bg-red-300 hover:bg-red-400 focus:ring-red-300 focus:border-red-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-[100%] px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Pay Now
+                </button>
+              </form>
+              <!-- {{upiFormData|json}} -->
+            </div>
+            <!-- form for upi ends here -->
+
+            <!-- Form starts for Gpay -->
+            <div *ngIf="
+                selectedPaymentOption === option.id && option.value === 'gpay'
+              " class="mt-3">
+              <form class="w-[50%]" (ngSubmit)="submitGpayUpiForm()">
+                <div>
+                  <div class="relative mt-2 shadow-sm mb-2">
+                    <input type="text" name="GpayUpiId" id="GpayUpiId" [(ngModel)]="gpayFormData.upiId"
+                      class="py-1.5 pl-7 pr-20 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-300 focus:border-red-300 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Enter UPI ID here" />
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <select name="UpiId" [(ngModel)]="gpayFormData.selectedUpiOption"
+                        class="h-full border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset sm:text-sm focus:ring-red-300 focus:border-red-300">
+                        <option value="@okhdfcbank">@okhdfcbank</option>
+                        <option value="@okicici">@okicici</option>
+                        <option value="@okaxis">@okaxis</option>
+                        <option value="@okaxis">@okaxis</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- {{gpayFormData|json}} -->
+
+                  <button type="submit"
+                    class="text-red-500 hover:text-red-600 bg-red-300 hover:bg-red-400 focus:ring-red-300 focus:border-red-300 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-[100%] px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Pay Now
+                  </button>
+                </div>
+              </form>
+
+              <!-- {{upiFormData|json}} -->
+            </div>
+            <!-- Form ends for Gpay -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Payment options ends -->
+  </div>
+</div>

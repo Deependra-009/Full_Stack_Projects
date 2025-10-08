@@ -1,0 +1,34 @@
+<div class="w-[100%] mt-[5em] flex justify-center">
+
+    <div class="w-[85%]  ">
+
+        <div class="w-[100%] py-5 text-[35px] flex justify-center items-center">
+            {{heading}}
+        </div>
+        <div class="w-[100%] py-2 text-[20px] text-gray-500 flex justify-center items-center">
+            {{subHeading}}
+        </div>
+
+        <div class="w-[100%] grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3  grid-cols-2 gap-5 ">
+
+            <div class="lg:w-[250px] w-[200px] h-[350px] m-auto  mt-10 lg:h-[400px] " *ngFor="let item of ProductData">
+                <div class="w-[100%] h-[220px] md:h-[280px]">
+                    <img class="w-[100%] bg-cover h-[100%]" [src]="item.img">
+                </div>
+                <div class="w-[100%] pt-5 pb-3 text-[22px]">
+                    {{item.title}}
+                </div>
+                <div class="w-[100%] py-1 text-[19px] text-gray-600">
+                    {{item.subtitle}}
+                </div>
+                <div class="w-[100%] py-1 text-[19px] text-red-600">
+                    {{item.discount}}
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

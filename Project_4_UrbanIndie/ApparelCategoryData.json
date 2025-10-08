@@ -1,0 +1,1139 @@
+[
+  {
+    "department_name": "men",
+    "apparel_category_name": "topwear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "T-shirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Casual Shirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Formal Shirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "SweatShirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sweaters",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jackets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Blazers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Suits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Rain Jackets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "men",
+    "apparel_category_name": "Indian & Festive Wear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Kurtas & Kurta Sets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sherwanis",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Nehru Jacket",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Dhotis",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "men",
+    "apparel_category_name": "Bottomwear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Jeans",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Casual Trousers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Formal Trousers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shorts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Track Pants & Joggers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "men",
+    "apparel_category_name": "Innerwear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Briefs",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Boxers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Vests",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shorts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sleepwear & Loungewear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Thermals",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "men",
+    "apparel_category_name": "Footwear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Sneakers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Casual Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Formal Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sports Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sandals",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Slides & Flip Flops",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Socks",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "men",
+    "apparel_category_name": "Sports Wear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Sports Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "T-shirts & Vests",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Track Pants & Shorts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Tracksuits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sports Accessories",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Swimwear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Fitness Bands",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "men",
+    "apparel_category_name": "Gadgets",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Smart Wearables",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Fitness Gadgets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Headphones",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Speakers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "men",
+    "apparel_category_name": "Fashion Accessories",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Wallets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Belts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Perfume",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Trimmers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Deodorant",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Caps & Hats",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Helmets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Phone Cases",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Rings & Wristwear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Fashion Accessories",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Belts, Scarves & More",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Indian & Fusion Wear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Kurtas & Suits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Kurtis, Tunics & Tops",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sarees",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Ethnic Wear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Leggings, Salwars & Churidars",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Skirts & Palazzos",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Dress Materials",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Lehenga Cholis",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Dupattas & Shawls",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jackets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Watches & Wearables",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Western Wear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Dresses",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Tops",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "T-shirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jeans",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Trousers & Capris",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shorts & Skirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Co-ords",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Playsuits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jumpsuits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shrugs",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sweaters & Sweatshirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jackets & Coats",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Blazers & Waistcoats",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Plus Size",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Maternity",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Sunglasses & Frames",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Footwear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Flats",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Casual Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Heels",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Boots",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sports Shoes & Floaters",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Sports & Active Wear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Clothing",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Footwear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sports Accessories",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sports Equipment",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Lingerie & Sleepwear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Bra",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Briefs",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shapewear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sleepwear & Loungewear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Swimwear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Camisoles & Thermals",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Beauty & Personal Care",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Makeup",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Skincare",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Premium Beauty",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Lipsticks",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Fragrances",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Jewellery",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Fashion Jewellery",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Fine Jewellery",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Earrings",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Backpacks",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Handbags, Bags & Wallets",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "women",
+    "apparel_category_name": "Luggages & Trolleys",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Boys Clothing",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "T-Shirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shorts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jeans",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Trousers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Clothing Sets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Ethnic Wear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Track Pants & Pyjamas",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jacket, Sweater & Sweatshirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Party Wear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Innerwear & Thermals",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Nightwear & Loungewear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Value Packs",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Girls Clothing",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Dresses",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Tops",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "T-Shirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Clothing Sets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Lehenga Choli",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Kurta Sets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Party Wear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Dungarees & Jumpsuits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Skirts & Shorts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Tights & Leggings",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jeans, Trousers & Capris",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jacket, Sweater & Sweatshirts",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Innerwear & Thermals",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Nightwear & Loungewear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Value Packs",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Footwear",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Casual Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Flipflops",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sports Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Flats",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sandals",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Heels",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "School Shoes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Socks",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Toys & Games",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Learning & Development",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Activity Toys",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Soft Toys",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Action Figure / Playset",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Infants",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Bodysuits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Rompers & Sleepsuits",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Clothing Sets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "T-Shirts & Tops",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Dresses",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bottom Wear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Winter Wear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Innerwear & Sleepwear",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Infant Care",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Home & Bath"
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Personal Care"
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Kids Accessories",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Bags & Backpacks",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Watches",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Jewellery & Hair Accessory",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sunglasses",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Masks & Protective Gears",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Caps & Hats",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "Kids",
+    "apparel_category_name": "Brands",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "H&M",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Max Kids",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Pantaloons",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "United Colors Of Benetton Kids",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "YK",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "U.S. Polo Assn. Kids",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Mothercare",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Bed Linen & Furnishing",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Bed Runners",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Mattress Protectors",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bedsheets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bedding Sets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bed Covers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Diwan Sets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Chair Pads & Covers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Sofa Covers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Pillows & Pillow Covers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Flooring",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Floor Runners",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Carpets",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Floor Mats & Dhurries",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Door Mats",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Bath",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Bath Towels",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Hand & Face Towels",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Beach Towels",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Towels Set",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bath Rugs",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bath Robes",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bathroom Accessories",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Shower Curtains",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Lamps & Lighting",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Floor Lamps",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Ceiling Lamps",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Table Lamps",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Wall Lamps",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Outdoor Lamps",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Home Décor",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Plants & Planters",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Aromas & Candles",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Clocks",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Mirrors",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Wall Décor",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Festive Decor",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Pooja Essentials",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Wall Shelves",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Fountains",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Ottoman",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Cushions & Cushion Covers",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Curtains",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Home Gift Sets",
+    "apparelCategoryModelList": []
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Kitchen & Table",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Table Runners",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Dinnerware & Serveware",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Cups and Mugs",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bakeware & Cookware",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Kitchen Storage & Tools",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Bar & Drinkware",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Mothercare",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "HRX",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Storage",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "Bins",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Hangers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Organisers",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Hooks & Holders",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  },
+  {
+    "department_name": "home & living",
+    "apparel_category_name": "Brands",
+    "apparelCategoryModelList": [
+      {
+        "category_name": "H&M",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Marks & Spencer",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Home Centre",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Spaces",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "D'Decor",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Story@Home",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Pure home & living",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Swayam",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Raymond Home",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Maspar",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Trident",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Cortina",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Random",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "Ellementry",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      },
+      {
+        "category_name": "ROMEE",
+        "category_image": "https://firebasestorage.googleapis.com/v0/b/food-for-you-e2209.appspot.com/o/UrbanIndie%2FMen%20tshirt%2FMen%20Turquoise%20Blue%20Solid%20Round%20Neck%20Sustainable%20Greenturn%20Organic%20Cotton%20T-shirt%2F1.jpg?alt=media&token=d0a51fff-1ecc-4a63-83b2-8775dd5e7abb"
+      }
+    ]
+  }
+]
+

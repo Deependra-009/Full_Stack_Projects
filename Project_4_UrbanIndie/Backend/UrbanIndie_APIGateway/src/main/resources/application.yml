@@ -1,0 +1,51 @@
+server:
+  port: 8084
+spring:
+  redis:
+    port: 6379
+    host: localhost
+  application:
+    name: Api-Gateway
+
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: USER-SERVICE
+#          uri: lb://USER-SERVICE
+#          predicates:
+#            - Path= /user-authentication/test,
+#                    /user-authentication/token,
+#                    /user-authentication/user-register,
+#                    /user-authentication/get-all-user,
+#                    /user-authentication/get-user-data/{email}
+#                    /user-authentication/update-user-data,
+#                    /user-authentication/update-password,
+#                    /user-authentication/update-forget-password,
+#                    /user-authentication/forget-password,
+#                    /user-authentication/send-otp/{email}
+#                  
+#
+#        - id: ORDER-SERVICE
+#          uri: lb://ORDER-SERVICE
+#          predicates:
+#            - Path= /order/test,
+#                    /order/placeorder,
+#                    /order/{orderId},
+#                    /order/get-all-order-particular-user/{user_id},
+#                    /cart/test,
+#                    /cart/add-products-in-cart,
+#                    /cart/get-cart-particular-user/{user_id},
+#                    
+#                    
+#
+#        - id: PRODUCT-SERVICE
+#          uri: lb://PRODUCT-SERVICE
+#          predicates:
+#            - Path= /product/test,
+#                    /product/add-product,
+#                    /product/get-all-product,
+#                    /product/add-product-description,
+#                    /product/get-particular-product/{productId}
+  config:
+    import: configserver:http://localhost:8090
+

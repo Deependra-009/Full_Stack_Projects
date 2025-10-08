@@ -1,0 +1,245 @@
+<div [class]="'w-[100%] h-[100%] flex justify-center items-center  bg-gray-400  backdrop-blur-[0px]'" aria-hidden="true"
+    class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="w-[60%] ">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Static modal
+                </h3>
+                <button (click)="closePage()" type="button"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    data-modal-hide="staticModal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="p-5 h-[60vh] w-[100%] flex flex-col  items-center ">
+
+                <div class="w-[90%]">
+                    <ol
+                        class="flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
+                        <li
+                            class="flex md:w-full items-center  sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+                            <span [class]="(payment_tabs==1)?'text-red-600':(payment_tabs>1)?'text-blue-600':''"
+                                class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                                <svg [class]="(payment_tabs==1 || (payment_tabs>=1)) ?'block':'hidden'"
+                                    class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                </svg>
+                                Account <span class="hidden sm:inline-flex sm:ml-2">Information</span>
+                            </span>
+                        </li>
+                        <li
+                            class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+                            <span [class]="(payment_tabs==2)?'text-red-600':(payment_tabs>2)?'text-blue-600':''"
+                                class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                                <span [class]="(payment_tabs==2 || (payment_tabs>=2))?'hidden':''"
+                                    class="mr-2 ">2</span>
+                                <svg [class]="(payment_tabs==2 || (payment_tabs>=2))?'block':'hidden'"
+                                    class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                </svg>
+                                Password <span class="hidden sm:inline-flex sm:ml-2">Verification</span>
+                            </span>
+                        </li>
+                        <li class="flex items-center" [class]="(payment_tabs==3)?'text-red-600':''">
+                            <span [class]="(payment_tabs==3)?'hidden':''" class="mr-2">3 </span>
+                            <svg [class]="(payment_tabs==3)?'block':'hidden'" class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Confirmation
+
+                        </li>
+                    </ol>
+                </div>
+                <div class="mt-5 w-[90%]">
+
+                    <ng-container *ngIf="payment_tabs==1">
+                        <form class="w-[100%]" [formGroup]="FundTransferDataForm">
+                            <div class="w-[100%] mt-5 flex justify-between items-center">
+                                <label class="text-[16px] text-gray-800 mr-5">Your Account Number</label>
+                                <input type="text" matInput name="fromAccountNo" formControlName="fromAccountNo"
+                                    id="first_name"
+                                    class="w-[50%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-not-allowed">
+
+                            </div>
+                            <div class="w-[100%] mt-5 flex justify-between items-center">
+                                <label class="text-[16px] text-gray-800 mr-5">Reciever Account Number</label>
+                                <input type="text" matInput name="toAccountNo" formControlName="toAccountNo"
+                                    id="first_name"
+                                    class="w-[50%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-not-allowed">
+                                <!-- <p class="text-gray-800 text-[20px] font-medium" >deependra@gmail.com</p> -->
+                            </div>
+                            <div *ngIf="page_type=='diff_account'"
+                                class="w-[100%] mt-5 flex justify-between items-center">
+                                <label class="text-[16px] text-gray-800 mr-5">IFSC Code</label>
+                                <input type="text" matInput name="ifsc_code" formControlName="ifsc_code" id="ifsc_code"
+                                    class="w-[50%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 cursor-not-allowed">
+                                <!-- <p class="text-gray-800 text-[20px] font-medium" >deependra@gmail.com</p> -->
+                            </div>
+                            <div class="w-[100%] mt-5 flex justify-between items-center">
+                                <label class="text-[16px] text-gray-800 mr-5">Transfer Amount</label>
+                                <div class="w-[50%]">
+                                    <input type="number" placeholder="Enter amount eg:123" (keypress)="check($event)"
+                                        required matInput name="amount" formControlName="amount" id="first_name"
+                                        class="w-[100%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <p *ngIf="checkCondition.amount"
+                                        class="mt-2 text-sm text-red-600 dark:text-red-500">Required this field!!! </p>
+
+                                </div>
+
+                            </div>
+                            <div class="w-[100%] mt-5 flex justify-between items-center">
+                                <label class="text-[16px] text-gray-800 mr-5">Expense Type</label>
+                                <div class="w-[50%]">
+                                    <select (click)="checkCondition.type=false" id="countries" matInput
+                                        formControlName="expenseType"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                                        <option value="shopping">Shopping</option>
+                                        <option value="food">Food</option>
+                                        <option value="entertainment">Entertainment</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <p *ngIf="checkCondition.type" class="mt-2 text-sm text-red-600 dark:text-red-500">
+                                        Required this field!!!</p>
+                                </div>
+                            </div>
+
+
+                            <div class="w-[100%] mt-5 flex justify-between items-center">
+                                <label class="text-[16px]  text-gray-800 mr-5">Description</label>
+                                <div class="w-[50%]">
+                                    <textarea (keypress)="check($event)" matInput name="description"
+                                        formControlName="description" id="message" rows="4"
+                                        class="block p-2.5 w-[100%] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Write your desription..."></textarea>
+                                    <p *ngIf="checkCondition.desc" class="mt-2 text-sm text-red-600 dark:text-red-500">
+                                        Required this field!!!</p>
+
+                                </div>
+
+                            </div>
+                        </form>
+                    </ng-container>
+
+                    <ng-container *ngIf="payment_tabs==2">
+
+                        <div class="w-[100%] mt-10 flex justify-between items-center">
+                            <label class="text-[16px] text-gray-800 mr-5">Transaction Password</label>
+                            <input type="text"  id="first_name"
+                                class="w-[50%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <!-- <p class="text-gray-800 text-[20px] font-medium" >deependra@gmail.com</p> -->
+                        </div>
+                        <div class="w-[100%] mt-10 flex justify-between items-center">
+                            <label class="text-[16px] text-gray-800 mr-5">OTP ( E-Mail )</label>
+                            <input type="text"  id="first_name"
+                                class="w-[50%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <!-- <p class="text-gray-800 text-[20px] font-medium" >deependra@gmail.com</p> -->
+                        </div>
+                        <div class="w-[100%] mt-10 flex justify-between items-center">
+                            <label class="text-[16px] text-gray-800 mr-5">OTP ( Phone Number )</label>
+                            <input type="text"  id="first_name"
+                                class="w-[50%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                [disabled]="true">
+                            <!-- <p class="text-gray-800 text-[20px] font-medium" >deependra@gmail.com</p> -->
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="payment_tabs==3">
+
+
+
+                        <div class="w-[100%] flex justify-center">
+                            <ng-container *ngIf="isPaymentComplete==3">
+                                <div class="w-[25%]">
+                                    <svg class="w-[100%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="none" stroke="#4afb32" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-check-circle">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                            </ng-container>
+
+                            <ng-container *ngIf="isPaymentComplete!=3">
+                                <div class="w-[100%]  flex justify-center">
+                                    <svg aria-hidden="true"
+                                        class="w-[40%] h-[40%] mt-5 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+                                        viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                            fill="currentColor" />
+                                        <path
+                                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                            fill="currentFill" />
+                                    </svg>
+
+                                </div>
+                            </ng-container>
+
+
+                        </div>
+
+                        <div *ngIf="isPaymentComplete==3"
+                            class="w-[100%] text-green-400 text-[25px] mt-5 flex justify-center">
+                            Payment Successfull
+                        </div>
+
+                    </ng-container>
+
+                </div>
+                <div class="w-[90%] absolute top-[55vh] pt-10 flex justify-around">
+                    <ng-container *ngIf="payment_tabs!=3 ">
+                        <button (click)="onPrevious()" *ngIf="payment_tabs!=1"
+                            class="w-[30%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                            <span
+                                class="w-[100%] relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                Previous
+                            </span>
+                        </button>
+                        <button (click)="onNext()"
+                            class="w-[30%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                            <span
+                                class="w-[100%] relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                Next
+                            </span>
+                        </button>
+                    </ng-container>
+                    <ng-container *ngIf="payment_tabs==3 && isPaymentComplete==3">
+                        <button (click)="addFundTransferInFavourite()"
+                            class="w-[30%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                            <span
+                                class="w-[100%] relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                Add to Favourite
+                            </span>
+                        </button>
+                        <button (click)="closePage()"
+                            class="w-[30%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                            <span
+                                class="w-[100%] relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                New Payment
+                            </span>
+                        </button>
+                    </ng-container>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="w-[100%] px-2 h-[3em] items-center text-[20px]  flex">
+    Profile
+</div>
+<div class="w-[100%]  border-t-[1px] border-gray-300">
+    <div class="w-[100%]  mt-4">
+        <div class="w-[97%] mt-3 py-4 text-[18px] text-gray-800 px-5 bg-gray-100">
+            <!-- <span class="text-gray-500">Name: </span> {{UserData.name}} -->
+            <span class="text-gray-500">Name: </span> <input [class]="UpdateDetails?'border-[2px] ':'border-0 '" [disabled]="!UpdateDetails" class="w-[80%] bg-transparent  rounded-2xl " [(ngModel)]="UserData.name" type="text">
+        </div>
+        <div class="w-[97%] mt-3 py-4 text-[18px] text-gray-800 px-5 bg-gray-100">
+            <span class="text-gray-500">Contact Number: </span> <input [class]="UpdateDetails?'border-[2px] ':'border-0 '" [disabled]="!UpdateDetails" class="w-[80%] bg-transparent  rounded-2xl " [(ngModel)]="UserData.phone_number" type="text">
+        </div>
+        <div class="w-[100%] ">
+            <div class="w-[97%] flex justify-between">
+                <div [class]="UserData.gender=='Male'?'bg-red-100':'bg-gray-100'" class="w-[49%] mt-3 py-4 text-[18px] text-gray-800 px-5 ">
+                    Male &nbsp;&nbsp; <button *ngIf="UpdateDetails" (click)="UserData.gender='Male'" class="border-2 px-5 py-1 text-red-500 border-red-400">Select</button>
+                </div>
+                <div [class]="UserData.gender=='Female'?'bg-red-100':'bg-gray-100'" class="w-[49%] mt-3 py-4 text-[18px] text-gray-800 px-5 ">
+                    Female &nbsp;&nbsp; <button *ngIf="UpdateDetails" (click)="UserData.gender='Female'" class="border-2 px-5 py-1 text-red-500 border-red-400">Select</button>
+                </div>
+            </div>
+        </div>
+        <div class="w-[97%] flex items-center mt-3 py-4 text-[18px] text-gray-800 px-5 bg-gray-100">
+            <span class="text-gray-500">Date of birth: </span>  &nbsp;&nbsp; {{UpdateDetails==false?UserData.date_of_birth:''}} 
+            <div *ngIf="UpdateDetails" (click)="openStartDatePicker()" class="relative max-w-sm">
+                <div matIconSuffix class="absolute inset-y-0 left-0 flex items-center pl-3.5 ">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                    </svg>
+                </div>
+                <input matInput [(ngModel)]="selectedDate" [max]="today_date" [matDatepicker]="start"
+                    type="text"
+                    class="bg-gray-50 border   border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Select Start date">
+                <!-- <mat-datepicker-toggle [for]="end"></mat-datepicker-toggle> -->
+                <mat-datepicker #start></mat-datepicker>
+            </div>
+        </div>
+    </div>
+    <div class="w-[100%] mt-5 ">
+        <div class="w-[97%] flex justify-end">
+            <ng-container *ngIf="UpdateDetails==false">
+                <button (click)="updateUserData()" class="md:w-[15%]  w-[40%] py-4 text-[18px] px-3 bg-black text-white"> Edit</button>
+            </ng-container>
+            <ng-container *ngIf="UpdateDetails==true">
+                <button (click)="saveUserData()" class="md:w-[15%]  w-[40%] py-4 text-[18px] px-3 bg-black text-white"> Save</button>
+            </ng-container>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="w-[100%] flex  md:h-full lg:flex-row flex-col justify-start">
+  <div
+    class="w-[100%] md:h-full  overflow-quick md:overflow-y-auto  lg:px-8 lg:py-14 md:px-6 px-0 md:py-4 py-4 bg-white">
+    <!-- p1 -->
+    <div *ngFor="let item of CartData" class=" lg:flex border-b-[1px] mt-3 w-[100%] py-0 md:py-6 lg:py-8 border-gray-400"
+    #productElement
+    [class.flashing]="flashProductId === item.product_id">
+
+      <!-- img -->
+      <div class="flex justify-center w-[100%] md:w-[30%] h-[100%]">
+        <img 
+        [src]="item.product_images[0]"
+          alt="Black Leather Bag" class="w-[70%] rounded-[10px]" />
+      </div>
+      <!-- content -->
+      <div class=" md:pl-3 lg:mt-0 mt-5 md:w-[100%] 2xl:w-3/4 flex flex-col justify-center">
+        <div class=" flex items-center justify-between w-full pt-1">
+          <p class="text-[18px] font-black leading-none text-gray-800">
+            {{ item.product_title }}
+          </p>
+        </div>
+        <p class="leading-3 text-gray-600 py-4">
+          <span class="line-through text-[15px] md:text-[17px] font-medium">₹{{ item.product_mrp }}</span>
+          &nbsp;
+          <span class="font-semibold text-[17px] md:text-[20px]">₹{{ item.product_price }}</span>
+          &nbsp;
+          <span class="font-normal text-[17px] md:text-[20px] text-red-500">
+            {{ item.product_discount }}% Off</span>
+        </p>
+        <div class="w-[100%]   items-center justify-between pt-3 mb-2">
+          <div class="w-[100%]  flex justify-start flex-row items-center">
+
+            <select  [(ngModel)]="item.selectedProductSize" (change)="onSpecChange(item)"
+              class="w-[32%]  md:py-2 h-10 md:w-[20%] bg-gray-100 md:px-1 border border-gray-200 md:mr-6 mr-2 focus:outline-none">
+              <ng-container *ngIf="item.selectedProductSize === null || item.selectedProductSize==='null' ">
+                <option value="null">Select Size</option>
+              </ng-container>
+              <option *ngFor="let sizeOption of item.product_size" [value]="sizeOption">
+
+                {{ sizeOption }}
+              </option>
+            </select>
+
+            <select [(ngModel)]="item.selectedProductColour" (change)="onSpecChange(item)"
+              class="w-[32%] py-2 h-10 md:w-[20%] bg-gray-100 md:px-1 border border-gray-200 md:mr-6 mr-2 focus:outline-none">
+              <ng-container *ngIf="item.selectedProductColour===null || item.selectedProductColour==='null' ">
+                <option value="null">Select Color</option>
+              </ng-container>
+              <option *ngFor="let color of item.product_color" [value]="color">
+                {{ color }}
+              </option>
+            </select>
+
+
+            <select [(ngModel)]="item.product_quantity" (change)="onSpecChange(item)"
+              class="w-[32%] py-2 h-10 md:w-[20%] bg-gray-100 md:px-1 border border-gray-200 md:mr-6  focus:outline-none">
+              <ng-container *ngIf="item.product_quantity === 'null' || item.product_quantity === null">
+                <option value="null">Select Quantity</option>
+              </ng-container>
+              <option *ngFor="let option of optionData" [value]="option">Qty: {{ option }}</option>
+            </select>
+          </div>
+
+          <div class="flex  w-[100%] flex-col md:flex-row justify-start items-center mt-2">
+            <button type="button" (click)="onRemoveFromBag(item.product_id)"
+              class="w-[100%] md:w-[60%] xl:w-[50%] lg:w-[44%] md:mt-0 mt-2 md:mr-3 bg-gray-200 dark:bg-gray-700 focus:outline-none transition duration-150 ease-in-out rounded hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-indigo-600 text-black px-6 py-2 text-sm focus:ring-4 focus:ring-blue-300 text-center inline-flex items-center dark:focus:ring-blue-800">
+              <span>Remove From Bag</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="ml-3 w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <p class="text-[16px] text-gray-600 pt-4">In Stock</p>
+          <p class="text-[16px] text-gray-600 pt-1">
+            15 days return available
+          </p>
+          <p class="w-[100%] text-[16px] text-gray-600 pt-1">
+            Delivery by Jul 23, 2023
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

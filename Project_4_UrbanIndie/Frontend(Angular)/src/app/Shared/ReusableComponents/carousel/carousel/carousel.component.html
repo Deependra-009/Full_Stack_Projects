@@ -1,0 +1,11 @@
+<div class="slideshow-container">
+    <div *ngFor="let item of items; let i = index" class="mySlides fade" [class.active]="i === currentIndex">
+      <ngx-shimmer-loading [width]="'100%'" *ngIf="isLoading" [height]="'820px'" [direction]="'rtl'" [borderRadius]="'5px'"></ngx-shimmer-loading> 
+      <img  [src]="item.image"   alt="Image"  *ngIf="!isLoading">
+    </div>
+    <a class="prev" (click)="previousSlide()">&#10094;</a>
+    <a class="next" (click)="nextSlide()">&#10095;</a>
+    <div class="dots-container">
+      <span *ngFor="let item of items; let j = index" class="dot" (click)="currentSlide(j)" [class.active]="j === currentIndex"></span>
+    </div>
+  </div>

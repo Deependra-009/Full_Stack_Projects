@@ -1,0 +1,169 @@
+{
+    "user_id": "",
+    "user_password": "",
+    "role": "",
+    "active": "",
+    "user_details": {
+        "account_holder_name": "",
+        "account_holder_address": "",
+        "account_holder_city": "",
+        "account_holder_state": "",
+        "account_holder_country": "",
+        "account_holder_pincode": "",
+        "account_holder_phone_no": "",
+        "account_holder_email": "",
+        "account_holder_dob": "",
+        "account_holder_gender": "",
+        "account_holder_aadhar_no": "",
+        "account_holder_pan_no": "",
+        "account_holder_photo": "",
+        "account_holder_marital_status": "",
+        "account_holder_religion": "",
+        "account_holder_category": "",
+        "account_holder_occupation": "",
+        "account_holder_qualification": "",
+        "account_holder_staff_of_bank": false,
+        "account_holder_residency_status": "",
+        "account_holder_house_of_ownership": "",
+        "account_holder_gross_income": ""
+    },
+    
+    "bank_detials": {
+        "user_id": "",
+        "customer_id": "",
+        "account_number": "",
+        "account_ifsccode": "",
+        "branch_name": "",
+        "branch_area": "",
+        "branch_city": "",
+        "branch_state": "",
+        "branch_country": "",
+        "branch_pincode": "",
+        "account_type": "",
+        "account_balance": "",
+        "account_opening_date": ""
+        
+    },
+    "accountData": [
+        {
+            "account_number":"",
+            "date": "",
+            "income": "",
+            "saving": "",
+            "expense": {
+                "account_number":"",
+                "total": "",
+                "shopping": "",
+                "food": "",
+                "entertainment": "",
+                "other": ""
+            }
+        }
+    ],
+    "statement": [
+        {
+            "user_id":"",
+            "date": "",
+            "description": "",
+            "credit": "",
+            "debit": "",
+            "balance": "",
+            "refNo": ""
+        }
+    ],
+    "beneficiarySameBank": [
+        {
+            "account_number":"",
+            "user_name": "",
+            "user_accountNo": "",
+            "active": true
+        }
+    ],
+    "beneficiaryOtherBank": [
+        {
+            "account_number":"",
+            "user_name": "",
+            "user_accountNo": "",
+            "user_ifscCode": "",
+            "user_branch_area": "",
+            "active": true
+        }
+    ],
+    "favouriteItem": [
+        {
+            "account_number":"",
+            "user_name": "",
+            "user_bank_name": "",
+            "user_account_number": "",
+            "amount": "",
+            "active": true
+        }
+    ],
+    "term_deposit": [
+        {
+            "account_number":"",
+            "ref_no": "",
+            "amount": "",
+            "booked_date": "",
+            "maturity_date": "",
+            "interset_rate": "",
+            "duration": "",
+            "active": false,
+            "nominee_details": [
+                {
+                    "name": "",
+                    "relationship": ""
+                }
+            ]
+        }
+    ],
+    "card":[
+        {
+            "account_number":"",
+            "all_debit_card": [
+                {
+                    "account_number":"",
+                    "card_number": "",
+                    "card_type": "",
+                    "card_holder_name": "",
+                    "expiry_date": "",
+                    "active": true,
+                    "cvv": ""
+                }
+            ],
+            "all_credit_card": [
+                {
+                    "account_number":"",
+                    "card_number": "",
+                    "card_type": "",
+                    "card_holder_name": "",
+                    "expiry_date": "",
+                    "active": true,
+                    "cvv": "",
+                    "credit_limit": "",
+                    "available_credit": "",
+                    "due_date": "",
+                    "credit_card_statement": [
+                        {
+                            "card_number": "",
+                            "date": "",
+                            "total_amount_paid": "",
+                            "due_date": ""
+                        }
+                    ]
+                }
+            ],
+            "nominations_details": {
+                "account_number":"",
+                "name": "",
+                "relationship": "",
+                "date_of_birth": "",
+                "phone_no": "",
+                "nominee_address_type": "",
+                "nominee_address": ""
+            }
+        }
+    ]
+    
+  
+}

@@ -1,0 +1,47 @@
+
+
+.custom-h3{
+    font-size: 17px;
+}
+
+@media (max-width:1500px) {
+    .custom-h3{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:1500px) and (min-width:1300) {
+    
+    .custom-dropdown{
+        width: 80%;
+    }
+}
+@media (max-width:1300px) and (min-width:1200){
+    .custom-dropdown{
+        overflow: scroll;
+        width: 90%;
+        
+    }
+}
+@media (max-width:1200px) and (min-width:800px) {
+    .custom-h3{
+        font-size: 14px;
+    }
+    .custom-dropdown{
+        overflow: scroll;
+        width: 80%;
+        
+    }
+    .custom-dropdown-cards{
+        width: 200px;
+    }
+    .custom-dropdown-subdiv{
+        width: 1000px;
+    }
+    
+}
+@media (min-width:768px) {
+    .svg-custom{
+        display:none
+    }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_APIGateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_APIGateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_ConfigurationServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_ConfigurationServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_EurekaServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_EurekaServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_OrderMicroservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_OrderMicroservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_PaymentMicroservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_PaymentMicroservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_UserMicroservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GlobalBazaar_UserMicroservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie-Authentication-Microservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_APIGateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_APIGateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_ConfigurationServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_ConfigurationServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_EurekaServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_EurekaServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_OrderMicroservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_OrderMicroservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_OtherMicroservices/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_OtherMicroservices/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_PaymentMicroservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_PaymentMicroservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_ProductMicroservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_ProductMicroservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_UserMicroservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UrbanIndie_UserMicroservice/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

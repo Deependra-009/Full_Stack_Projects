@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cborder {
+  border: 2px solid black;
+}
+
+.chatbg{
+  background-image: url('./../public/Images/bg-image.jpg');
+}
+
+.overflow-quick::-webkit-scrollbar {
+  width: 0px;
+}
+
+.online-svg{
+  bottom: 0;
+  right:0;
+}

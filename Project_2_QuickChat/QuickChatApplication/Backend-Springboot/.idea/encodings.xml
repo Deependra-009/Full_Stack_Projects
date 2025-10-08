@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/QuickChatApplication/QuickChat/ChatService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickChatApplication/QuickChat/CommonService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickChatApplication/QuickChat/UserService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickChatApplication/QuickChat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickChatApplication/QuickChat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickChatApplication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickChatApplication/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

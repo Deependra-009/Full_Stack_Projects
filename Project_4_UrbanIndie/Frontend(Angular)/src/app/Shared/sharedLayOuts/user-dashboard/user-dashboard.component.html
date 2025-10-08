@@ -1,0 +1,97 @@
+<div class="w-[100%] bg-white h-auto">
+    <!-- breadcrum -->
+    <div class="w-[100%] border-t-[1px] border-b-[1px] flex justify-center">
+        <div class="w-[85%] flex justify-start items-center h-[10vh]">
+            <app-breadcrumb />
+        </div>
+    </div>
+    <!-- back button -->
+    <div class="w-[100%] sticky bg-white z-1 border-gray-300 border-b-[1px] top-[90px] flex justify-center">
+        <div class="w-[85%] flex justify-between items-center h-[10vh]">
+            <div class="md:w-[30%] w-[50%] flex items-center">
+                <span class="w-[20%]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                    </svg></span>
+                <span class="text-xl md:text-xl font-semibold dark:text-white text-black mr-4">
+                    {{
+                    CurrentPage == "/user"
+                    ? "Edit Profile"
+                    : CurrentPage == "/user/order-page"
+                    ? "Orders"
+                    : ""
+                    }}
+                </span>
+            </div>
+            <div class="md:w-[20%] w-[50%] flex justify-end">
+                <button (click)="signout()"
+                    class="bg-gray-200 text-[15px] hover:bg-black hover:text-white dark:bg-gray-700 focus:outline-none transition duration-150 ease-in-out rounded dark:hover:bg-gray-600 dark:text-indigo-600 text-black px-8 py-2">
+                    Sign out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- main container -->
+    <div class="w-[100%] flex justify-center items-center">
+        <div class="xl:w-[90%] lg:w-[90%] 2xl:w-[85%] w-[100%] h-full flex flex-col-reverse md:flex-row">
+            <div class="w-[100%] xl:w-[80%] lg:w-[80%] md:w-[80%] 2xl:w-[70%] md:px-3">
+                <!-- <hr class="h-[1.5px] w-[100%] bg-gray-200"> -->
+
+                <!-- <hr class="h-[1.5px] w-[100%] bg-gray-200"> -->
+                <div class="w-[100%]">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+            <div
+                class="xl:w-[25%]   lg:w-[20%] md:w-[20%] border-gray-300 pb-2 md:border-b-0 border-b-[1px] md:h-[40%] md:block flex flex-wrap md:border-l-[1px] 2xl:w-[30%] w-[100%] md:sticky md:top-[180px]">
+                <div [class]="
+            CurrentPage == '/user' ? 'text-black font-[500]' : 'text-gray-600'
+          " routerLink="/user"
+                    class="bg-gray-200 md:bg-white mt-2 md:mt-0 md:block flex justify-center items-center ml-3 lg:ml-3 cursor-pointer hover:text-black md:w-[100%] text-[15px] lg:text-[18px] xl:text-[20px] md:pl-10 px-3 lg:px-4 py-4">
+                    Edit Profile
+                </div>
+                <div [class]="
+            CurrentPage == '/user/order-page'
+              ? 'text-black font-[500]'
+              : 'text-gray-600'
+          " routerLink="/user/order-page"
+                    class="bg-gray-200 md:bg-white mt-2 md:mt-0 md:block flex justify-center items-center ml-3 lg:ml-3 cursor-pointer hover:text-black md:w-[100%] text-[15px] lg:text-[18px] xl:text-[20px] md:pl-10 px-3 lg:px-4 py-4">
+                    Orders
+                </div>
+                <div [class]="'text-gray-600'"
+                    class="bg-gray-200 md:bg-white mt-2 md:mt-0 md:block flex justify-center items-center ml-3 lg:ml-3 cursor-pointer hover:text-black md:w-[100%] text-[15px] lg:text-[18px] xl:text-[20px] md:pl-10 px-3 lg:px-4 py-4">
+                    Coupons
+                </div>
+                
+                <div [class]="'text-gray-600'"
+                    class="bg-gray-200 md:bg-white mt-2 md:mt-0 md:block flex justify-center items-center ml-3 lg:ml-3 cursor-pointer hover:text-black md:w-[100%] text-[15px] lg:text-[18px] xl:text-[20px] md:pl-10 px-3 lg:px-4 py-4">
+                    Personal Information
+                </div>
+                <div [class]="
+                CurrentPage == '/user/address-page'
+                  ? 'text-black font-[500]'
+                  : 'text-gray-600'
+              " routerLink="/user/address-page"
+                    class="bg-gray-200 md:bg-white mt-2 md:mt-0 md:block flex justify-center items-center ml-3 lg:ml-3 cursor-pointer hover:text-black md:w-[100%] text-[15px] lg:text-[18px] xl:text-[20px] md:pl-10 px-3 lg:px-4 py-4">
+                    Address Book
+                </div>
+                <div [class]="'text-gray-600'"
+                    class="bg-gray-200 md:bg-white mt-2 md:mt-0 md:block flex justify-center items-center ml-3 lg:ml-3 cursor-pointer hover:text-black md:w-[100%] text-[15px] lg:text-[18px] xl:text-[20px] md:pl-10 px-3 lg:px-4 py-4">
+                    Saved gift cards
+                </div>
+
+                <div [class]="
+                CurrentPage == '/user/contactus-page'
+                  ? 'text-black font-[500]'
+                  : 'text-gray-600'
+              " routerLink="/user/contactus-page"
+                    class="bg-gray-200 md:bg-white mt-2 md:mt-0 md:block flex justify-center items-center ml-3 lg:ml-3 cursor-pointer hover:text-black md:w-[100%] text-[15px] lg:text-[18px] xl:text-[20px] md:pl-10 px-3 lg:px-4 py-4">
+                    Contact Us
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

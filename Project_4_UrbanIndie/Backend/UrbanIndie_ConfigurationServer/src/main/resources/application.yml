@@ -1,0 +1,16 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: CONFIGURATION-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/imvineetpratap/configRepo
+          clone-on-start: true
+#  profiles:
+#    active: prod
+#          username:
+#          password:
+

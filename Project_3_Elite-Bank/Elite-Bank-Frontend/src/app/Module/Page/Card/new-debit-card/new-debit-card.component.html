@@ -1,0 +1,390 @@
+<div class="w-[100%]">
+    <div>
+        <h1>Apply New Debit Card</h1>
+    </div>
+    <div class="mt-5 w-[60%]">
+        <div class="w-[100%]">
+            <ol
+                class="flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base">
+                <li
+                    class="flex md:w-full items-center  sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+                    <span [class]="(tabs==1)?'text-red-600':(tabs>1)?'text-blue-600':''"
+                        class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                        <svg [class]="(tabs==1 || (tabs>=1)) ?'block':'hidden'"
+                            class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                        </svg>
+                        Basic <span class="hidden sm:inline-flex sm:ml-2">Information</span>
+                    </span>
+                </li>
+                <li
+                    class="flex md:w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-6 xl:after:mx-10 dark:after:border-gray-700">
+                    <span [class]="(tabs==2)?'text-red-600':(tabs>2)?'text-blue-600':''"
+                        class="flex items-center after:content-['/'] sm:after:hidden after:mx-2 after:text-gray-200 dark:after:text-gray-500">
+                        <span [class]="(tabs==2 || (tabs>=2))?'hidden':''" class="mr-2 ">2</span>
+                        <svg [class]="(tabs==2 || (tabs>=2))?'block':'hidden'"
+                            class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                        </svg>
+                        Nominee <span class="hidden sm:inline-flex sm:ml-2">Information</span>
+                    </span>
+                </li>
+                <li class="flex items-center" [class]="(tabs==3)?'text-red-600':(tabs>3)?'text-blue-600':''">
+                    <span [class]="(tabs==3)?'hidden':''" class="mr-2">3 </span>
+                    <svg [class]="(tabs==4)?'block':'hidden'" class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2.5"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                    </svg>
+                    {{(tabs==4)?'Successfully':'InProcess'}}
+
+                </li>
+            </ol>
+        </div>
+        <div class="mt-5 w-[100%]  ">
+
+            <ng-container *ngIf="tabs==1">
+                <form class="w-[100%]" [formGroup]="BasicInformationForm">
+                    <div class="w-[100%] grid grid-cols-3 gap-4">
+                        <div class="mt-5 " *ngFor="let item of BasicInformation">
+
+                            <label [for]="item.id"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{item.name}}</label>
+                            <select [id]="item.id" matInput formControlName="{{item.id}}"
+                                class="w-[90%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option *ngFor="let subitem of item.data" [selected]="subitem.selected"
+                                    [value]="subitem.value">{{subitem.name}}
+                                </option>
+                            </select>
+                            <div class="text-red-500"
+                                *ngIf=" CheckForm.form1==true &&  BasicInformationForm.get(item.id)?.hasError('required')">
+                                * This field is required</div>
+
+                        </div>
+
+                        <div class="mt-5">
+                            <label for="gross_annual_income"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                Gross Annual Income
+                            </label>
+                            <input type="text" id="gross_annual_income" matInput
+                                formControlName="gross_annual_income"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[90%] focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required>
+                            <div class="text-red-500"
+                                *ngIf=" CheckForm.form1==true &&  BasicInformationForm.get('gross_annual_income')?.hasError('required')">
+                                * This field is required</div>
+                        </div>
+
+                        <div class="mt-5">
+                            <label for="gross_annual_income"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                Name On Credit Card
+                            </label>
+                            <input type="text" id="card_name" matInput formControlName="card_name"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[90%] focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required>
+                            <div class="text-red-500"
+                                *ngIf=" CheckForm.form1==true &&  BasicInformationForm.get('card_name')?.hasError('required')">
+                                * This field is required</div>
+                        </div>
+
+                        <div class="mt-5">
+                            <label for="card_type"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                Card Type
+                            </label>
+                            <select id="card_type" matInput formControlName="card_type"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option [selected]="true">Select</option>
+                                <option value="RUPAY SELECT Global Credit Card">Master Card
+                                </option>
+                                <option value="EMV VISA CLASSIC">Master Card CLASSIC</option>
+                                <option value="VISA EMV GLOBAL GOLD">Master Card GLOBAL GOLD</option>
+                            </select>
+                            <div class="text-red-500"
+                                *ngIf=" CheckForm.form1==true &&  BasicInformationForm.get('card_type')?.hasError('required')">
+                                * This field is required</div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </form>
+            </ng-container>
+
+            <ng-container *ngIf="tabs==2">
+
+                <div>
+                    <form [formGroup]="NomineeInformationForm" class="grid gap-6 mb-6 md:grid-cols-3">
+                        <div class="mb-6">
+                            <label for="nominee_relationship"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nominee
+                                Relationship</label>
+                            <select id="nominee_relationship" matInput formControlName="nominee_relationship"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option [selected]="true">Select</option>
+                                <option value="Father">Father</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Wife">Wife</option>
+                                <option value="Husband">Husband</option>
+                            </select>
+                            <div class="text-red-500"
+                                *ngIf=" CheckForm.form2==true &&  NomineeInformationForm.get('nominee_relationship')?.hasError('required')">
+                                * This field is required</div>
+                        </div>
+                        <div class="mb-6" *ngFor="let item of NomineeInformation">
+                            <label [for]="item.id"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                {{item.name}}
+                            </label>
+                            <input type="text" [id]="item.id" matInput formControlName="{{item.id}}"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[90%] focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required>
+                            <div class="text-red-500"
+                                *ngIf="CheckForm.form2 && NomineeInformationForm.get(item.id)?.hasError('required')">
+                                * This field is required</div>
+
+                            <div class="text-red-500" *ngIf="
+                                    CheckForm.form2==true &&
+                                    item.id=='nominee_phone_number' &&
+                                    NomineeInformationForm.get(item.id)?.status=='VALID' &&
+                                    NomineeInformationForm.get(item.id)?.value.length!=10">Invalid Value</div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="nominee-name"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nominee
+                                Address Type</label>
+                            <select id="countries" matInput formControlName="nominee_address_type"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[90%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option [selected]="true">Select</option>
+                                <option value="permanent">Permanent</option>
+                                <option value="rent">Rent</option>
+                            </select>
+                            <div class="text-red-500"
+                                *ngIf=" CheckForm.form2==true &&  NomineeInformationForm.get('nominee_address_type')?.hasError('required')">
+                                * This field is required</div>
+                        </div>
+                        <div class="w-[100%] mb-6">
+                            <label for="nominee-name"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nominee
+                                Date Of Birth</label>
+                            <div (click)="openDatePicker()" class="relative max-w-sm">
+                                <div matIconSuffix class="absolute inset-y-0 left-0 flex items-center pl-3.5 ">
+                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                    </svg>
+                                </div>
+                                <input matInput formControlName="nominee_dob" [matDatepicker]="nominee_dob"
+                                    type="text"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date">
+                                <mat-datepicker #nominee_dob></mat-datepicker>
+                                <div class="text-red-500"
+                                    *ngIf=" CheckForm.form2==true &&  NomineeInformationForm.get('nominee_dob')?.hasError('required')">
+                                    * This field is required</div>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="tabs==3">
+
+
+
+                <div class="w-[100%] flex justify-center">
+                    <ng-container *ngIf="isDebitCardProcessComplete==3">
+                        <div class="w-[25%]">
+                            <svg class="w-[100%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="#4afb32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="isDebitCardProcessComplete!=3">
+                        <div class="w-[100%]  ">
+                            <div class="w-[100%] flex justify-center">
+                                <svg aria-hidden="true"
+                                    class="w-[20%] h-[20%] mt-5 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+                                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                                        fill="currentFill" />
+                                </svg>
+                            </div>
+                            <div *ngIf="isDebitCardProcessComplete!=3"
+                                class="w-[100%] text-red-600 text-[15px] mt-5  flex  justify-center">
+
+                                <div class="text-[20px] flex items-center py-5">
+                                    <span>Please Wait While We Process Your Application</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </ng-container>
+
+
+                </div>
+
+
+                <div *ngIf="isDebitCardProcessComplete==3"
+                    class="w-[100%] text-red-600 text-[15px] mt-5 flex flex-col justify-center">
+
+                    <div class="text-[25px] flex items-center py-5">
+                        <span>Congratulations</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-party-popper">
+                            <path d="M5.8 11.3 2 22l10.7-3.79" />
+                            <path d="M4 3h.01" />
+                            <path d="M22 8h.01" />
+                            <path d="M15 2h.01" />
+                            <path d="M22 20h.01" />
+                            <path
+                                d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" />
+                            <path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.7-.72 1.22-1.43 1.22H17" />
+                            <path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98v0C9.52 4.9 9 5.52 9 6.23V7" />
+                            <path
+                                d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z" />
+                        </svg>
+                    </div>
+
+                    <ul class="w-[100%] space-y-2 text-gray-700 list-inside dark:text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Thank you for applying for our debit card. Your application has been received.
+                        </li>
+                        <li class="flex items-center">
+
+                            <li class="flex items-center">
+                                <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                </svg>
+                                Please Set Card Pin. Go to View -> Request -> Instant Pin Generation
+                            </li>
+                    </ul>
+
+
+                </div>
+
+            </ng-container>
+            <ng-container *ngIf="tabs==4">
+
+
+
+                <div class="w-[100%] flex justify-center">
+                    <ng-container *ngIf="isDebitCardProcessComplete==3">
+                        <div class="w-[25%]">
+                            <svg class="w-[100%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="#4afb32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                        </div>
+                    </ng-container>
+
+
+
+
+                </div>
+
+
+                <div *ngIf="isDebitCardProcessComplete==3"
+                    class="w-[100%] text-red-600 text-[15px] mt-5 flex flex-col justify-center">
+
+                    <div class="text-[25px] flex items-center py-5">
+                        <span>Congratulations</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-party-popper">
+                            <path d="M5.8 11.3 2 22l10.7-3.79" />
+                            <path d="M4 3h.01" />
+                            <path d="M22 8h.01" />
+                            <path d="M15 2h.01" />
+                            <path d="M22 20h.01" />
+                            <path
+                                d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" />
+                            <path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.7-.72 1.22-1.43 1.22H17" />
+                            <path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98v0C9.52 4.9 9 5.52 9 6.23V7" />
+                            <path
+                                d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z" />
+                        </svg>
+                    </div>
+
+                    <ul class="w-[100%] space-y-2 text-gray-700 list-inside dark:text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Thank you for applying for our credit card. Your application has been received.
+                        </li>
+                        <li class="flex items-center">
+
+                        <li class="flex items-center">
+                            <svg class="w-3.5 h-3.5 mr-2 text-gray-700 dark:text-gray-400 flex-shrink-0"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                            </svg>
+                            Your application is now under review. We'll notify you of our decision within 3 business
+                            days.
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </ng-container>
+
+        </div>
+
+
+        <div class="flex w-[100%] justify-around pt-10 ">
+
+            <button *ngIf="tabs!=3" (click)="tabs<3?onNext():gotoHome()" [class]="tabs==3?'w-[50%]':'w-[30%]'"
+                class=" relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                <span
+                    class="w-[100%] relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Next
+                </span>
+            </button>
+        </div>
+
+
+
+    </div>
+</div>

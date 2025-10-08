@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Amazon Ember', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f8fa;
+  color: #232f3e;
+}
+
+.aws-gradient {
+  background: linear-gradient(135deg, #ff9900 0%, #ff6600 100%);
+}
+
+.aws-card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200;
+}
+
+.aws-button {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.aws-button-primary {
+  @apply aws-button bg-aws-orange text-white hover:bg-orange-600;
+}
+
+.aws-button-secondary {
+  @apply aws-button bg-gray-100 text-gray-700 hover:bg-gray-200;
+}
+
+.aws-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-aws-orange focus:border-transparent;
+}

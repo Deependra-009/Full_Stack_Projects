@@ -1,0 +1,31 @@
+<!-- {{Data.length}} -->
+<!---------------------------main container----------------------->
+<div class="w-[100%] ">
+
+    <!--------------------Favourite container ribbon ends------------------->
+
+    <!---------------------------sub container starts------------------->
+    <div class="w-[83%] box-colour  m-auto mt-8 mb-8 justify-center">
+        <p class="text-white m-auto p-2">
+            Order within 15 minutes to get your items shipped today!
+        </p>
+    </div>
+    <!---------------------------sub container ends------------------->
+
+    <!------------------card section--------------------------------->
+    <div class="w-[83%] m-auto mt-8 mb-8">
+        <app-product-card4-wishlist [page_title]="'favourites'"
+            [isFavPage]="true"
+            [grid_style]="'grid mobile:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 justify-center m-auto'"
+            [border_style]="'border border-gray-200 dark:bg-gray-800 dark:border-gray-700'" [Data]="WishListData"
+            [style_class]="'2xl:w-[280px] 2xl:h-85 2xl:m-auto bg-white flex flex-col	flex-wrap items-center border-2 border-gray-200 cursor-pointer justify-center rounded-lg shadow xl:w-[250px] xl:h-70px lg:w-[290px]  md:w-[300px] mobile:w-[300px]'"
+            [image_card_style]="' w-[100%]  h-[280px]'"></app-product-card4-wishlist>
+
+
+        <!-- </div> -->
+    </div>
+
+    <div class="w-[83%] h-10 m-auto mt-8 mb-8 justify-center" *ngIf="isZeroLength()">
+        <!-- Content when there are no favorites -->
+    </div>
+</div>

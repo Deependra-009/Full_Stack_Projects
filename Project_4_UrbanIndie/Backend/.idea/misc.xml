@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/GlobalBazaar_APIGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/GlobalBazaar_EurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/GlobalBazaar_UserMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/GlobalBazaar_OrderMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_ProductMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/GlobalBazaar_ConfigurationServer/pom.xml" />
+        <option value="$PROJECT_DIR$/GlobalBazaar_PaymentMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_OrderMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_APIGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_EurekaServer/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_PaymentMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_UserMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_ConfigurationServer/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie_OtherMicroservices/pom.xml" />
+        <option value="$PROJECT_DIR$/UrbanIndie-Authentication-Microservice/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK" />
+</project>

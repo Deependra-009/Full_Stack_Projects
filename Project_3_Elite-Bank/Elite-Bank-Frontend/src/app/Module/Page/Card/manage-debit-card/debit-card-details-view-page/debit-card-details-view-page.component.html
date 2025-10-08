@@ -1,0 +1,1149 @@
+<div
+  [class]="
+    'w-[100%] h-[110vh] flex justify-center items-center  bg-gray-400  backdrop-blur-[0px]'
+  "
+  aria-hidden="true"
+  class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+  <div class="w-[95%] bg-white h-[60em] rounded-[25px]">
+    <!-- Modal content -->
+    <div
+      class="flex justify-between h-[7vh] px-10 border-b-[3px] border-gray-400 rounded-t dark:border-gray-600"
+    >
+      <h3
+        class="text-xl flex justify-center items-center h-[7vh] text-gray-900 dark:text-white"
+      >
+        DEBIT CARD DETAILS
+      </h3>
+      <button class=" " routerLink="/user/manage-debit-card">
+        <svg
+          class="w-3 h-3"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Card Details -->
+
+    <div class="w-[100%] flex justify-between">
+      <!-- left side data -->
+      <div
+        class="w-[20%] overflow-quick overflow-y-auto h-[56em] border-r-[2px] border-gray-400"
+      >
+        <div
+          *ngFor="let item of CardSideNavData; index as i"
+          class="w-[100%] hover:cursor-pointer"
+        >
+          <div
+            (click)="
+              i == 0
+                ? showSelectSubNavDataID('debit-card-status', i)
+                : showSubNavData(item.id)
+            "
+            [class]="i == 0 ? 'bg-white' : 'bg-blue-100'"
+            class="border-b-[2px] border-blue-400 p-5 flex justify-between items-center"
+          >
+            <div class="text-[20px]">{{ item.name }}</div>
+            <svg
+              *ngIf="i != 0"
+              [class]="item.id == SubNavDataID ? 'rotate-[270deg]' : ''"
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-chevron-down"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </div>
+          <ng-container *ngIf="item.id == SubNavDataID">
+            <ng-container *ngFor="let subitem of item.subdata; index as i">
+              <div
+                [class]="
+                  subitem.active ? 'cursor-pointer' : 'cursor-not-allowed'
+                "
+                (click)="showSelectSubNavDataID(subitem, -1)"
+                class="w-[100%] border-b-[2px] border-gray-400 p-5 flex justify-between items-center"
+              >
+                <div class="text-[20px]">{{ subitem.name }}</div>
+              </div>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+
+      <!-- right side data -->
+
+      <div class="w-[80%]">
+        <!-- debit card status -->
+
+        <ng-container *ngIf="SelectSubNavDataID == 'debit-card-status'">
+          <div class="w-[100%]">
+            <div class="w-[100%] p-5 text-[20px]">Debit Card Status</div>
+            <div class="p-5">
+              <div
+                class="w-[30%] flex justify-center flex-col bg-bg-card-img h-56 bg-cover rounded-xl relative text-white shadow-2xl transition-transform transform"
+              >
+                <ng-container *ngIf="ShowCardData">
+                  <div class="w-full px-8">
+                    <div class="flex justify-between">
+                      <div class="">
+                        <p class="font-light">Name</p>
+
+                        <p class="font-medium tracking-widest">
+                          {{ this.SelectedDebitCard.card_name }}
+                        </p>
+                      </div>
+                      <img
+                        class="w-14 h-14"
+                        src="https://i.imgur.com/bbPHJVe.png"
+                      />
+                    </div>
+                    <div class="pt-1">
+                      <p class="font-light">Card Number</p>
+
+                      <p class="font-medium tracking-more-wider">
+                        {{ this.SelectedDebitCard.card_number }}
+                      </p>
+                    </div>
+                    <div class="pt-1 pr-6">
+                      <div class="flex justify-between">
+                        <div class="">
+                          <p class="font-light text-xs">Expiry</p>
+
+                          <p class="font-medium tracking-wider text-sm">
+                            {{ this.SelectedDebitCard.expiryDate }}
+                          </p>
+                        </div>
+
+                        <div class="">
+                          <p class="font-light text-xs">CVV</p>
+
+                          <p class="font-bold tracking-more-wider text-sm">
+                            {{ this.SelectedDebitCard.cvv }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+
+                <ng-container *ngIf="!ShowCardData">
+                  <div
+                    class="backdrop-blur-md w-[100%] h-56 flex justify-center items-center"
+                  >
+                    <button
+                      (click)="enterPinNumber()"
+                      class="w-[40%] rounded-[10px] text-[17px] font-[500] text-white px-2 py-3 border-2 border-white"
+                    >
+                      Show Card Details
+                    </button>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-[100%] flex items-center border-t-[2px] border-b-[2px] border-gray-400 p-5"
+          >
+            <div class="text-[20px]">Status:</div>
+            <ng-container *ngIf="this.SelectedDebitCard.active">
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="ml-3 text-green-500"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <span class="text-green-500 ml-2 text-[18px]">Active</span>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="!this.SelectedDebitCard.active">
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="ml-2 text-red-500"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m15 9-6 6" />
+                  <path d="m9 9 6 6" />
+                </svg>
+                <span class="text-red-500 ml-2 text-[18px]">Not Active</span>
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="w-[100%]">
+            <div class="w-[100%] font-[500] p-5 text-[18px]">
+              {{ PageData.debit_unable_to_recall }}
+              <a class="text-blue-600 hover:cursor-pointer underline"
+                >Click here to view demo</a
+              >
+            </div>
+            <div class="w-[100%] p-5 text-[18px]">Note:</div>
+            <div class="w-[100%] p-5 pl-[50px] text-[18px]">
+              <ul class="list-disc">
+                <li>{{ PageData.debit_only_those_cards }}</li>
+              </ul>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- debit card upgrade -->
+
+        <ng-container *ngIf="SelectSubNavDataID == 'debit-card-upgrade'">
+          <div class="w-[100%]">
+            <div class="w-[100%] p-5 text-[20px]">Debit Card Upgrade</div>
+
+            <div class="text-[17px] border-2 border-gray-400 py-5 px-5 mx-5">
+              Card No:&nbsp;&nbsp;&nbsp;
+              <span class="font-[500]">{{
+                this.SelectedDebitCard.card_number
+              }}</span>
+            </div>
+
+            <div class="w-[100%]" [ngSwitch]="UpgradeCardTab.tab">
+              <ng-container *ngSwitchCase="1">
+                <div class="w-[100%] p-5">
+                  <table class="w-[100%] border-[2px] border-gray-400">
+                    <tr class="bg-blue-200">
+                      <th class="text-[18px] w-[15%] font-[500] py-4"></th>
+                      <th class="text-[18px] w-[30%] font-[500] py-4">Name</th>
+                      <th class="text-[18px] w-[15%] font-[500] py-4">
+                        Amount
+                      </th>
+                      <th class="text-[18px] w-[40%] font-[500] py-4">
+                        Benefit
+                      </th>
+                    </tr>
+                    <tr
+                      *ngFor="
+                        let item of PageData.upgrade_card_data.debit_card
+                          .card_list
+                      "
+                      class="border-b-[2px] border-gray-400"
+                    >
+                      <td class="">
+                        <div
+                          class="w-[100%] flex justify-center items-center py-3"
+                        >
+                          <input
+                            *ngIf="
+                              !(item.name == this.SelectedDebitCard.card_type)
+                            "
+                            [(ngModel)]="SelectedUpgradeDebitCard"
+                            [id]="item.id"
+                            type="radio"
+                            [value]="item"
+                            class="w-5 h-5 text-blue-600 bg-gray-200 focus:ring-transparent border-2 border-gray-600"
+                          />
+                          <div
+                            *ngIf="
+                              item.name == this.SelectedDebitCard.card_type
+                            "
+                          >
+                            OWNED
+                          </div>
+                        </div>
+                      </td>
+                      <td class="">
+                        <div
+                          class="w-[100%] flex justify-center items-center py-3"
+                        >
+                          {{ item.name }}
+                        </div>
+                      </td>
+                      <td class="">
+                        <div
+                          class="w-[100%] flex justify-center items-center py-3"
+                        >
+                          {{ item.fee }}
+                        </div>
+                      </td>
+                      <td class="">
+                        <div
+                          class="w-[100%] flex justify-center items-center py-3"
+                        >
+                          {{ item.benefit }}
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="w-[100%] p-5 flex justify-start items-center">
+                  <input
+                    type="checkbox"
+                    [(ngModel)]="this.SelectedUpgradeDebitCard.checkedTC"
+                    value=""
+                    class="w-5 h-5 text-blue-600 bg-gray-100 border-2 border-gray-600 rounded focus:ring-transparent dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label
+                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    I agree to have read and understood the
+                    <span class="text-blue-500 underline hover:cursor-pointer"
+                      >Terms and condition</span
+                    >
+                    related to Debit Card and agree to abide by them.
+                  </label>
+                </div>
+
+                <div class="w-[100%] p-5 flex items-center">
+                  <button
+                    class="w-[13%] py-3 text-[17px] rounded-[10px] bg-gray-200"
+                  >
+                    Back
+                  </button>
+                  <button
+                    class="ml-[5%] w-[13%] py-3 bg-blue-600 text-white rounded-[10px] text-[17px]"
+                    (click)="upgradeDebitCardData()"
+                  >
+                    Confirm
+                  </button>
+                </div>
+              </ng-container>
+
+              <ng-container *ngSwitchCase="2">
+                <div
+                  *ngIf="UpgradeCardTab.loading == true"
+                  class="w-[80%] mt-10"
+                >
+                  <div class="w-[50%] flex justify-center">
+                    <svg
+                      aria-hidden="true"
+                      class="w-[20%] h-[20%] mt-5 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+                      viewBox="0 0 100 101"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="w-[50%] text-red-600 text-[15px] mt-5 flex justify-center"
+                  >
+                    <div class="text-[20px] flex items-center py-5">
+                      <span>Please Wait While We Process Your Application</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  *ngIf="UpgradeCardTab.loading == false"
+                  class="w-[80%] m-5 text-[15px] mt-5"
+                >
+                  <div
+                    class="text-[25px] text-green-500 flex items-center py-5"
+                  >
+                    <span>Congratulations</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-party-popper"
+                    >
+                      <path d="M5.8 11.3 2 22l10.7-3.79" />
+                      <path d="M4 3h.01" />
+                      <path d="M22 8h.01" />
+                      <path d="M15 2h.01" />
+                      <path d="M22 20h.01" />
+                      <path
+                        d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"
+                      />
+                      <path
+                        d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.7-.72 1.22-1.43 1.22H17"
+                      />
+                      <path
+                        d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98v0C9.52 4.9 9 5.52 9 6.23V7"
+                      />
+                      <path
+                        d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"
+                      />
+                    </svg>
+                  </div>
+
+                  <ul
+                    class="w-[100%] space-y-2 text-gray-700 list-inside dark:text-gray-400"
+                  >
+                    <li class="flex items-center">
+                      <svg
+                        class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                        />
+                      </svg>
+                      Your card is Upgraded Successfully
+                    </li>
+                  </ul>
+
+                  <div class="w-[100%] mt-10">
+                    <button
+                      (click)="goToHomePage()"
+                      class="py-2 text-[18px] border-black hover:text-blue-600 rounded-[8px] border-2 hover:border-blue-600 w-[10%]"
+                    >
+                      Home
+                    </button>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+            <div></div>
+          </div>
+        </ng-container>
+
+        <!-- cash back redemption -->
+
+        <ng-container *ngIf="SelectSubNavDataID == 'cash-back-redemption'">
+          <div class="w-[90%]">
+            <div class="w-[100%] p-5 text-[20px]">
+              Debit Card Cash Back Redemption
+            </div>
+
+            <div class="w-[100%] mt-5 px-5 py-1">
+              Please verify and confirm your request for Cash Back Redemption
+            </div>
+
+            <div class="w-[100%] mx-5 border-2 border-gray-400">
+              <div
+                class="w-[100%] text-[17px] border-b-2 border-gray-400 py-5 px-5"
+              >
+                Card No:&nbsp;&nbsp;&nbsp;
+                <span class="font-[500]">{{
+                  this.SelectedDebitCard.card_number
+                }}</span>
+              </div>
+              <div class="w-[100%] border-b-2 border-gray-400 p-5">
+                <table class="w-[100%]">
+                  <tr class="border-2 border-gray-400">
+                    <th class="w-[7%] border-r-2 border-gray-400"></th>
+                    <th class="py-5 border-r-2 border-gray-400 font-[500]">
+                      Program
+                    </th>
+                    <th
+                      class="w-[15%] border-r-2 border-gray-400 py-5 font-[500]"
+                    >
+                      Points Accured
+                    </th>
+                    <th
+                      class="w-[15%] border-r-2 border-gray-400 py-5 font-[500]"
+                    >
+                      Minimum Points Needed
+                    </th>
+                    <th
+                      class="w-[15%] border-r-2 border-gray-400 py-5 font-[500]"
+                    >
+                      Points to be Redeemed
+                    </th>
+                    <th class="w-[15%] py-5 font-[500]">
+                      Account being redeemed (INR)
+                    </th>
+                  </tr>
+                  <tr class="border-2 border-gray-400">
+                    <td class="border-r-2 border-gray-400">
+                      <div
+                        class="w-[100%] flex justify-center items-center py-5"
+                      >
+                        <input
+                          type="checkbox"
+                          value=""
+                          class="w-5 hover:cursor-pointer hover:border-2 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                      </div>
+                    </td>
+                    <td class="border-r-2 border-gray-400">
+                      <div
+                        class="w-[100%] flex justify-center items-center py-5"
+                      >
+                        Debit Card Promotional Cashback Points
+                      </div>
+                    </td>
+                    <td class="border-r-2 border-gray-400">
+                      <div
+                        class="w-[100%] flex justify-center items-center py-5"
+                      >
+                        0
+                      </div>
+                    </td>
+                    <td class="border-r-2 border-gray-400">
+                      <div
+                        class="w-[100%] flex justify-center items-center py-5"
+                      >
+                        1
+                      </div>
+                    </td>
+                    <td class="border-r-2 border-gray-400">
+                      <div
+                        class="w-[100%] flex justify-center items-center py-5"
+                      >
+                        <input />
+                      </div>
+                    </td>
+                    <td class="border-r-2 border-gray-400">
+                      <div
+                        class="w-[100%] flex justify-center items-center py-5"
+                      >
+                        Rs
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="w-[100%] px-5 py-3">
+                <button
+                  disabled
+                  class="w-[16%] cursor-not-allowed py-3 bg-blue-600 text-white rounded-[10px] text-[17px]"
+                >
+                  Confirm
+                </button>
+              </div>
+            </div>
+
+            <div class="w-[100%] p-5">
+              <div class="w-[100%] text-[20px] text-blue-600">Note:</div>
+              <ul class="p-5">
+                <li class="list-disc text-[16px]">
+                  For Platinum Gold and Titanium Royale Debit Card
+                </li>
+                <ul class="p-5">
+                  <li
+                    *ngFor="
+                      let item of PageData.cashback.debit_card_note
+                        .platinum_gold
+                    "
+                    class="list-decimal text-[16px] py-1"
+                  >
+                    {{ item }}
+                  </li>
+                </ul>
+
+                <li class="list-disc text-[16px]">
+                  For Women and Business Debit Card
+                </li>
+                <ul class="p-5">
+                  <li
+                    *ngFor="
+                      let item of PageData.cashback.debit_card_note
+                        .women_business_card
+                    "
+                    class="list-decimal text-[16px] py-1"
+                  >
+                    {{ item }}
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="SelectSubNavDataID == 'whats-new'">
+          <div class="w-[80%]">
+            <h1>whats-new</h1>
+          </div>
+        </ng-container>
+
+        <!-- debit card hotlisting  -->
+        <ng-container *ngIf="SelectSubNavDataID == 'debit-card-hotlisting'">
+          <div class="w-[80%]">
+            <div class="w-[100%] p-5 text-[20px]">
+              ATM / Debit Card Hotlisting - Confirm
+            </div>
+            <div class="w-[100%]" [ngSwitch]="DebitCardHotlistingTab.tab">
+              <ng-container *ngSwitchCase="1">
+                <div class="w-[100%] ml-5 mt-5 text-[16px] font-[400]">
+                  Please verify and confirm your request for hotlisting your card
+                </div>
+                <div class="ml-5 w-[100%] border-2 border-gray-400">
+                  <div
+                    class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">Card No:</div>
+                    <div class="py-4 text-[17px] w-[70%]">{{this.SelectedDebitCard.card_number}}</div>
+                  </div>
+                  <div
+                    class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">Reason</div>
+                    <div class="py-4 text-[17px] w-[70%]">
+                      <select
+                        id="debit_card_hotlisting_reason"
+                        [(ngModel)]="DebitCardHotlistingTab.reason"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[40%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        name="debit_card_hotlisting_reason"
+                        >
+                        <option value="lost">Lost</option>
+                        <option value="stolen">Stolen</option>
+                        <option value="damaged">Damaged</option>
+                        <option value="compromised">Compromised</option>
+                        <option value="expired">Expired</option>
+                        <option value="suspicious-activity">
+                          Suspicious Activity
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="h-[70px] w-[100%] flex justify-start items-center">
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">Remarks</div>
+                    <div class="py-4 text-[17px] w-[70%]">
+                      <input
+                        [(ngModel)]="DebitCardHotlistingTab.remarks"
+                        placeholder="Remarks"
+                        class="w-[40%] p-2 text-[17px] border-2 border-gray-300"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="w-[100%] p-5 flex items-center">
+                  <!-- <button
+                    class="w-[14%] py-3 text-[17px] rounded-[10px] bg-gray-200"
+                  >
+                    Back
+                  </button> -->
+                  <button
+                  (click)="cardHotListing()"
+                    class="w-[14%] py-3 bg-blue-600 text-white rounded-[10px] text-[17px]"
+                  >
+                    Confirm
+                  </button>
+                </div>
+
+                <div class="w-[100%] p-5">
+                  <div class="w-[100%] text-[20px] text-blue-600">Note:</div>
+                  <ul class="p-5">
+                    <li
+                      *ngFor="let item of PageData.card_hotlisting"
+                      class="py-1 list-disc text-[16px]"
+                    >
+                      {{ item }}
+                    </li>
+                  </ul>
+                </div>
+              </ng-container>
+
+              <ng-container *ngSwitchCase="2">
+                <div
+                  *ngIf="DebitCardHotlistingTab.loading == true"
+                  class="w-[100%] mt-10"
+                >
+                  <div class="w-[70%] flex justify-center">
+                    <svg
+                      aria-hidden="true"
+                      class="w-[20%] h-[20%] mt-5 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+                      viewBox="0 0 100 101"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="w-[70%] text-red-600 text-[15px] mt-5 flex justify-center"
+                  >
+                    <div class="text-[20px] flex items-center py-5">
+                      <span>Please Wait While We Process Your Application</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  *ngIf="DebitCardHotlistingTab.loading == false"
+                  class="w-[80%] m-5 text-[15px] mt-5"
+                >
+                  <div
+                    class="text-[25px] text-green-500 flex items-center py-5"
+                  >
+                    <span>Congratulations</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-party-popper"
+                    >
+                      <path d="M5.8 11.3 2 22l10.7-3.79" />
+                      <path d="M4 3h.01" />
+                      <path d="M22 8h.01" />
+                      <path d="M15 2h.01" />
+                      <path d="M22 20h.01" />
+                      <path
+                        d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"
+                      />
+                      <path
+                        d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.7-.72 1.22-1.43 1.22H17"
+                      />
+                      <path
+                        d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98v0C9.52 4.9 9 5.52 9 6.23V7"
+                      />
+                      <path
+                        d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"
+                      />
+                    </svg>
+                  </div>
+
+                  <ul
+                    class="w-[100%] space-y-2 text-gray-700 list-inside dark:text-gray-400"
+                  >
+                    <li class="flex items-center">
+                      <svg
+                        class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                        />
+                      </svg>
+                      Your card is Deactivate Successfully
+                    </li>
+                  </ul>
+
+                  <div class="w-[100%] mt-10">
+                    <button
+                      (click)="goToHomePage()"
+                      class="py-2 text-[18px] border-black hover:text-blue-600 rounded-[8px] border-2 hover:border-blue-600 w-[10%]"
+                    >
+                      Home
+                    </button>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="SelectSubNavDataID == 'instant-pin-generation'">
+          <div class="w-[80%]">
+            <div class="w-[100%] p-5 text-[20px]">Instant Pin Generation</div>
+            <div class="'w-[100%]" [ngSwitch]="InstantPinGenerationTab.tab">
+              <ng-container *ngSwitchCase="1">
+                <div class="ml-5 mt-10 w-[100%] border-2 border-gray-400">
+                  <div
+                    class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">Card No:</div>
+                    <div class="py-4 text-[17px] w-[70%]">{{this.SelectedDebitCard.card_number}}</div>
+                  </div>
+                  <div
+                    class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">
+                      Enter 4 Digit Pin
+                    </div>
+                    <div class="py-4 text-[17px] w-[40%]">
+                      <input [(ngModel)]="InstantPinGenerationTab.pin" [maxlength]="4"
+                      placeholder="4 Digit Pin"
+                        class="w-[40%] p-2 text-[20px] border-2 border-gray-300"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="h-[70px] border-b-2 border-gray-400 w-[100%] flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">
+                      Re-enter 4 Digit Pin
+                    </div>
+                    <div class="py-4 text-[17px] w-[40%]">
+                      <input [(ngModel)]="InstantPinGenerationTab.re_pin" [maxlength]="4"
+                      placeholder="4 Digit Pin"
+                        class="w-[40%] p-2 text-[20px] border-2 border-gray-300"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="h-[70px] p-5 w-[100%] flex justify-start items-center"
+                  >
+                    <button
+                      (click)="instantPinGenerationFunc(1,2)"
+                      class="w-[14%] py-3 bg-blue-600 text-white rounded-[10px] text-[17px]"
+                    >
+                      Confirm
+                    </button>
+                  </div>
+                </div>
+                <div class="w-[100%] p-5">
+                  <div class="w-[100%] text-[20px] text-blue-600">Note:</div>
+                  <ul class="p-5">
+                    <li
+                      *ngFor="let item of PageData.instant_pin_generation"
+                      class="py-1 list-disc text-[16px]"
+                    >
+                      {{ item }}
+                    </li>
+                  </ul>
+                </div>
+              </ng-container>
+
+              <ng-container *ngSwitchCase="2">
+
+                <div class="ml-5 mt-10 w-[100%] border-2 border-gray-400">
+                  <div
+                    class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">Card No:</div>
+                    <div class="py-4 text-[17px] w-[70%]">{{this.SelectedDebitCard.card_number}}</div>
+                  </div>
+                  <div
+                    class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">
+                      Enter OTP (mobile)
+                    </div>
+                    <div class="py-4 text-[17px] w-[70%]">
+                      <input
+                        class="w-[40%] p-2 text-[20px] border-2 border-gray-300"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="h-[70px] border-b-2 border-gray-400 w-[100%] flex justify-start items-center"
+                  >
+                    <div class="py-4 text-[17px] pl-5 w-[30%]">
+                      Enter OTP (email)
+                    </div>
+                    <div class="py-4 text-[17px] w-[70%]">
+                      <input
+                        class="w-[40%] p-2 text-[20px] border-2 border-gray-300"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="h-[70px] p-5 w-[100%] flex justify-start items-center"
+                  >
+                    <button
+                      (click)="instantPinGenerationFunc(2,3)"
+                      class="w-[14%] py-3 bg-blue-600 text-white rounded-[10px] text-[17px]"
+                    >
+                      Confirm
+                    </button>
+                  </div>
+                </div>
+              </ng-container>
+
+              <ng-container *ngSwitchCase="3">
+                <div
+                  *ngIf="InstantPinGenerationTab.loading == true"
+                  class="w-[100%] mt-10"
+                >
+                  <div class="w-[70%] flex justify-center">
+                    <svg
+                      aria-hidden="true"
+                      class="w-[20%] h-[20%] mt-5 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+                      viewBox="0 0 100 101"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="w-[70%] text-red-600 text-[15px] mt-5 flex justify-center"
+                  >
+                    <div class="text-[20px] flex items-center py-5">
+                      <span>Please Wait While We Process Your Application</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  *ngIf="InstantPinGenerationTab.loading == false"
+                  class="w-[80%] m-5 text-[15px] mt-5"
+                >
+                  <div
+                    class="text-[25px] text-green-500 flex items-center py-5"
+                  >
+                    <span>Congratulations</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-party-popper"
+                    >
+                      <path d="M5.8 11.3 2 22l10.7-3.79" />
+                      <path d="M4 3h.01" />
+                      <path d="M22 8h.01" />
+                      <path d="M15 2h.01" />
+                      <path d="M22 20h.01" />
+                      <path
+                        d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"
+                      />
+                      <path
+                        d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11v0c-.11.7-.72 1.22-1.43 1.22H17"
+                      />
+                      <path
+                        d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98v0C9.52 4.9 9 5.52 9 6.23V7"
+                      />
+                      <path
+                        d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"
+                      />
+                    </svg>
+                  </div>
+
+                  <ul
+                    class="w-[100%] space-y-2 text-gray-700 list-inside dark:text-gray-400"
+                  >
+                    <li class="flex items-center">
+                      <svg
+                        class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+                        />
+                      </svg>
+                      Your Pin is generated Successfully
+                    </li>
+                  </ul>
+
+                  <div class="w-[100%] mt-10">
+                    <button
+                      (click)="goToHomePage()"
+                      class="py-2 text-[18px] border-black hover:text-blue-600 rounded-[8px] border-2 hover:border-blue-600 w-[10%]"
+                    >
+                      Home
+                    </button>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="SelectSubNavDataID == 'set-card-limit-usuage'">
+          <div class="w-[80%]">
+            <div class="w-[100%] p-5 text-[20px]">Set Card Limit Usuage</div>
+            <div class="ml-5 mt-10 w-[100%] border-2 border-gray-400">
+              <div
+                class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+              >
+                <div class="py-4 text-[17px] pl-5 w-[30%]">Card No:</div>
+                <div class="py-4 text-[17px] w-[70%]">123XXXXXX76</div>
+              </div>
+              <div
+                class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+              >
+                <div class="py-4 text-[17px] pl-5 w-[30%]">Enter Amount</div>
+                <div class="py-4 text-[17px] w-[70%]">
+                  <input
+                    class="w-[40%] p-2 text-[20px] border-2 border-gray-300"
+                  />
+                </div>
+              </div>
+              <div
+                class="h-[70px] p-5 w-[100%] flex justify-start items-center"
+              >
+                <button
+                  class="w-[14%] py-3 bg-blue-600 text-white rounded-[10px] text-[17px]"
+                >
+                  Confirm
+                </button>
+              </div>
+            </div>
+            <div class="w-[100%] p-5">
+              <div class="w-[100%] text-[20px] text-blue-600">Note:</div>
+              <ul class="p-5">
+                <li
+                  *ngFor="let item of PageData.set_card_usuage_limit.debit_card"
+                  class="py-1 list-disc text-[16px]"
+                >
+                  {{ item }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container
+          *ngIf="SelectSubNavDataID == 'account-linking-to-debit-card'"
+        >
+          <div class="w-[80%]">
+            <div class="w-[100%] p-5 text-[20px]">
+              Accounting Linking to Debit Card
+            </div>
+            <div class="w-[100%] p-5">
+              <div class="text-[15px] border-[1px] border-gray-400 py-4 pl-5">
+                Card Not Linked to Any Account
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="SelectSubNavDataID == 'pin-regeneration'">
+          <div class="w-[80%]">
+            <div class="w-[100%] text-[20px] p-5">Pin Regeneration</div>
+            <div class="w-[100%]">
+              <div class="w-[100%] ml-5 mt-5 text-[16px] font-[400]">
+                You will be receiving a One Time Password on your registered
+                mobile number<br />
+
+                Please visit your nearest HDFC Bank ATM to set your ATM PIN,
+                easily and conveniently, using this One Time Password
+              </div>
+              <div class="ml-5 w-[100%] border-2 border-gray-400">
+                <div
+                  class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                >
+                  <div class="py-4 text-[17px] pl-5 w-[30%]">Card No:</div>
+                  <div class="py-4 text-[17px] w-[70%]">123XXXXXX76</div>
+                </div>
+                <div
+                  class="h-[70px] w-[100%] border-b-2 border-gray-400 flex justify-start items-center"
+                >
+                  <div class="py-4 text-[17px] pl-5 w-[30%]">Reason</div>
+                  <div class="py-4 text-[17px] w-[70%]">
+                    <select
+                      id="countries"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[40%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                      <option selected>Choose a Reason</option>
+                      <option value="US">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="FR">France</option>
+                      <option value="DE">Germany</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="h-[70px] w-[100%] flex justify-start items-center">
+                  <div class="w-[20%] pl-5 text-[17px]">Remarks</div>
+                  <div class="w-[20%] pl-5 text-[17px]">XXXXXXX55000</div>
+                  <div class="w-[60%] pl-5 text-[17px]">
+                    If this number is correct,the One Time Password is sent to
+                    this number
+                  </div>
+                </div>
+                <div class="h-[70px] w-[100%] flex justify-start items-center">
+                  <div class="flex justify-start ml-5 items-center w-[20%]">
+                    <input
+                      type="radio"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label class="pl-5">Yes</label>
+                  </div>
+                  <div class="flex justify-start ml-5 items-center w-[20%]">
+                    <input
+                      type="radio"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label class="pl-5">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] p-5 flex justify-start items-center">
+                <input
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
+                  I agree to have read and understood the
+                  <span class="text-blue-500 underline hover:cursor-pointer"
+                    >Terms and condition</span
+                  >
+                  related to Debit Card and agree to abide by them.
+                </label>
+              </div>
+
+              <div class="w-[100%] p-5 flex items-center">
+                <button
+                  class="w-[13%] py-3 text-[17px] rounded-[10px] bg-gray-200"
+                >
+                  Back
+                </button>
+                <button
+                  class="ml-[5%] w-[13%] py-3 bg-blue-600 text-white rounded-[10px] text-[17px]"
+                >
+                  Confirm
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

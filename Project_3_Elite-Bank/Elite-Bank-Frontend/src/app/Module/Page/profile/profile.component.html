@@ -1,0 +1,205 @@
+<div class="w-[100%]">
+  <div class="w-[100%]">
+    <h1>My Profile</h1>
+  </div>
+  <div class="w-[100%] h-[150px] flex border-2 rounded-[10px] p-3">
+    <div class="w-[10%] flex justify-center items-center">
+      <img
+        class="w-[120px] h-[120px] rounded-full"
+        src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+        alt="user photo"
+      />
+    </div>
+    <div class="w-[90%] ml-2 mt-2">
+      <h1>Deependra Trivedi</h1>
+      <div
+        class="w-[20%] text-[18px] font-medium flex justify-start items-center"
+      >
+        Saving Account
+        <div class="ml-3 h-3 w-3 rounded-full bg-green-500 mr-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-[100%] mt-5 border-2 rounded-[10px] p-3">
+    <div class="border-b border-gray-200 dark:border-gray-700">
+      <ul
+        class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400"
+        id="myTab"
+        data-tabs-toggle="#myTabContent"
+        role="tablist"
+      >
+        <li class="mr-2 hover:cursor-pointer" role="presentation">
+          <a
+            [class]="tab == 1 ? 'text-blue-700' : 'none'"
+            type="button"
+            (click)="changeTab(1)"
+            class="inline-flex items-center justify-center p-4 group"
+            aria-current="page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-user-2"
+            >
+              <circle cx="12" cy="8" r="5" />
+              <path d="M20 21a8 8 0 1 0-16 0" />
+            </svg>
+            &nbsp;Profile Details
+          </a>
+        </li>
+        <li class="mr-2 hover:cursor-pointer" role="presentation">
+          <a
+            type="button"
+            [class]="tab == 2 ? 'text-blue-700' : 'none'"
+            (click)="changeTab(2)"
+            class="inline-flex items-center justify-center p-4 group"
+            aria-current="page"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-landmark"
+            >
+              <line x1="3" x2="21" y1="22" y2="22" />
+              <line x1="6" x2="6" y1="18" y2="11" />
+              <line x1="10" x2="10" y1="18" y2="11" />
+              <line x1="14" x2="14" y1="18" y2="11" />
+              <line x1="18" x2="18" y1="18" y2="11" />
+              <polygon points="12 2 20 7 4 7" />
+            </svg>
+
+            &nbsp;Account Details
+          </a>
+        </li>
+        <li class="mr-2 hover:cursor-pointer" role="presentation">
+          <a
+            class="cursor-not-allowed inline-flex items-center justify-center p-4 group"
+            [class]="tab == 3 ? 'text-blue-700' : 'none'"
+            (click)="changeTab(3)"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-settings"
+            >
+              <path
+                d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+              />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            &nbsp; Setting
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- tab component -->
+    <div id="myTabContent" class="mt-5">
+      <div [ngClass]="tab == 1 ? 'block' : 'hidden'" class="p-4 rounded-lg">
+        <div class="w-[100%] grid grid-cols-3 gap-4">
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">E-mail</label>
+            <h2 class="text-gray-800">deependra@gmail.com</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Mobile Number</label>
+            <h2 class="text-gray-800">1234567890</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Gender</label>
+            <h2 class="text-gray-800">Male</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Date of Birth</label>
+            <h2 class="text-gray-800">10/10/1999</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Marital Status</label>
+            <h2 class="text-gray-800">Unmarried</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Occupation</label>
+            <h2 class="text-gray-800">Engineer</h2>
+          </div>
+        </div>
+
+        <hr class="mt-5 h-[2px] bg-gray-200" />
+        <div class="w-[100%] mt-5">
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Address</label>
+            <h2 class="text-gray-800">ABC LDA Colony ABC Road</h2>
+          </div>
+          <div class="w-[100%] grid grid-cols-3 gap-5">
+            <div class="w-[100%]">
+              <label class="text-[16px] text-gray-800">City</label>
+              <h2 class="text-gray-800">Lucknow</h2>
+            </div>
+            <div class="w-[100%]">
+              <label class="text-[16px] text-gray-800">State</label>
+              <h2 class="text-gray-800">Lucknow</h2>
+            </div>
+            <div class="w-[100%]">
+              <label class="text-[16px] text-gray-800">Pincode</label>
+              <h2 class="text-gray-800">123456</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="tab == 2 ? 'block' : 'hidden'" class="p-4 rounded-lg">
+        <div class="w-[100%] grid grid-cols-3 gap-5">
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Customer ID</label>
+            <h2 class="text-gray-800">123456</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Account Number</label>
+            <h2 class="text-gray-800">123456789012</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">IFSC Code</label>
+            <h2 class="text-gray-800">123456</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Branch Name</label>
+            <h2 class="text-gray-800">Lucknow</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Branch Area</label>
+            <h2 class="text-gray-800">Lucknow</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Branch City</label>
+            <h2 class="text-gray-800">Lucknow</h2>
+          </div>
+          <div class="w-[100%]">
+            <label class="text-[16px] text-gray-800">Opening Date</label>
+            <h2 class="text-gray-800">10/10/1000</h2>
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="tab == 3 ? 'block' : 'hidden'" class="p-4 rounded-lg">
+        <h1>other</h1>
+      </div>
+    </div>
+  </div>
+</div>

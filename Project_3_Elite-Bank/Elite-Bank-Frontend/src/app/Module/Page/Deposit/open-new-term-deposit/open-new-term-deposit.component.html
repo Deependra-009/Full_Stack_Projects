@@ -1,0 +1,122 @@
+<div class="p-4 sm:ml-64">
+    <div class="p-4  mt-14">
+        <div>
+            <h1>Deposit Summary</h1>
+        </div>
+        <div>
+            <div class="w-[40%]">
+                <div>
+                    <label for="account-debited"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Account to be
+                        debited</label>
+                    <div class="w-[100%] flex justify-between items-center">
+                        <input disabled type="text" id="account-debited"
+                            class="w-[70%] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required>
+                        <div class=" text-[18px] text-green-600 dark:text-green-500"><span class="font-medium">Balance:
+                            </span> Rs 13000</div>
+
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <label for="td-enter-amount"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Amount</label>
+                    <input type="text" id="td-enter-amount"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[70%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required>
+                    <p class="pt-2 text-sm text-black ">Minimum Amount of Rs 5000</p>
+                </div>
+                <div class="mt-5">
+
+                    <label for="countries"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Duration</label>
+                    <select id="countries"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[70%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Select</option>
+                        <option value="US">3 Month</option>
+                        <option value="CA">6 Month</option>
+                        <option value="FR">12 Month</option>
+                        <option value="DE">18 Month</option>
+                    </select>
+
+                </div>
+                <hr class="w-[100%] mt-5 h-[2px] bg-gray-400">
+                <div class="mt-5">
+                    <div>
+                        <h1>Nomination Details</h1>
+                    </div>
+                    <div class="flex w-[50%] justify-between">
+                        <div class="w-[50%] text-[19px]">Add Nominee</div>
+                        <fieldset class="flex w-[40%]  justify-between">
+                            <legend class="sr-only">Countries</legend>
+
+                            <div class="flex items-center mb-4">
+                                <input id="country-option-1" type="radio" name="countries" value="USA"
+                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
+                                    checked>
+                                <label for="country-option-1"
+                                    class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    Yes
+                                </label>
+                            </div>
+
+                            <div class="flex items-center mb-4">
+                                <input id="country-option-2" type="radio" name="countries" value="Germany"
+                                    class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="country-option-2"
+                                    class="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    No
+                                </label>
+                            </div>
+
+
+
+
+                        </fieldset>
+
+                    </div>
+                    <div>
+                        <form *ngIf="Nomination==false">
+                            <div class="mb-6">
+                                <select id="countries"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[70%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option selected>Select</option>
+                                    <option value="US">Father</option>
+                                    <option value="CA">Mother</option>
+                                    <option value="FR">Wife</option>
+                                    <option value="DE">Husband</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="nominee-name"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nominee
+                                    Name</label>
+                                <input type="text" id="nominee-name"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[70%] focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="mt-[10%]">
+                    <button type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Submit
+                        <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</div>

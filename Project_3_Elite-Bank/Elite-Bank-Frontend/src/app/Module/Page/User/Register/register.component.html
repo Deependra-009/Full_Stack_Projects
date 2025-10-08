@@ -1,0 +1,701 @@
+<div
+  class="w-[100%] h-[100vh] flex justify-center items-center bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-green-300 to-green-400"
+>
+  <div class="w-[90%] h-[90vh] bg-white rounded-[20px] p-5 flex justify-center">
+    <div class="w-[50%]">
+      <div class="w-[100%] min-h-[50%] flex justify-center items-center">
+        <img
+          class="w-[50%]"
+          src="./../../../../../assets/Images/Login/bankimage.jpeg"
+        />
+      </div>
+      <div class="w-[100%] min-h-[50%]">
+        <div
+          class="w-[100%] flex justify-center p-5 text-[40px] font-medium font-serif"
+        >
+          Welcome to Elite Online Banking
+        </div>
+        <div
+          class="w-[100%] flex justify-center py-5 px-10 text-[25px] text-red-600 underline"
+        >
+          Your financial security is our top priority
+        </div>
+        <div class="w-[100%] flex justify-center py-5 px-10 text-[28px]">
+          Let's set up your Bank Account
+        </div>
+      </div>
+    </div>
+    <div
+      [ngSwitch]="RegisterStep"
+      class="w-[50%] flex justify-center items-center"
+    >
+      <!-- Registeration Step 1 -->
+      <ng-container *ngSwitchCase="1">
+        <div class="w-[90%] min-h-[90%]">
+          <div
+            class="w-[100%] p-5 flex justify-center items-center text-[40px] font-semibold font-sans"
+          >
+            <div class="w-[80%]">Registeration Details</div>
+          </div>
+          <!-- <div class="w-[100%] flex justify-center py-5 px-10 text-[20px] ">Already have an Account. <span>Login</span></div> -->
+          <div class="w-[100%] py-10">
+            <form class="w-[100%]" [formGroup]="UserRegisterationData1">
+              <div class="w-[100%] py-2 flex flex-col">
+                <label class="text-gray-600 text-[17px]">E-mail</label>
+                <input
+                  matInput
+                  formControlName="account_holder_email"
+                  placeholder="example@gmail.com"
+                  class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                />
+
+                <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form1==true &&
+                    UserRegisterationData1.get(
+                      'account_holder_email'
+                    )?.hasError('required')
+                  "
+                >
+                  * This field is required
+                </div>
+              </div>
+              <div class="w-[100%] py-2 flex flex-col">
+                <label class="text-gray-600 text-[17px]">Password</label>
+                <input
+                type="password"
+                  matInput
+                  formControlName="user_password"
+                  placeholder="Enter 10 character or more"
+                  class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                />
+                <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form1==true &&
+                    UserRegisterationData1.get('user_password')?.hasError(
+                      'required'
+                    )
+                  "
+                >
+                  * This field is required
+                </div>
+              </div>
+              <div class="w-[100%] py-2 flex flex-col">
+                <label class="text-gray-600 text-[17px]"
+                  >Confirm Password</label
+                >
+                <input type="password"
+                  placeholder="Rewrite the password"
+                  matInput
+                  formControlName="user_password_rewrite"
+                  class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                />
+                <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form1==true &&
+                    UserRegisterationData1.get(
+                      'user_password_rewrite'
+                    )?.hasError('required')
+                  "
+                >
+                  * This field is required
+                </div>
+              </div>
+              <div class="w-[100%] py-2 flex">
+                <input
+                  type="checkbox"
+                  value=""
+                  class="w-5 h-5 text-blue-600 bg-gray-100 border-2 border-gray-600 rounded focus:ring-transparent dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >
+                  I agree to have read and understood the
+                  <span class="text-blue-500 underline hover:cursor-pointer"
+                    >Terms and condition</span
+                  >
+                  related to bank and agree to abide by them.
+                </label>
+              </div>
+            </form>
+            <div class="w-[100%] py-10">
+              <button
+                (click)="goToNextPage()"
+                class="w-[80%] py-3 text-[22px] font-medium border-2 border-[#e11d48] text-[#e11d48] shadow-sm-light hover:shadow-none shadow-[#e11d48] hover:text-white rounded-[7px] hover:bg-[#e11d48]"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Registeration Step 2 -->
+      <ng-container *ngSwitchCase="2">
+        <div class="w-[90%] min-h-[90%]">
+          <div
+            class="w-[100%] p-5 flex justify-center items-center text-[40px] font-semibold font-sans"
+          >
+            <div class="w-[60%]">User Details</div>
+          </div>
+          <!-- <div class="w-[100%] flex justify-center py-5 px-10 text-[20px] ">Already have an Account. <span>Login</span></div> -->
+          <div class="w-[100%]">
+            <form class="w-[100%]" [formGroup]="UserRegisterationData2">
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">First Name</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_first_name"
+                    placeholder="Enter Your First Name "
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_first_name'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Last Name</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_last_name"
+                    placeholder="Enter Your Last Name"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_last_name'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Gender</label>
+                  <select
+                    matInput
+                    formControlName="account_holder_gender"
+                    class="w-[80%] border-2 border-gray-300 rounded-[8px] my-2"
+                  >
+                    <option value="" [selected]="true">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_gender'
+                      )?.value==''
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Phone Number</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_phone_no"
+                    placeholder="+91 00000 00000"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_phone_no'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Date of Birth</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_dob"
+                    type="date"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_dob'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Religion</label>
+                  <select
+                    matInput
+                    formControlName="account_holder_religion"
+                    class="w-[80%] border-2 border-gray-300 rounded-[8px] my-2"
+                  >
+                    <option value="" [selected]="true">Select</option>
+                    <option value="hindu">Hindu</option>
+                  </select>
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_religion'
+                      )?.value==''
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Category</label>
+                  <select
+                    matInput
+                    formControlName="account_holder_category"
+                    class="w-[80%] border-2 border-gray-300 rounded-[8px] my-2"
+                  >
+                    <option value="" [selected]="true">Select</option>
+                    <option value="general">General</option>
+                    <option value="SC/ST">SC/ST</option>
+                  </select>
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_category'
+                      )?.value==''
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Occupation</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_occupation"
+                    placeholder="Enter Your Occupation"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_occupation'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Gross Income</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_gross_income"
+                    placeholder="Enter Your Gross Income "
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_gross_income'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]"
+                    >Residency Status</label
+                  >
+                  <select
+                    matInput
+                    formControlName="account_holder_residency_status"
+                    class="w-[80%] border-2 border-gray-300 rounded-[8px] my-2"
+                  >
+                    <option value="" [selected]="true">Select</option>
+                    <option value="owned">Owned</option>
+                    <option value="rent">Rent</option>
+                  </select>
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form2==true &&
+                    UserRegisterationData2.get(
+                        'account_holder_residency_status'
+                      )?.value==''
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="w-[100%] py-10 flex justify-center items-center">
+            <div class="w-[50%]">
+              <div class="w-[90%] flex justify-center">
+                <button
+                  (click)="goToPrevPage()"
+                  class="w-[80%] py-3 text-[22px] font-medium border-2 border-[black] text-[black] rounded-[7px]"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+            <div class="w-[50%]">
+              <div class="w-[90%] flex justify-center">
+                <button
+                  (click)="goToNextPage()"
+                  class="w-[80%] py-3 text-[22px] font-medium border-2 border-[#e11d48] text-[#e11d48] hover:text-white rounded-[7px] hover:bg-[#e11d48]"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- Registeration Step 3 -->
+      <ng-container *ngSwitchCase="3">
+        <div class="w-[90%] min-h-[90%]">
+          <div
+            class="w-[100%] p-5 flex justify-center items-center text-[40px] font-semibold font-sans"
+          >
+            <div class="w-[60%]">User Details</div>
+          </div>
+          <!-- <div class="w-[100%] flex justify-center py-5 px-10 text-[20px] ">Already have an Account. <span>Login</span></div> -->
+          <div class="w-[100%]">
+            <form class="w-[100%]" [formGroup]="UserRegisterationData3">
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Address</label>
+                  <textarea
+                    matInput
+                    formControlName="account_holder_address"
+                    placeholder="Enter Your First Name "
+                    class="w-[90%] resize-none px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  ></textarea>
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_address'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">City</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_city"
+                    placeholder="Enter Your City"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_city'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">State</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_state"
+                    placeholder="Enter Your State"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_state'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Country</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_country"
+                    placeholder="Enter Your Country"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_country'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Pincode</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_pincode"
+                    placeholder="Enter Your Pincode"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_pincode'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]"
+                    >Marital Status</label
+                  >
+                  <select
+                    matInput
+                    formControlName="account_holder_marital_status"
+                    class="w-[80%] border-2 border-gray-300 rounded-[8px] my-2"
+                  >
+                    <option value="" [selected]="true">Select</option>
+                    <option value="married">Married</option>
+                    <option value="unmarried">Unmarried</option>
+                  </select>
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_marital_status'
+                      )?.value==''
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Aadhar Card</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_aadhar_no"
+                    placeholder="Enter Your Aadhar Number"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_aadhar_no'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+              <div class="w-[100%] flex">
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]">Pan Card</label>
+                  <input
+                    matInput
+                    formControlName="account_holder_pan_no"
+                    placeholder="Enter Your Pan Number "
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get(
+                        'account_holder_pan_no'
+                      )?.hasError('required')
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+                <div class="w-[100%] py-2 flex flex-col">
+                  <label class="text-gray-600 text-[17px]"
+                    >Deposit Amount</label
+                  >
+                  <input
+                    matInput
+                    formControlName="deposit_amount"
+                    placeholder="Enter Your First Deposit Amount"
+                    class="w-[80%] px-3 text-[17px] border-2 py-2 my-2 border-gray-300 rounded-[10px]"
+                  />
+                  <div
+                  class="text-red-500"
+                  *ngIf="
+                    RegisterFormCheck.form3==true &&
+                    UserRegisterationData3.get('deposit_amount')?.hasError(
+                        'required'
+                      )
+                    "
+                  >
+                    * This field is required
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="w-[100%] py-10 flex justify-center items-center">
+            <div class="w-[50%]">
+              <div class="w-[90%] flex justify-center">
+                <button
+                  (click)="goToPrevPage()"
+                  class="w-[80%] py-3 text-[22px] font-medium border-2 border-[black] text-[black] rounded-[7px]"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+            <div class="w-[50%]">
+              <div class="w-[90%] flex justify-center">
+                <button
+                  (click)="goToNextPage()"
+                  class="w-[80%] py-3 text-[22px] font-medium border-2 border-[#e11d48] text-[#e11d48] hover:text-white rounded-[7px] hover:bg-[#e11d48]"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <!-- Registeration Step 4 -->
+      <ng-container *ngSwitchCase="4">
+        <div class="w-[90%] min-h-[90%]">
+          <div
+            class="w-[100%] p-5 flex justify-center items-center text-[40px] font-semibold font-sans"
+          >
+            <div class="w-[80%]">Documents Upload</div>
+          </div>
+          <div class="w-[100%] py-10">
+            <div class="w-[80%] py-3">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                for="default_size"
+                >Passport Size Photo</label
+              >
+              <input
+                class="block w-full mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                type="file"
+              />
+            </div>
+            <div class="w-[80%] py-3">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                for="default_size"
+                >Aadhar Card</label
+              >
+              <input
+                class="block w-full mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                type="file"
+              />
+            </div>
+            <div class="w-[80%] py-3">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                for="default_size"
+                >Pan Card</label
+              >
+              <input
+                class="block w-full mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                type="file"
+              />
+            </div>
+          </div>
+          <div class="w-[100%] py-10 flex justify-center items-center">
+            <div class="w-[50%]">
+              <div class="w-[90%] flex justify-center">
+                <button
+                  (click)="goToPrevPage()"
+                  class="w-[80%] py-3 text-[22px] font-medium border-2 border-[black] text-[black] rounded-[7px]"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+            <div class="w-[50%]">
+              <div class="w-[90%] flex justify-center">
+                <button
+                  (click)="goToNextPage()"
+                  class="w-[80%] py-3 text-[22px] font-medium border-2 border-[#e11d48] text-[#e11d48] hover:text-white rounded-[7px] hover:bg-[#e11d48]"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,430 @@
+<div class="w-[100%] flex">
+  <div class="w-[70%]">
+    <!-- Cards Section  -->
+    <div class="w-[100%] flex justify-around">
+      <div
+        class="border-2 border-gray-300 bg-white shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 rounded-2xl flex flex-col justify-between w-[31%] h-[200px] p-6 hover:cursor-pointer"
+      >
+        <div class="w-[50px] h-[50px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            shape-rendering="geometricPrecision"
+            text-rendering="geometricPrecision"
+            image-rendering="optimizeQuality"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            viewBox="0 0 452 512.11"
+          >
+            <path
+              d="M336.47 255.21h64.36v-12.46c-3.68-13.63-9.54-22.87-17.13-28.49-7.59-5.61-17.43-8.01-28.98-7.93l-263.96.06c-6.5 0-11.76-5.27-11.76-11.76 0-6.5 5.26-11.76 11.76-11.76l263.65.03c16.59-.16 31.23 3.62 43.25 12.53 1.08.8 2.14 1.64 3.17 2.52v-7.07c0-10.98-4.53-21.02-11.82-28.31-7.23-7.29-17.25-11.8-28.29-11.8h-8.49l-1.09-.05-4.15 15.56h-28.52l16.92-63.47c-14.22-3.8-22.7-18.5-18.89-32.72l-94.11-25.21c-3.81 14.21-18.5 22.71-32.7 18.9l-27.63 102.5h-29.41L177.4 0l199.7 53.51-19.69 73.73h3.31c17.45 0 33.36 7.19 44.9 18.72 11.56 11.51 18.73 27.45 18.73 44.92v64.99c6.79 1.35 12.86 4.71 17.57 9.42 6.21 6.21 10.08 14.81 10.08 24.28v77.35c0 9.87-4.04 18.85-10.52 25.32-4.63 4.63-10.53 8.02-17.13 9.57v46.66c0 17.46-7.18 33.39-18.72 44.93l-.74.68c-11.5 11.13-27.11 18.03-44.17 18.03H63.63c-17.47 0-33.4-7.17-44.94-18.7C7.17 481.89 0 465.98 0 448.47V190.88c0-17.52 7.16-33.43 18.68-44.95 11.52-11.52 27.44-18.69 44.95-18.69h37.12l.16.01L130.46 17.5l28.19 7.55-38.73 141.23H90.4l4.18-15.51H63.63c-11.01 0-21.04 4.52-28.32 11.79-7.27 7.27-11.79 17.31-11.79 28.32v257.59c0 11.01 4.53 21.03 11.81 28.3 7.28 7.29 17.32 11.82 28.3 11.82h297.09c10.73 0 20.54-4.3 27.74-11.25l.54-.58c7.29-7.28 11.83-17.32 11.83-28.29v-45.71h-64.36c-19.88 0-37.96-8.14-51.02-21.2l-1.23-1.35c-12.36-13-19.98-30.52-19.98-49.68v-3.1c0-19.79 8.13-37.83 21.21-50.94l.13-.13c13.1-13.05 31.12-21.15 50.89-21.15zm-95.71-93.06c17.19 4.6 34.89-5.6 39.49-22.8 4.61-17.19-5.61-34.89-22.8-39.49-17.2-4.6-34.9 5.6-39.5 22.8-4.6 17.19 5.62 34.88 22.81 39.49zM362.3 309.07l.06.05c10.93 10.96 10.9 28.79-.02 39.74l-.05.06c-10.96 10.93-28.79 10.9-39.75-.02l-.05-.05c-10.93-10.96-10.9-28.79.02-39.75l.05-.05c10.96-10.93 28.79-10.91 39.74.02z"
+            />
+          </svg>
+        </div>
+        <div class="text-[20px] mt-[1rem]">Balance</div>
+        <div class="text-[30px] font-bold">Rs {{ Balance }}</div>
+      </div>
+      <div
+        class="border-2 border-gray-300 bg-white shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 rounded-2xl flex flex-col justify-between w-[31%] h-[200px] p-6 hover:cursor-pointer"
+      >
+        <div class="w-[50px] h-[50px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            shape-rendering="geometricPrecision"
+            text-rendering="geometricPrecision"
+            image-rendering="optimizeQuality"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            viewBox="0 0 452 512.11"
+          >
+            <path
+              d="M336.47 255.21h64.36v-12.46c-3.68-13.63-9.54-22.87-17.13-28.49-7.59-5.61-17.43-8.01-28.98-7.93l-263.96.06c-6.5 0-11.76-5.27-11.76-11.76 0-6.5 5.26-11.76 11.76-11.76l263.65.03c16.59-.16 31.23 3.62 43.25 12.53 1.08.8 2.14 1.64 3.17 2.52v-7.07c0-10.98-4.53-21.02-11.82-28.31-7.23-7.29-17.25-11.8-28.29-11.8h-8.49l-1.09-.05-4.15 15.56h-28.52l16.92-63.47c-14.22-3.8-22.7-18.5-18.89-32.72l-94.11-25.21c-3.81 14.21-18.5 22.71-32.7 18.9l-27.63 102.5h-29.41L177.4 0l199.7 53.51-19.69 73.73h3.31c17.45 0 33.36 7.19 44.9 18.72 11.56 11.51 18.73 27.45 18.73 44.92v64.99c6.79 1.35 12.86 4.71 17.57 9.42 6.21 6.21 10.08 14.81 10.08 24.28v77.35c0 9.87-4.04 18.85-10.52 25.32-4.63 4.63-10.53 8.02-17.13 9.57v46.66c0 17.46-7.18 33.39-18.72 44.93l-.74.68c-11.5 11.13-27.11 18.03-44.17 18.03H63.63c-17.47 0-33.4-7.17-44.94-18.7C7.17 481.89 0 465.98 0 448.47V190.88c0-17.52 7.16-33.43 18.68-44.95 11.52-11.52 27.44-18.69 44.95-18.69h37.12l.16.01L130.46 17.5l28.19 7.55-38.73 141.23H90.4l4.18-15.51H63.63c-11.01 0-21.04 4.52-28.32 11.79-7.27 7.27-11.79 17.31-11.79 28.32v257.59c0 11.01 4.53 21.03 11.81 28.3 7.28 7.29 17.32 11.82 28.3 11.82h297.09c10.73 0 20.54-4.3 27.74-11.25l.54-.58c7.29-7.28 11.83-17.32 11.83-28.29v-45.71h-64.36c-19.88 0-37.96-8.14-51.02-21.2l-1.23-1.35c-12.36-13-19.98-30.52-19.98-49.68v-3.1c0-19.79 8.13-37.83 21.21-50.94l.13-.13c13.1-13.05 31.12-21.15 50.89-21.15zm-95.71-93.06c17.19 4.6 34.89-5.6 39.49-22.8 4.61-17.19-5.61-34.89-22.8-39.49-17.2-4.6-34.9 5.6-39.5 22.8-4.6 17.19 5.62 34.88 22.81 39.49zM362.3 309.07l.06.05c10.93 10.96 10.9 28.79-.02 39.74l-.05.06c-10.96 10.93-28.79 10.9-39.75-.02l-.05-.05c-10.93-10.96-10.9-28.79.02-39.75l.05-.05c10.96-10.93 28.79-10.91 39.74.02z"
+            />
+          </svg>
+        </div>
+        <div class="text-[20px] mt-[1rem]">Loan</div>
+        <div class="text-[30px] font-bold">Rs {{ LoanAmount }}</div>
+      </div>
+      <div
+        class="border-2 border-gray-300 bg-white shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 rounded-2xl flex flex-col justify-between w-[31%] h-[200px] p-6 hover:cursor-pointer"
+      >
+        <div class="w-[50px] h-[50px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            shape-rendering="geometricPrecision"
+            text-rendering="geometricPrecision"
+            image-rendering="optimizeQuality"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            viewBox="0 0 452 512.11"
+          >
+            <path
+              d="M336.47 255.21h64.36v-12.46c-3.68-13.63-9.54-22.87-17.13-28.49-7.59-5.61-17.43-8.01-28.98-7.93l-263.96.06c-6.5 0-11.76-5.27-11.76-11.76 0-6.5 5.26-11.76 11.76-11.76l263.65.03c16.59-.16 31.23 3.62 43.25 12.53 1.08.8 2.14 1.64 3.17 2.52v-7.07c0-10.98-4.53-21.02-11.82-28.31-7.23-7.29-17.25-11.8-28.29-11.8h-8.49l-1.09-.05-4.15 15.56h-28.52l16.92-63.47c-14.22-3.8-22.7-18.5-18.89-32.72l-94.11-25.21c-3.81 14.21-18.5 22.71-32.7 18.9l-27.63 102.5h-29.41L177.4 0l199.7 53.51-19.69 73.73h3.31c17.45 0 33.36 7.19 44.9 18.72 11.56 11.51 18.73 27.45 18.73 44.92v64.99c6.79 1.35 12.86 4.71 17.57 9.42 6.21 6.21 10.08 14.81 10.08 24.28v77.35c0 9.87-4.04 18.85-10.52 25.32-4.63 4.63-10.53 8.02-17.13 9.57v46.66c0 17.46-7.18 33.39-18.72 44.93l-.74.68c-11.5 11.13-27.11 18.03-44.17 18.03H63.63c-17.47 0-33.4-7.17-44.94-18.7C7.17 481.89 0 465.98 0 448.47V190.88c0-17.52 7.16-33.43 18.68-44.95 11.52-11.52 27.44-18.69 44.95-18.69h37.12l.16.01L130.46 17.5l28.19 7.55-38.73 141.23H90.4l4.18-15.51H63.63c-11.01 0-21.04 4.52-28.32 11.79-7.27 7.27-11.79 17.31-11.79 28.32v257.59c0 11.01 4.53 21.03 11.81 28.3 7.28 7.29 17.32 11.82 28.3 11.82h297.09c10.73 0 20.54-4.3 27.74-11.25l.54-.58c7.29-7.28 11.83-17.32 11.83-28.29v-45.71h-64.36c-19.88 0-37.96-8.14-51.02-21.2l-1.23-1.35c-12.36-13-19.98-30.52-19.98-49.68v-3.1c0-19.79 8.13-37.83 21.21-50.94l.13-.13c13.1-13.05 31.12-21.15 50.89-21.15zm-95.71-93.06c17.19 4.6 34.89-5.6 39.49-22.8 4.61-17.19-5.61-34.89-22.8-39.49-17.2-4.6-34.9 5.6-39.5 22.8-4.6 17.19 5.62 34.88 22.81 39.49zM362.3 309.07l.06.05c10.93 10.96 10.9 28.79-.02 39.74l-.05.06c-10.96 10.93-28.79 10.9-39.75-.02l-.05-.05c-10.93-10.96-10.9-28.79.02-39.75l.05-.05c10.96-10.93 28.79-10.91 39.74.02z"
+            />
+          </svg>
+        </div>
+        <div class="text-[20px] mt-[1rem]">Fixed Deposit</div>
+        <div class="text-[30px] font-bold">Rs 0</div>
+      </div>
+    </div>
+
+    <!-- Google Chart Section -->
+
+    <div class="w-[100%] mt-5 flex justify-around">
+      <ng-container *ngIf="loading == true && loaded == false">
+        <div
+          class="flex items-center justify-center w-[97%] h-[400px] border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div
+            class="px-7 py-3 text-[18px] font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200"
+          >
+            loading...
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="loading == false && loaded == true">
+        <google-chart
+          class="border-2 border-gray-300 bg-white shadow dark:border-gray-700 dark:hover:bg-gray-700 rounded-2xl flex flex-col justify-between p-6 hover:cursor-pointer"
+          [title]="GraphData.linechart.title"
+          [type]="LineChart"
+          [data]="GraphData.linechart.data"
+          [columns]="GraphData.linechart.columnNames"
+          [height]="GraphData.linechart.height"
+          [width]="GraphData.linechart.width"
+          [options]="GraphData.linechart.options"
+        >
+        </google-chart>
+      </ng-container>
+      <ng-container *ngIf="loading == false && loaded == true">
+        <ng-container>
+          <google-chart
+            class="border-2 border-gray-300 bg-white shadow dark:border-gray-700 dark:hover:bg-gray-700 rounded-2xl flex flex-col justify-between p-6 hover:cursor-pointer"
+            [title]="GraphData.piechart.title"
+            [type]="PieChart"
+            [data]="GraphData.piechart.data"
+            [columns]="GraphData.piechart.columnNames"
+            [height]="GraphData.piechart.height"
+            [width]="GraphData.piechart.width"
+            [options]="GraphData.piechart.options"
+          >
+          </google-chart>
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <!-- Transactions Section -->
+    <div class="w-[100%] mt-5 flex justify-center">
+      <ng-container *ngIf="loading == true && loaded == false">
+        <div
+          class="flex items-center justify-center w-[97%] h-[400px] border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div
+            class="px-7 py-3 text-[18px] font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200"
+          >
+            loading...
+          </div>
+        </div>
+      </ng-container>
+      <div
+        *ngIf="loading == false && loaded == true"
+        class="w-[98%] border-2 border-gray-300 bg-white shadow dark:border-gray-700 dark:hover:bg-gray-700 rounded-2xl flex flex-col justify-between p-6 hover:cursor-pointer"
+      >
+        <table
+          class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr>
+              <th scope="col" class="p-4">S.No</th>
+              <th scope="col" class="px-6 py-3">Description</th>
+              <th scope="col" class="px-6 py-3">Amount</th>
+              <th scope="col" class="px-6 py-3">Transaction Date</th>
+              <th scope="col" class="px-6 py-3">Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let item of TransactionData; index as i"
+              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+            >
+              <td class="w-4 p-4">
+                <div class="flex justify-center">
+                  <h3>{{ i + 1 }}</h3>
+                </div>
+              </td>
+              <th
+                scope="row"
+                class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
+              >
+                <img
+                  class="w-10 h-10 rounded-full"
+                  src="https://flowbite.com/docs/images/logo.svg"
+                  alt="Jese image"
+                />
+
+                <div class="pl-3">
+                  <div class="text-base font-semibold">
+                    {{ item.transfer_account_number }}
+                  </div>
+                  <div class="font-normal text-gray-500">
+                    {{ item.description }}
+                  </div>
+                </div>
+              </th>
+              <td
+                [class]="
+                  item.type.toLowerCase() == 'debit'
+                    ? 'text-red-600'
+                    : 'text-green-500'
+                "
+                class="px-6 py-4 font-medium"
+              >
+                Rs&nbsp;
+                {{
+                  item.type.toLowerCase() == "debit"
+                    ? "-" + item.amount
+                    : "+" + item.amount
+                }}
+              </td>
+              <td class="px-6 py-4">
+                <div class="flex items-center">
+                  {{ item.transaction_date }}
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <a href="#" class="font-medium text-gray-600 hover:underline">
+                  Rs {{ item.balance }}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="w-[25%] sm:fixed sm:right-5">
+    <!-- card section -->
+
+    <div
+      class="w-[100%] border-2 border-gray-300 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-2xl flex flex-col justify-between p-6 hover:cursor-pointer"
+    >
+      <div class="w-[100%] flex justify-between items-center">
+        <div class="text-[22px] w-[30%]">My Cards</div>
+
+        <ng-container *ngIf="isCebitCardExist || isCebitCardExist">
+          <div class="flex w-[70%]">
+            <select
+              (change)="changeCardType($event)"
+              class="bg-gray-50 border rounded-l-lg border-gray-300 text-gray-900 text-sm block w-[60%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+            >
+              <option *ngIf="isCebitCardExist" [value]="1" [selected]="true" >
+                <button
+                  type="button"
+                  class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  <div class="inline-flex items-center">Credit Card</div>
+                </button>
+              </option>
+              <option *ngIf="isDebitCardExist" [value]="2">
+                <button
+                  type="button"
+                  class="inline-flex w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                >
+                  <div class="inline-flex items-center">Debit Card</div>
+                </button>
+              </option>
+            </select>
+            <select
+              *ngIf="cardType == 1"
+              (change)="showCardData($event)"
+              class="bg-gray-50 border-1 rounded-r-lg border-gray-300 text-gray-900 text-sm block w-[60%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+            >
+              <!-- <option selected>Select Card</option> -->
+              <option
+                *ngFor="let item of CardData.creditcards; index as i"
+                [value]="i"
+              >
+                {{ item.card_name }}
+              </option>
+            </select>
+            <select
+              *ngIf="cardType == 2"
+              (change)="showCardData($event)"
+              class="bg-gray-50 border-1 rounded-r-lg border-gray-300 text-gray-900 text-sm block w-[60%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+            >
+              <option
+                *ngFor="let item of CardData.debitcards; index as i"
+                [value]="i"
+              >
+                {{ item.card_name }}
+              </option>
+            </select>
+          </div>
+        </ng-container>
+      </div>
+      <ng-container *ngIf="!isDebitCardExist && !isCebitCardExist && cardLoading == false && cardLoaded == true">
+        <div
+          class="flex mt-5 items-center justify-center w-[97%] h-[400px] border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+        >
+        <div class="w-[50%]">
+            <img class="mix-blend-multiply" src="./../../../../../assets/Images/Other/oops-smiley.jpg">
+            <div class="w-[100%] text-center text-[23px] font-serif font-[600]">No Cards Available</div>
+        </div>
+        </div></ng-container
+      >
+      <ng-container *ngIf="cardLoading == true && cardLoaded == false">
+        <div
+          class="flex mt-5 items-center justify-center w-[97%] h-[400px] border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+        >
+          <div
+            class="px-7 py-3 text-[18px] font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200"
+          >
+            loading...
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="(isDebitCardExist || isCebitCardExist) && cardLoading == false && cardLoaded == true">
+        <div class="mt-5">
+          <div
+            class="w-[100%] flex justify-center flex-col bg-bg-card-img h-56 m-auto bg-cover rounded-xl relative text-white shadow-2xl transition-transform transform"
+          >
+            <div class="w-full px-8">
+              <div class="flex justify-between">
+                <div class="">
+                  <p class="font-light">Name</p>
+
+                  <p class="font-medium tracking-widest">
+                    {{ SelectCardData?.card_name }}
+                  </p>
+                </div>
+                <img class="w-14 h-14" src="https://i.imgur.com/bbPHJVe.png" />
+              </div>
+              <div class="pt-1">
+                <p class="font-light">Card Number</p>
+
+                <p class="font-medium tracking-more-wider">
+                  {{ SelectCardData?.card_number }}
+                </p>
+              </div>
+              <div class="pt-1 pr-6">
+                <div class="flex justify-between">
+                  <div class="">
+                    <p class="font-light text-xs">Active</p>
+
+                    <p class="font-medium tracking-wider text-sm">
+                      {{ SelectCardData.active ? "YES" : "NO" }}
+                    </p>
+                  </div>
+                  <div class="">
+                    <p class="font-light text-xs">Expiry</p>
+
+                    <p class="font-medium tracking-wider text-sm">
+                      {{ SelectCardData?.expiryDate }}
+                    </p>
+                  </div>
+
+                  <div class="">
+                    <p class="font-light text-xs">CVV</p>
+
+                    <p class="font-bold tracking-more-wider text-sm">
+                      {{ SelectCardData.cvv }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="cardLoading == false && cardLoaded == true">
+        <div class="text-[22px] flex justify-center mt-5">
+          <button
+            *ngIf="isCebitCardExist && isCebitCardExist"
+            type="button"
+            (click)="enterPinNumber()"
+            class="w-[60%] text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            View Details
+          </button>
+          <button
+            type="button"
+            [routerLink]="
+              cardType == 1 ? '/user/new-credit-card' : '/user/new-debit-card'
+            "
+            [class]="isCebitCardExist && isCebitCardExist?'w-[60%]':'w-[100%]'"
+            class="text-white  bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Add new card
+          </button>
+        </div>
+      </ng-container>
+    </div>
+    <!-- quick transfer      -->
+    <div
+      class="mt-[20px] w-[100%] border-2 border-gray-300 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-2xl flex flex-col justify-between p-6 hover:cursor-pointer"
+    >
+      <div class="text-[20px]">Quick Transfer</div>
+      <!-- <div class="mt-[20px] flex gap-2 overflow-quick overflow-y-auto">
+        <img
+          *ngFor="let item of QuickTransferData"
+          class="w-10 h-10 rounded-full"
+          src="https://flowbite.com/docs/images/logo.svg"
+          alt="Jese image"
+        />
+      </div> -->
+      <div class="mt-[20px]">
+        <div class="mb-6 w-[100%]">
+          <label
+            for="cardname"
+            class="block mb-2 text-[18px] font-medium text-gray-900 dark:text-white"
+            >Card Holder Name</label
+          >
+          <input
+            type="string"
+            id="cardname"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            placeholder="Card Holder Name"
+            required
+          />
+        </div>
+        <div class="mb-6 w-[100%]">
+          <label
+            for="cardnumber"
+            class="block mb-2 text-[18px] font-medium text-gray-900 dark:text-white"
+            >Card Number</label
+          >
+          <input
+            type="string"
+            id="cardnumber"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            placeholder="XXXX XXXX XXXX 1234"
+            required
+          />
+        </div>
+      </div>
+      <div class="w-[100%] flex justify-around">
+        <button
+          class="w-[40%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+        >
+          <span
+            class="w-[100%] relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+          >
+            Send
+          </span>
+        </button>
+        <button
+          class="w-[40%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800"
+        >
+          <span
+            class="w-[100%] relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+          >
+            Save Draft
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

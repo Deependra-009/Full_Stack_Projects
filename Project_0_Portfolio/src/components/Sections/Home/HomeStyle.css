@@ -1,0 +1,25 @@
+
+.span-text::before {
+    content: "Deependra Trivedi";
+    animation: home-animate infinite 6s;
+    padding-left: 10px;
+  }
+
+  @keyframes home-animate {
+    0% {
+      content: "Deependra Trivedi";
+    }
+
+    25% {
+      content: "Full Stack Developer";
+    }
+    50% {
+      content: "Problem Solver";
+    }
+
+    75% {
+      content: "Designer";
+    }
+    100% {
+    }
+  }

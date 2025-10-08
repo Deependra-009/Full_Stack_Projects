@@ -1,0 +1,15 @@
+<div *ngIf="isHomePage; else defaultNavbar"
+  class="w-full bg-home-bg-image min-h-[50vh] transparent bg-top bg-cover md:mt-0 md:min-h-[95vh]  bg-no-repeat md:bg-cover bg-fixed ">
+  <app-navbar   *ngIf="!scrolled; else scrollednav" [style]="'       transparent           text-white'"
+    [color]="'white'"></app-navbar>
+  <ng-template #scrollednav>
+    <app-navbar [style]="'bg-white text-black border-b-[1px] border-slate-200'" [color]="'black'"></app-navbar>
+  </ng-template>
+</div>
+<ng-template #defaultNavbar>
+  <app-navbar [style]="'bg-white text-black border-b-[1px] border-slate-200'" [color]="'black'"></app-navbar>
+</ng-template>
+<div class="w-[100%]  h-[90px] "></div>
+  <router-outlet></router-outlet>
+
+<app-footer></app-footer>

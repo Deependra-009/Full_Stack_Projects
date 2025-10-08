@@ -1,0 +1,76 @@
+server:
+  port: 8081
+
+
+
+
+spring:
+#  data:
+#    mongodb:
+#      uri: mongodb+srv://Global_Bazaar_Project:Global_Bazaar_%40_#@projectcluster.vxt4voc.mongodb.net/GlobalBazaar?retryWrites=true&w=majority
+
+  application:
+    name: ORDER-CART-SERVICE
+#  config:
+#    import: configserver:http://localhost:8090
+    
+    
+# resilience4j
+
+
+#resilience4j:
+#  circuitbreaker:
+#    instances:
+#      GetAllOrdersParticularUserCircuitBreaker:
+#        registerHealthIndicator: true
+#        eventConsumerBufferSize: 10
+#        failureRateThreshold: 50
+#        minimumNumberOfCalls: 5
+#        automaticTransitionFromOpenToHalfOpenEnabled: true
+#        waitDurationInOpenState: 6s
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        slidingWindowSize: 10
+#        slidingWindowType: count-based
+#        slow-call-duration-threshold: 10s
+#
+#      GetOrdersDetailsByIDCircuitBreaker:
+#        registerHealthIndicator: true
+#        eventConsumerBufferSize: 10
+#        failureRateThreshold: 50
+#        minimumNumberOfCalls: 5
+#        automaticTransitionFromOpenToHalfOpenEnabled: true
+#        waitDurationInOpenState: 6s
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        slidingWindowSize: 10
+#        slidingWindowType: count-based
+#        slow-call-duration-threshold: 10s
+#
+#      TestCircuitBreaker:
+#        registerHealthIndicator: true
+#        eventConsumerBufferSize: 10
+#        failureRateThreshold: 50
+#        minimumNumberOfCalls: 5
+#        automaticTransitionFromOpenToHalfOpenEnabled: true
+#        waitDurationInOpenState: 6s
+#        permittedNumberOfCallsInHalfOpenState: 3
+#        slidingWindowSize: 10
+#        slidingWindowType: count-based
+#        slow-call-duration-threshold: 10s
+#
+#
+#
+##health config
+#management:
+#  health:
+#    circuitbreakers:
+#      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health
+#  endpoint:
+#    health:
+#      show-details: always
+#
+#
+#

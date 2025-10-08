@@ -1,0 +1,279 @@
+<nav [class]="style" class=" w-[100%] fixed top-0 left-0 z-10 bg-fixed  ">
+    <div class="w-[100%] justify-between flex h-[90px]">
+        <div class=" md:w-[30%] w-[40%] pl-[50px]    flex justify-center items-center ">
+            <div routerLink="/" class="w-[32px] mr-3  h-[32px] bg-[url('/assets/Images/Vector.png')]">
+            </div>
+            <div routerLink="/product-page" class="md:block hidden text-[20px] font-medium">UrbanIndie</div>
+        </div>
+
+
+        <div [class]="MobileMenu?(NavOpen)?'block  bg-white text-black':'hidden':' block'" id="nav-link"
+            class=" md:w-[40%] w-[100%] md:h-[90px] h-[90vh] md:pb-0 pb-5 md:overflow-hidden overflow-auto  md:top-0 md:relative fixed left-0 top-[90px] md:flex    md:justify-around md:items-center">
+
+            <div class="md:w-[20%] " *ngFor="let mainitem of dropdownItems;index as i">
+
+
+                <div [id]="mainitem.id" (mouseover)="showNav(mainitem.id)" [attr.link]="mainitem.link" type="button"
+                    class="md:w-[100%]  text-[15px] md:text-[18px] w-[100%] home-dropdown  {{MobileMenu?'border-b-[1px] ':mainitem.border }}   h-[60px] md:hover:border-b-[5px]    md:h-[90px] flex justify-between  md:justify-center items-center hover:cursor-pointer md:px-0 md:py-0   pl-5   ">
+                    {{ mainitem.text }}
+                    <div *ngIf="mainitem.id!=0" class="md:hidden  block mr-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" [class]="'text-gray-500'" width="25" height="25"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+
+                    </div>
+
+
+                </div>
+                <!-- ------------------------------- -->
+
+                <div (mouseleave)="hideNavbar()" *ngIf="NavId==i && i!=0"
+                    class=" md:overflow-hidden  overflow-y-auto md:py-0   md:z-50 custom-dropdown md:fixed left-[15%] md:top-[90px] md:w-[70%]  w-[100%] md:h-[450px]   text-black bg-white">
+                    <div
+                        class="w-[100%] custom-dropdown-subdiv  grid md:grid-cols-5 grid-rows-1   md:grid-flow-row gap-0  ">
+                        <div *ngFor="let item of mainitem.dropdownContent;index as i"
+                            class="md:pl-0 pl-5 custom-dropdown-cards w-[100%]  md:h-[450px]  "
+                            [class]="i%2==1?'md:bg-gray-100':'bg-white'">
+
+                            <div class="w-[100%] md:mt-2  pl-5" *ngFor="let subitem of item;">
+
+                                <h3 (click)="MobileMenu==false?generateRouterLink([mainitem.text,subitem.label]):''"
+                                    [id]="subitem.id" [class]="mainitem.style"
+                                    class="cursor-pointer custom-h3 md:py-0 py-2 flex justify-between items-center font-medium">
+                                    {{subitem.label}}
+
+
+                                    <div *ngIf="subitem.subItems!=undefined && subitem.subItems.length!=0"
+                                        class="md:hidden block mr-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" [class]="mainitem.style" width="20"
+                                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-chevron-right">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+
+                                    </div>
+                                </h3>
+
+
+                                <ng-container>
+                                    <ul [class]="SubId==subitem.id  ?'block':'hidden'"
+                                        *ngFor="let subsubitem of subitem.subItems"
+                                        class="md:pl-0 pl-5  text-gray-700 md:pb-0  py-3  md:block md:py-[4px] hover:text-black hover:cursor-pointer hover:font-medium">
+                                        <li (click)="generateRouterLink([mainitem.text,subitem.label,subsubitem])">
+                                            {{subsubitem}}</li>
+
+                                    </ul>
+                                </ng-container>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <form *ngIf="SearchClick==true " id="search-bar"
+            class="absolute left-5 top-[90px] md:top-[16px] md:left-[26%]  z-10 w-[100%] md:w-[50%] ">
+            <label for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative w-[90%] ">
+
+                <!-- //search -->
+                <input (keyup)="getQuery($event)" type="search" id="default-search"
+                    class="block w-[100%] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search Mockups, Logos..." required>
+                <button [class]="this.searchText.length==0?'hidden':'block'" (click)="search()"
+                    routerLink="/search-product"
+                    class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+            </div>
+        </form>
+        <div class="md:w-[30%] w-[60%] md:pr-0 pr-2 flex md:justify-center justify-around items-center">
+
+
+            <div id="search-button" class="hover:cursor-pointer w-[13%]">
+                <div>
+                    <svg (click)="openSearchBar()" xmlns="http://www.w3.org/2000/svg" *ngIf="SearchClick==true"
+                        class="w-[130%] h-[130%] md:w-[60%] md:h-[60%]" viewBox="0 0 24 24" fill="none"
+                        style.stroke="{{color}}" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m15 9-6 6" />
+                        <path d="m9 9 6 6" />
+                    </svg>
+                </div>
+
+                <div>
+                    <!-- search svg -->
+                    <svg (click)="openSearchBar()" *ngIf="SearchClick==false"
+                        class="w-[130%] h-[130%] md:w-[60%] md:h-[60%]" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="20" cy="20" r="19.375" style.stroke="{{color}}" stroke-width="1.25" />
+                        <g opacity="0.6">
+                            <circle cx="19.129" cy="19.129" r="8.12903" style.stroke="{{color}}" stroke-width="2" />
+                            <path d="M24.9355 24.9355L28.5 28.5001" style.stroke="{{color}}" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+            <ng-container *ngIf="isLoginUser==true">
+                <div class=" relative hover:cursor-pointer w-[13%]" routerLink="/order/cart-page">
+                    <!-- cart svg -->
+                    <svg class="w-[130%] h-[130%] md:w-[60%] md:h-[60%]" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="20" cy="20" r="19.375" style.stroke="{{color}}" stroke-width="1.25" />
+                        <g opacity="0.6">
+                            <path
+                                d="M15.0957 16.1428V16.1428C16.9662 14.1814 17.9014 13.2006 19.0201 12.918C19.6632 12.7555 20.3366 12.7555 20.9797 12.918C22.0984 13.2006 23.0337 14.1814 24.9041 16.1428V16.1428"
+                                style.stroke="{{color}}" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M11.4629 23.6419C11.0434 21.1676 10.8337 19.9304 11.1592 18.9569C11.494 17.9554 12.2025 17.1204 13.138 16.6247C14.0474 16.1428 15.3068 16.1428 17.8257 16.1428H22.1743C24.6932 16.1428 25.9526 16.1428 26.862 16.6247C27.7975 17.1204 28.5059 17.9554 28.8408 18.9569C29.1663 19.9304 28.9566 21.1676 28.5371 23.6419C28.2274 25.4687 28.0726 26.382 27.6325 27.0782C27.1784 27.7964 26.5126 28.3571 25.7261 28.6835C24.9638 28.9999 24.0339 28.9999 22.1743 28.9999H17.8257C15.9661 28.9999 15.0362 28.9999 14.2739 28.6835C13.4874 28.3571 12.8216 27.7964 12.3675 27.0782C11.9274 26.382 11.7726 25.4687 11.4629 23.6419Z"
+                                style.stroke="{{color}}" stroke-width="2" />
+                            <path d="M15.6406 20.2571V24.8856" style.stroke="{{color}}" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20 20.2571V24.8856" style.stroke="{{color}}" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M24.3594 20.2571V24.8856" style.stroke="{{color}}" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+
+                    </svg>
+                    <ng-container *ngIf="CartItem!=0">
+                        <div
+                            class="absolute inline-flex items-center justify-center w-6  h-6  text-xs font-bold text-white bg-red-500  rounded-full  -top-[40%] left-[70%]  md:-top-[10%]  md:left-[40%] dark:border-gray-900">
+                            {{CartItem}}</div>
+
+                    </ng-container>
+
+                </div>
+            </ng-container>
+            <ng-container *ngIf="isLoginUser==true">
+                <div class="hover:cursor-pointer w-[13%]" routerLink="/favourite">
+                    <!-- favourite svg -->
+                    <svg class="w-[130%] h-[130%] md:w-[60%] md:h-[60%]" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="20" cy="20" r="19.375" style.stroke="{{color}}" stroke-width="1.25" />
+                        <g opacity="0.6">
+                            <path
+                                d="M27.0562 22.0838C24.1691 25.9616 21.8793 27.3537 20.7841 27.8509C20.2864 28.0497 19.689 28.0497 19.1912 27.8509C18.0961 27.3537 15.8063 25.9616 12.9192 22.0838C11.7245 20.1946 9.43471 15.8195 12.6205 12.936C15.6072 10.9474 18.0961 12.7371 19.2908 13.9303C19.689 14.3281 20.3859 14.3281 20.7841 13.9303C21.9788 12.7371 24.4677 10.8479 27.4544 12.936C30.5407 15.8195 28.2509 20.1946 27.0562 22.0838Z"
+                                style.stroke="{{color}}" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
+
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="isLoginUser==true">
+                <div routerLink="/user" class="hover:cursor-pointer w-[13%]">
+                    <!-- login svg -->
+                    <svg class="w-[130%] h-[130%] md:w-[60%] md:h-[60%]" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="20" cy="20" r="19.375" style.stroke="{{color}}" stroke-width="1.25" />
+                        <g opacity="0.6">
+                            <path
+                                d="M27 26.5C27 28.0294 24 29 20 29C16 29 13 28.0294 13 26.5C13 24.2692 16.5 23 20 23C23.5 23 27 24.5 27 26.5Z"
+                                style.stroke="{{color}}" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M20 20C22.4853 20 24.5 17.9853 24.5 15.5C24.5 13.0147 22.4853 11 20 11C17.5147 11 15.5 13.0147 15.5 15.5C15.5 17.9853 17.5147 20 20 20Z"
+                                style.stroke="{{color}}" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
+
+                </div>
+            </ng-container>
+            <ng-container *ngIf="isLoginUser==false">
+                <div routerLink="/login" class="hover:cursor-pointer w-[13%]">
+                    <!-- login svg -->
+                    <svg class="w-[130%] h-[130%] md:w-[60%] md:h-[60%]" viewBox="0 0 40 40" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="20" cy="20" r="19.375" style.stroke="{{color}}" stroke-width="1.25" />
+                        <g opacity="0.6">
+                            <path
+                                d="M27 26.5C27 28.0294 24 29 20 29C16 29 13 28.0294 13 26.5C13 24.2692 16.5 23 20 23C23.5 23 27 24.5 27 26.5Z"
+                                style.stroke="{{color}}" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M20 20C22.4853 20 24.5 17.9853 24.5 15.5C24.5 13.0147 22.4853 11 20 11C17.5147 11 15.5 13.0147 15.5 15.5C15.5 17.9853 17.5147 20 20 20Z"
+                                style.stroke="{{color}}" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
+
+                </div>
+            </ng-container>
+
+        </div>
+        <button id="nav_open_button" (click)="openNav($event)" *ngIf="MobileMenu" type="button"
+            class="fixed  bg-transparent   inline-flex items-center  w-[20%] h-[90px]   justify-center text-sm text-black outline-none">
+            <!-- <img class="w-[50%]" src="./../../../../assets/Images/Nav/menu.png"> -->
+            <svg id="opennavsvg" [class]="'text-'+color" *ngIf="this.NavOpen==false" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+            <svg id="closenavsvg" [class]="'text-'+color" *ngIf="this.NavOpen==true" xmlns="http://www.w3.org/2000/svg"
+                width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="alert-4" *ngIf="TryToLogin==true"
+        class="flex items-center p-4 mb-4 text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+        role="alert">
+        <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+            viewBox="0 0 20 20">
+            <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+        </svg>
+        <span class="sr-only">Info</span>
+        <div class="ms-3 text-sm flex items-center font-medium">
+            Server is currently experiencing high traffic and may be slower than usual. We apologize for any
+            inconvenience and appreciate your patience
+            <div class="ml-2" role="status">
+                <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                        fill="currentColor" />
+                    <path
+                        d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                        fill="currentFill" />
+                </svg>
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <button type="button" (click)="closeAlert()"
+            class="ms-auto -mx-1.5 -my-1.5 bg-yellow-50 text-yellow-500 rounded-lg  p-1.5 hover:bg-yellow-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-yellow-300 dark:hover:bg-gray-700"
+            data-dismiss-target="#alert-4" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+        </button>
+    </div>
+
+
+</nav>

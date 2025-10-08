@@ -1,0 +1,53 @@
+<div class="w-[100%]">
+  <div class="w-[100%]">
+    <h1>Loan Summary</h1>
+  </div>
+  <div class="w-[100%] mt-10">
+    <table class="w-[75%] border-2 border-gray-400 text-[17px]">
+      <tr class="bg-gray-200 border-b-2 border-gray-400">
+        <th class="font-[500] border-r-2 border-gray-400 w-[15%] py-5">Loan Account No</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[12%] py-5">Loan Amount</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[8%] py-5">Tenure (Months)</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[8%] py-5">EMI</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[8%] py-5">Status</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[20%] py-5">Product</th>
+        <th class="font-[500] w-[10%] py-5">Details</th>
+      </tr>
+      <tr class="border-b-2 border-gray-400" *ngFor="let item of AllLoanData">
+        <th class="font-[500] border-r-2 border-gray-400 w-[15%] py-5">{{item.account_number}}</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[12%] py-5">{{item.loan_amount}}</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[8%] py-5">{{item.total_tenure}}</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[8%] py-5">{{item.emi}}</th>
+        <th [class]="item.loan_active?'text-green-500 ':'text-red-600'" class="font-[500] border-r-2 border-gray-400 w-[8%] py-5">{{item.loan_active?'ACTIVE':'CLOSED'}}</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[20%] py-5">{{item.loan_type}}</th>
+        <th class="font-[500] w-[10%] py-5">
+            <div (click)="goToLoanSummaryDetailPage(item)" class="text-blue-600 cursor-pointer hover:text-red-600">View</div>
+        </th>
+      </tr>
+      <!-- <tr class="border-b-2 border-gray-400">
+        <th class="font-[500] border-r-2 border-gray-400 w-[15%] py-5">1234567890</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[15%] py-5">300000</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[15%] py-5">36</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[15%] py-5">10000</th>
+        <th class="font-[500] border-r-2 border-gray-400 text-red-700 w-[15%] py-5">Close</th>
+        <th class="font-[500] border-r-2 border-gray-400 w-[15%] py-5">PERSONAL LOAN</th>
+        <th class="font-[500] w-[15%] py-5">
+            <div (click)="goToLoanSummaryDetailPage('/user/loan-details-page')" class="text-blue-600 cursor-pointer hover:text-red-600">View</div>
+        </th>
+      </tr> -->
+
+    </table>
+    <div class="w-[100%] text-[17px] mt-5">
+        {{PageData.loan_summary.table_note}}
+    </div>
+    <div class="w-[100%] text-[17px] mt-5">
+        Note:
+        <ul class="px-5 mt-3 list-disc">
+            <li class="text-[17px]" *ngFor="let item of PageData.loan_summary.note">{{item}} <span class="cursor-pointer text-blue-600">Click Here</span></li>
+
+        </ul>
+        <div class="text-[17px] mt-3 text-blue-600 underline cursor-pointer">Service Charges and Fees</div>
+    </div>
+
+  </div>
+</div>

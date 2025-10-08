@@ -1,0 +1,7 @@
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@urbanindie-cluster.4jsoh9w.mongodb.net/?retryWrites=true&w=majority
+#      database: UrbanIndie
+#application:
+

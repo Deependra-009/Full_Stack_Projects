@@ -1,0 +1,92 @@
+<div class="w-[100%]">
+    <div>
+        <h1>Manage Favourite</h1>
+    </div>
+    <div class="w-[70%] mt-5">
+
+        <div class="p-3 relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="pb-4 bg-white dark:bg-gray-900">
+                <label for="table-search" class="sr-only">Search</label>
+                <div class="relative mt-1">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" id="table-search"
+                        class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search for items">
+                </div>
+            </div>
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="p-4">
+                            S.No
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Beneficiary name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Account Number
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            IFSC Code
+                        </th>
+                        <th scope="col" class=" px-6 py-3">
+                            Amount
+                        </th>
+                        <th scope="col" class="text-center px-6 py-3" >
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of FavouritePaymentData;index as i"
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4 ">
+                            <div class="flex justify-center">
+                                <h3>{{i+1}}</h3>
+                            </div>
+                        </td>
+
+                        <td class="px-6 py-4 font-medium text-red-500">
+                            {{item.beneficiary_name}}
+                        </td>
+                        <td class="px-6 py-4 font-medium text-green-500">
+                            {{item.account_number}}
+                        </td>
+                        <td class="px-6 py-4 font-medium text-black">
+                            {{item.ifsc_code==null?"Same Bank":item.ifsc_code}}
+                        </td>
+                        <td class=" text-black px-6 py-4">
+                            {{item.amount}}
+                        </td>
+                        <td class="px-6 py-4 ">
+                            <div class=" flex w-[100%] justify-between">
+                                <div (click)="selectFavouriteTransaction(item)"
+                                class=" font-medium text-gray-700 hover:text-red-500 hover:cursor-pointer      hover:underline">
+                                Select
+                            </div>
+                            <div  (click)="deleteFavouriteTransaction(item)"
+                                class="font-medium text-red-600 dark:text-red-500 hover:cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash">
+                                    <path d="M3 6h18" />
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                </svg>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

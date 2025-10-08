@@ -1,0 +1,63 @@
+<div class="w-[21.875rem] h-[100vh] border-r-[2px] border-r-teal-400">
+    <!-- search div -->
+  <div class="w-[100%] h-[10vh] flex justify-center items-center">
+    <form class="w-[100%]">
+      <div class="flex justify-center relative">
+        <div
+          class="absolute inset-y-0 start-0 flex items-center ps-8 pointer-events-none"
+        >
+          <svg
+            class="w-5 h-5 text-gray-500"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+            />
+          </svg>
+        </div>
+        <input
+          class="w-[90%] outline-none block placeholder-gray-500 ps-10 py-2 border-[2px] border-teal-400 rounded-[10px]"
+          placeholder="Search"
+          required
+        />
+      </div>
+    </form>
+  </div>
+
+  <!-- user data -->
+
+  <div class="w-[100%] px-2 py-1 h-[90vh]  overflow-quick overflow-y-scroll">
+
+    <!-- for loop for users chat -->
+    @for (item of UserList; track item.id;let i=$index) {
+    <div
+        (click)="openClickedUser(i)"
+      [class]="
+        SelectedChat == i
+          ? 'text-white bg-teal-500 rounded-[10px]'
+          : 'text-black'
+      "
+      class="py-2 cursor-pointer  my-1  px-1 w-[100%] flex items-center"
+    >
+      <div class="w-[20%] flex justify-center">
+        <img class="w-[80%]" src="./../../../assets/Images/user-icon.png" />
+      </div>
+      <div class="w-[57%] px-1">
+        <h1 class="text-[17px]">{{ item.name }}</h1>
+        <h1>new message</h1>
+      </div>
+      <div class="w-[20%] pb-5 text-[15px]">
+        {{ item.time }}
+      </div>
+    </div>
+    }
+  </div>
+
+</div>

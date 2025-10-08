@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-color: black; */
+  color: #ef4444;
+  /* font-family: monospace; */
+}
+.cborder {
+  border: 2px solid white;
+}
+.item-center {
+  display: flex;
+  justify-content: center;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  /* background-color: black; */
+  z-index: 100;
+}
+html {
+  scroll-behavior: smooth;
+}
+.skill-logo {
+  width: 150px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.diamond-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 80%;
+  left: 0px;
+  background: #39d1b4;
+}
+
+@media (min-width: 640px) {
+  hr {
+    width: 30%;
+  }
+
+  .diamond-logo {
+    width: 90%;
+    left:45%;
+  }
+  .diamond-logo::before {
+    left:45%;
+  }
+
+}
+
+
+.diamond-logo::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  transform: rotate(45deg);
+  background: #39d1b4;
+  left: 50%;
+}
+
+/* Add this in your CSS file */
+.no-scroll {
+  overflow: hidden;
+}
+
+.overflow-quick::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+.slide-left {
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.slide-right {
+  -webkit-animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+/* Hide scrollbar for Webkit browsers */
+body::-webkit-scrollbar {
+  display: none;
+}
+

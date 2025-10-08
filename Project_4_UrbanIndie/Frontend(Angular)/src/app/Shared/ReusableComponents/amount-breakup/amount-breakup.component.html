@@ -1,0 +1,83 @@
+<div class="w-[100%] bg-white h-[90%]">
+  <div class="flex flex-col justify-between">
+    <div>
+      <div (click)="isList = !isList"
+        class="p-4 shadow rounded bg-white text-sm font-black leading-9 text-gray-800 flex items-center justify-between cursor-pointer">
+        Apply Coupons
+        <div>
+          <div class="hidden" id="close">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.00016 0.666664L9.66683 5.33333L0.333496 5.33333L5.00016 0.666664Z" fill="#1F2937" />
+            </svg>
+          </div>
+          <div id="open">
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.00016 5.33333L0.333496 0.666664H9.66683L5.00016 5.33333Z" fill="#1F2937" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="isList" class="p-4 bg-white shadow rounded" id="dropdown">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <div class="pl-4 flex items-center">
+              <p class="text-sm leading-normal ml-2 text-gray-400">
+                You can find your saved coupons and offer coupons in this
+                section
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="text-xs bg-gray-200 transition duration-150 ease-in-out hover:bg-gray-300 rounded-md mt-6 font-medium py-2 w-full leading-3 text-black">
+          Find coupons
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex border-t flex-col lg:px-8 md:px-7 px-4 lg:py-4 md:py-4 py-4 justify-between">
+    <div>
+      <p class="font-black leading-9 text-gray-800">Amount Breakout</p>
+      <div class="flex items-center justify-between pt-5">
+        <p class="text-base leading-none font-normal text-gray-400">
+          Total MRP
+        </p>
+        <p class="text-base leading-none text-gray-700">₹{{totalMRP}}</p>
+      </div>
+      <div class="flex items-center justify-between pt-5">
+        <p class="text-base leading-none font-normal text-gray-400">
+          Discount on MRP
+        </p>
+        <p class="text-base leading-none text-red-500">₹{{totalDiscount}}</p>
+      </div>
+      <div class="flex items-center justify-between pt-5">
+        <p class="text-base leading-none font-normal text-gray-400">
+          Coupon Discount
+        </p>
+        <p class="text-base leading-none text-gray-700">--</p>
+      </div>
+      <div class="flex items-center justify-between pt-5">
+        <p class="text-base leading-none font-normal text-gray-400">
+          Delivery Fee
+        </p>
+        <p class="text-base leading-none text-gray-700">Free!</p>
+      </div>
+    </div>
+    <div class="border-t">
+      <div class="flex items-center pb-6 justify-between lg:pt-5 pt-5">
+        <p class="text-base leading-none font-normal text-gray-500">Total</p>
+        <p class="font-bold leading-normal text-right text-gray-800">₹{{totalPrice}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-[100%] flex justify-center items-center md:mt-2 h-[9%] md:mb-2 bg-white">
+  <app-button *ngIf="isContinueDisabled"  class="w-[100%] md:w-[80%]" [title]="'Continue'" 
+    [style]="' px-6 py-3 text-[18px]  text-white bg-neutral-600 hover:bg-slate-900 focus:outline-none focus:ring focus:ring-blue-300'"
+    (click)="onContinueButtonClick()"></app-button>
+
+
+    <button *ngIf="!isContinueDisabled" class="w-[100%] md:w-[80%] px-6 py-3 text-[18px]  text-white bg-black hover:bg-slate-900 focus:outline-none focus:ring focus:ring-blue-300" 
+     [routerLink]="dynamic_route"  [routerLink]="dynamic_route" [disabled]="isContinueDisabled" (click)="onButtonClick()">Continue</button>
+</div>

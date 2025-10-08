@@ -1,0 +1,186 @@
+<div class="w-[100%] px-2 h-[3em] items-center text-[20px]  flex">
+    Orders
+</div>
+<div  class="w-[100%] border-t-[1px] border-gray-300 pb-2  flex flex-wrap  items-center  md:h-[7em]">
+    <div (click)="getAllOrders(undefined,undefined,true)"  class="bg-gray-200 text-gray-700  mt-2 md:mt-0 md:block flex justify-center items-center  ml-3 cursor-pointer hover:text-black   text-[15px] md:text-[17px] px-4 py-4">
+        All
+    </div>
+    <div  (click)="getAllOrders(getCurrentYear(), getCurrentMonth())"   class="bg-gray-200 text-gray-700  mt-2 md:mt-0 md:block flex justify-center items-center  ml-3 cursor-pointer hover:text-black   text-[15px] md:text-[17px] px-4 py-4">
+        This month
+    </div>
+    <div (click)="getAllOrders(getCurrentYear())" class="bg-gray-200 text-gray-700  mt-2 md:mt-0 md:block flex justify-center items-center  ml-3 cursor-pointer hover:text-black   text-[15px] md:text-[17px] px-4 py-4">
+        This Year
+    </div>
+    <div (click)="getAllOrders(2022)"  class="bg-gray-200 text-gray-700  mt-2 md:mt-0 md:block flex justify-center items-center  ml-3 cursor-pointer hover:text-black   text-[15px] md:text-[17px] px-4 py-4">
+        2022
+    </div>
+    <div (click)="getAllOrders(2021)"  class="bg-gray-200 text-gray-700  mt-2 md:mt-0 md:block flex justify-center items-center  ml-3 cursor-pointer hover:text-black   text-[15px] md:text-[17px] px-4 py-4">
+        2021
+    </div>
+    <div (click)="getAllOrders(2020)"  class="bg-gray-200 text-gray-700  mt-2 md:mt-0 md:block flex justify-center items-center  ml-3 cursor-pointer hover:text-black   text-[15px] md:text-[17px] px-4 py-4">
+        2020    
+    </div>
+</div>
+<div class="w-[100%] md:h-[100vh]  overflow-quick md:overflow-y-auto">
+<div *ngFor="let items of orders"> 
+
+    <div *ngFor="let item of items.products" class="w-[100%] border-gray-300 border-t-[1px] md:h-[350px] lg:h-[300px] py-5">
+       <!-- {{items|json}} -->
+        <div class="w-[100%] md:flex" (click)="navigateToOrder(items.order_id)">
+            <div class="xl:w-[30%] md:w-[50%] lg:w-[40%] 2xl:w-[30%] flex justify-center w-[100%] px-5 ">
+                <img class="md:w-[100%] w-[70%] h-[250px]"
+                src="{{item.product_images[0]}}">
+            </div>
+            <div class="xl:w-[70%] 2xl:w-[80%] w-[100%] py-3 md:py-0 px-6 md:px-5 ">
+                <div class="py-1 text-[18px]  w-[100%]">
+                    <!-- Calvin Klein  -->    {{item.product_brand}}
+                </div>
+                <div class="py-1 text-[16px] text-gray-500 w-[100%]" routerLink="">
+                  <!--  Allover Logo Denim Trucker Jacket -->     {{item.product_title}}
+                </div>
+                <div class="py-1 text-[16px]  w-[100%]">
+                    <!--    100 -->
+                    ₹{{item.product_price}}
+                </div>
+                <div class="w-[100%] py-1 flex">
+                    <div class="2xl:w-[20%] xl:w-[20%]  w-[100%] px-4  flex justify-center items-center py-2 bg-gray-200">{{item.product_size[0]}}</div>
+                    <div class="2xl:w-[20%] xl:w-[20%]  w-[100%] px-4 ml-5 flex justify-center items-center py-2 bg-gray-200">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle opacity="0.2" cx="14" cy="14" r="13.375" stroke="black" stroke-width="1.25" />
+                            <circle cx="14" cy="14" r="10" [attr.fill]="item.product_color[0]" />
+                        </svg>
+
+                    </div>
+                    <div class="2xl:w-[20%] xl:w-[20%]  w-[100%] px-4 ml-5 flex justify-center items-center py-2 bg-gray-200">Qty: {{item.product_quantity}}
+                    </div>
+                </div>
+               <ng-container *ngIf="items.order_status === 'OutOfDelivery'">
+                <div class="w-[100%] md:flex py-1 ">
+                    <div class="md:w-[50%] xl:w-[40%] 2xl:w-[30%] w-[100%] px-4 flex justify-center py-2 items-center bg-gray-200 cursor-pointer">See Order Details &nbsp;
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.6">
+                                <path
+                                    d="M7 8C8.10457 8 9 7.10457 9 6C9 4.89543 8.10457 4 7 4C5.89543 4 5 4.89543 5 6C5 7.10457 5.89543 8 7 8Z"
+                                    stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9 6C9 6 11.6569 6 14 6C15.5 6 18 6 18 9C18 12 15.5 12 14 12C10.5 12 12 12 9.5 12C8 12 6 12.5 6 15C6 17.5 8 18 9.5 18C13 18 18 18 18 18"
+                                    stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15 21L18 18L15 15" stroke="black" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                        </svg>
+
+                    </div>
+
+
+                    <div class="md:w-[50%] xl:w-[40%] 2xl:w-[30%] w-[100%] mt-2 md:mt-0 md:ml-5 px-4 flex justify-center py-2 items-center bg-gray-200 cursor-pointer">Call Delievery guy &nbsp;
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.6">
+                                <path
+                                    d="M15.5187 20.8312C8.99707 18.6339 5.50186 14.6437 3.27588 9.01866C2.7194 7.89365 2.71938 5.08115 6.05833 3.28114C6.89306 2.83114 7.7278 2.83113 8.84079 3.95615C9.95377 5.08116 8.84078 3.95614 9.95377 5.08114C11.2338 6.375 11.0976 7.5 10.875 8.0625C10.6524 8.7375 9.61987 9.35616 9.95377 10.7062C10.2877 12.0562 11.9571 13.8562 13.2927 14.0812C14.6283 14.3062 15.381 13.4625 15.9375 13.125C16.494 12.7875 17.4142 12.6222 18.3011 13.5187C18.75 13.9724 18.8576 14.0812 19.9706 15.2062C21.0836 16.3312 21.2094 17.2442 20.7497 18.0187C19.3125 20.9404 16.8946 21.2948 15.5187 20.8312Z"
+                                    stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+
+                    </div>
+                </div>
+               </ng-container>
+
+
+                <ng-container *ngIf="items.order_status === 'Placed'">
+                    <div class="w-[100%] flex py-1">
+                        <div class="w-[100%] xl:w-[40%] 2xl:w-[30%] px-4 flex justify-center py-2 items-center bg-gray-200 cursor-pointer" (click)="cancelOrder(items.order_id)">Cancel Order &nbsp;
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                    <path d="M6 18L18 6" stroke="black" stroke-width="1.7" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M18 18L6 6" stroke="black" stroke-width="1.7" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+    
+                        </div>
+                        <div class="w-[100%] mt-2 md:mt-0 xl:w-[40%] 2xl:w-[30%] px-4 flex justify-center py-2 items-center ml-5 bg-gray-200 cursor-pointer">See Order Details &nbsp;
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                    <path
+                                        d="M7 8C8.10457 8 9 7.10457 9 6C9 4.89543 8.10457 4 7 4C5.89543 4 5 4.89543 5 6C5 7.10457 5.89543 8 7 8Z"
+                                        stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M9 6C9 6 11.6569 6 14 6C15.5 6 18 6 18 9C18 12 15.5 12 14 12C10.5 12 12 12 9.5 12C8 12 6 12.5 6 15C6 17.5 8 18 9.5 18C13 18 18 18 18 18"
+                                        stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M15 21L18 18L15 15" stroke="black" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="items.order_status === 'Delivered'">
+                    <div class="w-[100%] flex flex-col lg:flex-row py-1">
+                        <div class="w-[100%] xl:w-[40%] 2xl:w-[30%] px-4 flex justify-center py-2 items-center  bg-gray-200 cursor-pointer">Exchange &nbsp;
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                    <path
+                                        d="M4 12V10C4 8.93913 4.42143 7.92172 5.17157 7.17157C5.92172 6.42143 6.93913 6 8 6H17"
+                                        stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M14 2L18 6L14 10" stroke="black" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M20 12V14C20 15.0609 19.5786 16.0783 18.8284 16.8284C18.0783 17.5786 17.0609 18 16 18H7"
+                                        stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M10 22L6 18L10 14" stroke="black" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg>
+    
+                        </div>
+                        <div class="w-[100%] mt-2 lg:mt-0 xl:w-[40%] 2xl:w-[30%] px-4 flex justify-center py-2 items-center lg:ml-5 bg-gray-200 cursor-pointer">Return &nbsp;
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                    <path d="M9 15L3 9L9 3" stroke="black" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9 19H16C17.3261 19 18.5979 18.4732 19.5355 17.5355C20.4732 16.5979 21 15.3261 21 14V14C21 12.6739 20.4732 11.4021 19.5355 10.4645C18.5979 9.52678 17.3261 9 16 9H4"
+                                        stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+    
+                        </div>
+                        <div class="w-[100%] mt-2 lg:mt-0 xl:w-[40%] 2xl:w-[30%] px-4 flex justify-center py-2 items-center lg:ml-5 bg-gray-200 cursor-pointer">Download Invoice &nbsp;
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.6">
+                                    <path d="M20 14C20 19.5 19 20 12 20C5 20 4 19.5 4 14" stroke="black" stroke-width="1.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12 4L12 15" stroke="black" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 11L12 15L16 11" stroke="black" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg>
+    
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="items.order_status === 'OutOfDelivery'"> 
+                <div class="py-2 w-[100%] text-[16px] text-gray-600">
+                    Out for delivery · Delivery code is 6872
+                </div>
+                <div class="py-2 w-[100%] text-[16px] text-gray-600">
+                    Delivery guy will delivery your order today, in between 8 AM - 8 PM
+                </div>
+            </ng-container>
+            <!-- Cancelled -->
+            <ng-container *ngIf="items.order_status === 'Placed'"> 
+                <div class="py-2 w-[100%] text-[16px] text-gray-600">
+                    Your Order is Placed and it is currently processed by our seller
+                </div>
+                <div class="py-2 w-[100%] text-[16px] text-gray-600">
+                    it will be delivered to you by {{item.deliveryDate}}      
+                  </div>
+            </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

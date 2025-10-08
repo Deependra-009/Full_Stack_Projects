@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.ml-43{
+    margin-left: 10.7rem;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.overflow-quick::-webkit-scrollbar{
+    width: 0px;
+}
+
+.cborder{
+    border:2px solid red;
+}

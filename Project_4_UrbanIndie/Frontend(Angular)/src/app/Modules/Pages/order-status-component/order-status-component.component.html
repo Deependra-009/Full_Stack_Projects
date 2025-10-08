@@ -1,0 +1,162 @@
+<div class="w-full flex justify-center items-center custom-component">
+  <div class="xl:w-[90%] lg:w-[90%] 2xl:w-[85%] w-[100%]" *ngIf="orderResponseData">
+    <!-- first Card Container -->
+    <div class="bg-white p-4 rounded-md shadow-md">
+      <div class="flex">
+        <div class="w-3/5 p-2 relative border-r flex items-center">
+          <!-- Animation Box -->
+          <div class="w-28 h-28 relative bottom-3">
+            <ng-lottie [options]="orderPlacedAnimation"></ng-lottie>
+          </div>
+        
+          <!-- Content for Left Card -->
+          <div class="pl-4">
+            <p class="text-xl font-semibold text-red-500 leading-tight">
+              Order placed for ₹{{orderResponseData.order_total_amount}}!
+            </p>
+            <p class="leading-tight">
+              Your {{orderResponseData.products.length}} item will be delivered by
+              <strong class="font-medium">Tue, Sep 26th '23</strong>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Right Card -->
+        <div class="w-2/5 p-2 relative flex items-center">
+          <!-- Animation Box -->
+          <div class="lg:block absolute top-6 right-0 bottom-0 w-24">
+            <ng-lottie [options]="orderBoxAnimation"></ng-lottie>
+          </div>
+
+          <!-- Content for Right Card (Section 2) -->
+          <div class="text-left pl-2">
+            <p class="text-lg font-semibold mb-1">Why call? Just click!</p>
+            <p class="mb-2">Easily track all UrbanIndie orders!</p>
+            <button routerLink="/user/order-page"
+              class="mt-2  rounded-md py-2 px-3 text-white bg-black hover:bg-slate-900 focus:outline-none focus:ring focus:ring-blue-300">
+              Go to My Orders
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Outer Card Container ends -->
+
+    <!-- New Card Section -->
+    <div class="bg-white p-4 shadow-md mt-4">
+      <div class="flex">
+        <!-- First Inner Card (Occupies 1/3 of the width) -->
+        <div class="w-1/3 p-2 border-r border-gray-300 m-0">
+          <p class="font-medium mb-2">Delivery Address</p>
+          <p class="font-medium mb-3">{{orderResponseData.addressOfDelivery.name}}</p>
+          <p>{{orderResponseData.addressOfDelivery.addressLine1}}</p>
+
+          <p>{{orderResponseData.addressOfDelivery.addressLine2}}</p>
+          <p class="mb-3">{{orderResponseData.addressOfDelivery.addressCity}}, {{orderResponseData.addressOfDelivery.addressPinCode}}</p>
+          <p class="font-medium mb-2">Phone Number</p>
+          <p>{{orderResponseData.addressOfDelivery.mobileNumber}}
+          </p>
+        </div>
+
+        <!-- Second Inner Card (Occupies 1/3 of the width) -->
+        <div class="w-1/3 p-2 border-r border-gray-300">
+          <p class="font-medium mb-2">Your Rewards</p>
+          <div class="flex items-center mb-2 flex-wrap">
+           <img src="../../../../assets/Images/svg/coins.svg" alt="coins" class="w-12 h-12 mr-2" />
+            <div>
+              <p>50% off on Bata Shoes</p>
+              <p class="text-gray-500 text-xs">Use it on your next purchase.</p>
+            </div>
+          </div>
+        </div>
+
+<!-- Third Inner Card (Occupies 1/3 of the width) -->
+<div class="w-1/3 p-2">
+  <p class="font-medium mb-2">More actions</p>
+  <div class="flex items-center mb-2">
+    <img src="../../../../assets/Images/svg/share.svg" alt="Coins" class="w-6 h-12 mr-2" />
+    <div class="inline-flex flex-col">
+      <p>Share your Order Details</p>
+    </div>
+    <button class="bg-white text-black rounded-md py-1 px-3 hover:bg-red-400 hover:text-white shadow-md border border-gray-300 ml-auto">
+      Share Order
+    </button>
+  </div>
+</div>
+ </div>
+    </div>
+
+    
+
+
+
+
+<!-- 3rd card -->
+    <!-- Main Card Container -->
+    <div class="bg-white p-4 shadow-md mt-4">
+
+
+      <div class="flex" *ngFor="let product of orderResponseData.products">
+        <!-- First Inner Card (Occupies 1/3 of the width) -->
+        <div class="w-1/3 p-2 m-0 flex items-start">
+          <!-- Product Image (Left Side) -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNOQHToVgcxjo1gpQO2xomMdyUrdg5ikwFNR2mA_q7P1jY7uWUn-rc7mNrgI1hEVwQ4TM&usqp=CAU" alt="Product Image" class="w-24 h-24 object-cover mr-4">
+          
+          <div>
+             <!-- Product Name -->
+             <p class="font-medium text-lg mb-1">{{product.product_title}}</p>
+             <!-- Product Description -->
+             <p class="text-gray-500 text-xs">Size:{{product.selectedProductSize}}</p> 
+             <p class="text-gray-500 text-xs">Colour:{{product.selectedProductColour}}</p> 
+             <p class="text-gray-500 text-xs">Seller:{{product.product_seller_id}}</p>
+          </div>
+        </div>    
+        <!-- Second Inner Card (Occupies 1/3 of the width) -->
+        <div class="w-1/3 p-2 ">
+          <div class="flex items-center mb-2">
+            <!-- Truck Icon -->
+            <img src="../../../../assets/Images/svg/deliveryTruck.svg" alt="Truck Icon" class="w-6  mr-2">
+            
+            <!-- Text -->
+            <div>
+              <p class=" mb-1">Delivery expected by {{orderResponseData.products.DeliveryDate}}</p>
+            </div>
+          </div>
+        </div>
+
+<!-- Third Inner Card (Occupies 1/3 of the width) -->
+<div class="w-1/3 p-2">
+  <p class="font-medium mb-2">
+    ₹{{product.product_price}}&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-500">2 offers applied</span>
+    <span class="rounded-full bg-gray-200 w-6 h-6 inline-flex items-center justify-center ml-1 shadow-lg">
+      <span class="text-gray-800">?</span>
+    </span>
+  </p>
+  <p>
+    <span class="text-black-800">Need help?</span> 
+  </p>
+</div>
+ </div>
+
+
+
+ <hr>
+  <!-- Total Section -->
+  <div class="flex justify-end items-center mt-2">
+    <p class="text-lg font-medium">Total: ₹{{orderResponseData.order_total_amount}}</p>
+  </div>
+    </div>
+   
+    <div class="w-1/3 p-4 bg-white rounded-md shadow-md mt-2 flex items-center">
+      <div class="flex items-center mb-2 flex-wrap">
+       <img src="../../../../assets/Images/svg/alert.svg" alt="coins" class="w-12 h-12 mr-2" />
+        <div>
+          <p>Beware of fraudulent calls & messages!</p>
+          <p class="text-gray-500 text-xs">We don't ask for bank OTP/pin for offers or demand money</p>
+        </div>
+      </div>
+    </div>
+   
+   
+  </div>
+</div>

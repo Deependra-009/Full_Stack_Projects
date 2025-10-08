@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="UrbanIndie_PaymentMicroservice" />
+        <module name="UrbanIndie_OtherMicroservices" />
+        <module name="GlobalBazaar_APIGateway" />
+        <module name="GlobalBazaar_EurekaServer" />
+        <module name="UrbanIndie_ProductMicroservices" />
+        <module name="GlobalBazaar_UserMicroservice" />
+        <module name="UrbanIndie_EurekaServer" />
+        <module name="GlobalBazaar_PaymentMicroservice" />
+        <module name="UrbanIndie_OrderMicroservice" />
+        <module name="UrbanIndie-Authentication-Microservice" />
+        <module name="GlobalBazaar_ConfigurationServer" />
+        <module name="UrbanIndie_APIGateway" />
+        <module name="UrbanIndie_ConfigurationServer" />
+        <module name="order" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="GlobalBazaar_APIGateway" target="17" />
+      <module name="GlobalBazaar_ConfigurationServer" target="17" />
+      <module name="GlobalBazaar_EurekaServer" target="17" />
+      <module name="GlobalBazaar_PaymentMicroservice" target="17" />
+      <module name="GlobalBazaar_UserMicroservice" target="17" />
+      <module name="order" target="17" />
+      <module name="UrbanIndie-Backend" target="17" />
+      <module name="UrbanIndie_UserMicroservice" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="GlobalBazaar_APIGateway" options="-parameters" />
+      <module name="GlobalBazaar_ConfigurationServer" options="-parameters" />
+      <module name="GlobalBazaar_EurekaServer" options="-parameters" />
+      <module name="GlobalBazaar_PaymentMicroservice" options="-parameters" />
+      <module name="GlobalBazaar_UserMicroservice" options="-parameters" />
+      <module name="UrbanIndie-Authentication-Microservice" options="-parameters" />
+      <module name="UrbanIndie_APIGateway" options="-parameters" />
+      <module name="UrbanIndie_ConfigurationServer" options="-parameters" />
+      <module name="UrbanIndie_EurekaServer" options="-parameters" />
+      <module name="UrbanIndie_OrderMicroservice" options="-parameters" />
+      <module name="UrbanIndie_OtherMicroservices" options="-parameters" />
+      <module name="UrbanIndie_PaymentMicroservice" options="-parameters" />
+      <module name="UrbanIndie_ProductMicroservices" options="-parameters" />
+      <module name="UrbanIndie_UserMicroservice" options="-parameters" />
+      <module name="order" options="-parameters" />
+    </option>
+  </component>
+</project>
