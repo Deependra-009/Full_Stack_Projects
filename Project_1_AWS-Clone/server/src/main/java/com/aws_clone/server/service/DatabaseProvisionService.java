@@ -36,6 +36,14 @@ public class DatabaseProvisionService {
                 image = "postgres:16";
                 containerPort = 5432;
             }
+            case "oracle" -> {
+                image = "gvenzl/oracle-xe:21-slim";
+                containerPort = 1521;
+            }
+            case "mongodb" -> {
+                image = "mongo:7";
+                containerPort = 27017;
+            }
             default -> throw new IllegalArgumentException("Unsupported DB type");
         }
 
@@ -45,18 +53,30 @@ public class DatabaseProvisionService {
         int hostPort = findAvailablePort();
 
         // Prepare environment variables
-        List<String> env = dbType.equalsIgnoreCase("mysql") ?
-                List.of(
-                        "MYSQL_ROOT_PASSWORD=" + password,
-                        "MYSQL_DATABASE=" + dbName,
-                        "MYSQL_USER=" + username,
-                        "MYSQL_PASSWORD=" + password
-                ) :
-                List.of(
-                        "POSTGRES_DB=" + dbName,
-                        "POSTGRES_USER=" + username,
-                        "POSTGRES_PASSWORD=" + password
-                );
+        List<String> env = switch (dbType.toLowerCase()) {
+            case "mysql" -> List.of(
+                    "MYSQL_ROOT_PASSWORD=" + password,
+                    "MYSQL_DATABASE=" + dbName,
+                    "MYSQL_USER=" + username,
+                    "MYSQL_PASSWORD=" + password
+            );
+            case "postgres" -> List.of(
+                    "POSTGRES_DB=" + dbName,
+                    "POSTGRES_USER=" + username,
+                    "POSTGRES_PASSWORD=" + password
+            );
+            case "oracle" -> List.of(
+                    "ORACLE_PASSWORD=" + password,
+                    "ORACLE_DATABASE=" + dbName
+            );
+            case "mongodb" -> List.of(
+                    "MONGO_INITDB_ROOT_USERNAME=" + username,
+                    "MONGO_INITDB_ROOT_PASSWORD=" + password,
+                    "MONGO_INITDB_DATABASE=" + dbName,
+                    "MONGO_INITDB_AUTHENTICATION_DATABASE=admin"
+            );
+            default -> throw new IllegalArgumentException("Unsupported DB type for environment variables");
+        };
 
         // Generate a UUID suffix
         String uuid = UUID.randomUUID().toString();
@@ -67,14 +87,27 @@ public class DatabaseProvisionService {
         // Container name
         String containerName = "db-container-" + uuid;
 
-        Volume containerVolume = new Volume(dbType.equalsIgnoreCase("mysql") ? "/var/lib/mysql" : "/var/lib/postgresql/data");
+        String volumePath = switch (dbType.toLowerCase()) {
+            case "mysql" -> "/var/lib/mysql";
+            case "postgres" -> "/var/lib/postgresql/data";
+            case "oracle" -> "/opt/oracle/oradata";
+            case "mongodb" -> "/data/db";
+            default -> "/var/lib/data";
+        };
+        Volume containerVolume = new Volume(volumePath);
 
         ExposedPort tcpPort = ExposedPort.tcp(containerPort);
+
+        // Add command line arguments for MongoDB to fix port binding
+        String[] cmdArray = dbType.toLowerCase().equals("mongodb") ? 
+            new String[]{"mongod", "--bind_ip_all", "--port", String.valueOf(containerPort)} : 
+            null;
 
         CreateContainerResponse container = dockerClient.createContainerCmd(image)
                 .withName(containerName)
                 .withEnv(env)
                 .withExposedPorts(tcpPort)
+                .withCmd(cmdArray)
                 .withHostConfig(
                         com.github.dockerjava.api.model.HostConfig.newHostConfig()
                                 // ✅ Bind the host port on 0.0.0.0 (localhost)
@@ -85,7 +118,13 @@ public class DatabaseProvisionService {
 
         dockerClient.startContainerCmd(container.getId()).exec();
 
-        String jdbcUrl = "jdbc:" + dbType + "://localhost:" + hostPort + "/" + dbName;
+        String jdbcUrl = switch (dbType.toLowerCase()) {
+            case "mysql" -> "jdbc:mysql://localhost:" + hostPort + "/" + dbName;
+            case "postgres" -> "jdbc:postgresql://localhost:" + hostPort + "/" + dbName;
+            case "oracle" -> "jdbc:oracle:thin:@localhost:" + hostPort + ":XE";
+            case "mongodb" -> "mongodb://" + username + ":" + password + "@localhost:" + hostPort + "/" + dbName;
+            default -> "jdbc:" + dbType + "://localhost:" + hostPort + "/" + dbName;
+        };
 
         DatabaseInstance instance = new DatabaseInstance();
         instance.setDbType(dbType);

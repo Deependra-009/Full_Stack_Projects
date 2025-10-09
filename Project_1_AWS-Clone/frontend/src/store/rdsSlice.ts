@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { DatabaseInstance, CreateDatabaseRequest, DatabaseState } from '../types/rds';
+import { DatabaseInstance, CreateDatabaseRequest, DatabaseState, Notification } from '../types/rds';
 import { rdsApi } from '../services/rdsApi';
 
 const initialState: DatabaseState = {
@@ -7,6 +7,7 @@ const initialState: DatabaseState = {
   loading: false,
   error: null,
   selectedInstance: null,
+  notifications: [],
 };
 
 // Async thunks
@@ -56,6 +57,30 @@ const rdsSlice = createSlice({
     clearError: (state) => {
       state.error = null;
     },
+    updateInstanceStatus: (
+      state,
+      action: PayloadAction<{ id: number; status: DatabaseInstance['status'] }>
+    ) => {
+      const instance = state.instances.find(i => i.id === action.payload.id);
+      if (instance) {
+        instance.status = action.payload.status;
+        instance.updatedAt = new Date().toISOString();
+      }
+    },
+    addNotification: (state, action: PayloadAction<Omit<Notification, 'id' | 'timestamp'>>) => {
+      const notification: Notification = {
+        ...action.payload,
+        id: Date.now().toString(),
+        timestamp: Date.now(),
+      };
+      state.notifications.push(notification);
+    },
+    removeNotification: (state, action: PayloadAction<string>) => {
+      state.notifications = state.notifications.filter(n => n.id !== action.payload);
+    },
+    clearNotifications: (state) => {
+      state.notifications = [];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -104,5 +129,5 @@ const rdsSlice = createSlice({
   },
 });
 
-export const { selectInstance, clearError } = rdsSlice.actions;
+export const { selectInstance, clearError, updateInstanceStatus, addNotification, removeNotification, clearNotifications } = rdsSlice.actions;
 export default rdsSlice.reducer;

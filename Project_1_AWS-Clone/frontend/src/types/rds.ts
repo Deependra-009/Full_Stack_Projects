@@ -1,6 +1,6 @@
 export interface DatabaseInstance {
   id: number;
-  dbType: 'mysql' | 'postgres';
+  dbType: 'mysql' | 'postgres' | 'oracle' | 'mongodb';
   dbName: string;
   username: string;
   password: string;
@@ -15,7 +15,7 @@ export interface DatabaseInstance {
 }
 
 export interface CreateDatabaseRequest {
-  dbType: 'mysql' | 'postgres';
+  dbType: 'mysql' | 'postgres' | 'oracle' | 'mongodb';
   dbName: string;
   username: string;
   password: string;
@@ -26,4 +26,12 @@ export interface DatabaseState {
   loading: boolean;
   error: string | null;
   selectedInstance: DatabaseInstance | null;
+  notifications: Notification[];
+}
+
+export interface Notification {
+  id: string;
+  type: 'success' | 'error' | 'info';
+  message: string;
+  timestamp: number;
 }

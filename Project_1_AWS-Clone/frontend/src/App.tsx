@@ -4,6 +4,7 @@ import { fetchDatabases } from './store/rdsSlice';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import RDSPage from './components/RDS/RDSPage';
+import Toast from './components/Toast';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -58,6 +59,7 @@ const App: React.FC = () => {
           {renderContent()}
         </main>
       </div>
+      <Toast />
     </div>
   );
 };

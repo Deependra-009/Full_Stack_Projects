@@ -75,6 +75,8 @@ const CreateDatabaseForm: React.FC = () => {
             >
               <option value="postgres">PostgreSQL</option>
               <option value="mysql">MySQL</option>
+              <option value="oracle">Oracle Database</option>
+              <option value="mongodb">MongoDB</option>
             </select>
           </div>
 

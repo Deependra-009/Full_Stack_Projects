@@ -1,11 +1,13 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { deleteDatabase, selectInstance, fetchDatabases } from '../../store/rdsSlice';
+import { deleteDatabase, selectInstance, fetchDatabases, addNotification, updateInstanceStatus } from '../../store/rdsSlice';
 import { rdsApi } from '../../services/rdsApi';
 import { DatabaseInstance } from '../../types/rds';
 import { Database, Trash2, Play, Square, Eye, Copy } from 'lucide-react';
 import mysqlLogo from '../../assets/mysql.svg';
 import postgresLogo from '../../assets/postgres.svg';
+import oracleLogo from '../../assets/oracle.svg';
+import mongodbLogo from '../../assets/mongodb.svg';
 
 const DatabaseList: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -13,27 +15,64 @@ const DatabaseList: React.FC = () => {
 
   const handleDelete = async (id: number) => {
     if (window.confirm('Are you sure you want to delete this database instance?')) {
-      await dispatch(deleteDatabase(id));
+      try {
+        await dispatch(deleteDatabase(id));
+        dispatch(addNotification({
+          type: 'success',
+          message: 'Database instance deleted successfully!'
+        }));
+      } catch (error) {
+        dispatch(addNotification({
+          type: 'error',
+          message: 'Failed to delete database instance'
+        }));
+      }
     }
   };
 
   const handleStart = async (id: number) => {
     try {
+      // Optimistic UI: set to STARTING immediately
+      dispatch(updateInstanceStatus({ id, status: 'STARTING' }));
+      dispatch(addNotification({ type: 'info', message: 'Starting database instance...' }));
       await rdsApi.startDatabase(id);
       // Refresh the list after starting
       dispatch(fetchDatabases());
+      dispatch(addNotification({
+        type: 'success',
+        message: 'Database instance started successfully!'
+      }));
     } catch (error) {
       console.error('Failed to start database:', error);
+      // Revert optimistic state
+      dispatch(updateInstanceStatus({ id, status: 'STOPPED' }));
+      dispatch(addNotification({
+        type: 'error',
+        message: 'Failed to start database instance'
+      }));
     }
   };
 
   const handleStop = async (id: number) => {
     try {
+      // Optimistic UI: set to STOPPING immediately
+      dispatch(updateInstanceStatus({ id, status: 'STOPPING' }));
+      dispatch(addNotification({ type: 'info', message: 'Stopping database instance...' }));
       await rdsApi.stopDatabase(id);
       // Refresh the list after stopping
       dispatch(fetchDatabases());
+      dispatch(addNotification({
+        type: 'success',
+        message: 'Database instance stopped successfully!'
+      }));
     } catch (error) {
       console.error('Failed to stop database:', error);
+      // Revert optimistic state
+      dispatch(updateInstanceStatus({ id, status: 'RUNNING' }));
+      dispatch(addNotification({
+        type: 'error',
+        message: 'Failed to stop database instance'
+      }));
     }
   };
 
@@ -43,7 +82,10 @@ const DatabaseList: React.FC = () => {
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-    // You could add a toast notification here
+    dispatch(addNotification({
+      type: 'info',
+      message: 'Connection URL copied to clipboard!'
+    }));
   };
 
   const getStatusColor = (status: string) => {
@@ -110,6 +152,10 @@ const DatabaseList: React.FC = () => {
                     <img src={mysqlLogo} alt="MySQL" className="h-8 w-8" />
                   ) : instance.dbType === 'postgres' ? (
                     <img src={postgresLogo} alt="PostgreSQL" className="h-8 w-8" />
+                  ) : instance.dbType === 'oracle' ? (
+                    <img src={oracleLogo} alt="Oracle" className="h-8 w-8" />
+                  ) : instance.dbType === 'mongodb' ? (
+                    <img src={mongodbLogo} alt="MongoDB" className="h-8 w-8" />
                   ) : (
                     <Database className="h-8 w-8 text-aws-orange" />
                   )}
@@ -128,13 +174,14 @@ const DatabaseList: React.FC = () => {
                 </span>
                 
                 <div className="flex items-center space-x-2">
-                  {instance.status === 'RUNNING' ? (
+                  {instance.status === 'RUNNING' || instance.status === 'STARTING' ? (
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        handleStop(instance.id);
+                        if (instance.status === 'RUNNING') handleStop(instance.id);
                       }}
-                      className="p-1 text-gray-400 hover:text-red-600"
+                      className={`p-1 ${instance.status === 'RUNNING' ? 'text-gray-400 hover:text-red-600' : 'text-gray-300 cursor-not-allowed'}`}
+                      disabled={instance.status !== 'RUNNING'}
                       title="Stop database"
                     >
                       <Square className="h-4 w-4" />
@@ -143,9 +190,10 @@ const DatabaseList: React.FC = () => {
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        handleStart(instance.id);
+                        if (instance.status === 'STOPPED') handleStart(instance.id);
                       }}
-                      className="p-1 text-gray-400 hover:text-green-600"
+                      className={`p-1 ${instance.status === 'STOPPED' ? 'text-gray-400 hover:text-green-600' : 'text-gray-300 cursor-not-allowed'}`}
+                      disabled={instance.status !== 'STOPPED'}
                       title="Start database"
                     >
                       <Play className="h-4 w-4" />
